@@ -196,13 +196,53 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 
 ## Classes
 
+- Classes can be defined with or without any {}.
+- Classes has properties and not fields. Properties can be defined as `val` or `var`.
+- To create instances of classes, we can simply call the Class using the className. There is no `new` keyword in Kotlin.
+- **All properties needs to be initialized if they are not passed using constructor**.
+- Constructor properties can have **default** or **named** parameters similar to functions.
+- We can initialize properties inside an `init{}` block of code inside the class.
+- Secondary constructors can be created by using the `constructor` keyword. 
+- If the class has a primary constructor, each secondary constructor needs to **delegate to the primary constructor**, either directly or indirectly through another secondary constructor(s) using the `this` keyword.
+- `var` is not allowed inside secondary constructors.
+
+[Additional Reading](https://kotlinlang.org/docs/reference/classes.html)
+
+### Custom Getters & Setters
+
+- We can create custom getters and setters inside kotlin classes by using the `get()` and `set()` methods with each properties.
+- `field` is a special keyword in Kotlin that is used to set a value to a property.
+
+[Additional Reading](https://kotlinlang.org/docs/reference/properties.html)
+
 ### Member functions
+
+- We can define member functions inside classes similar to how we defined functions. 
+- It will have access to all the properties inside the class 
 
 ### Visibility Modifiers
 
+<img src="./images/visibility.png"> 
+
 ### `data` Classes
 
+- In order to reduce verbose code, Kotlin has `data` classes which automatically derives -
+    - `equals()` / `hashCode()`
+    - `toString()`
+    - `copy()`
+- Data classes must fulfill the following requirements -
+    - The primary constructor needs to have at least one parameter
+    - All primary constructor parameters need to be marked as `val` or `var`
+    - Data classes cannot be abstract, open, sealed or inner
+- We can `override` and provide explicit implementations of `equals()`, `hashCode()` or `toString()` in the data class body, then these functions are not generated, and the explicit implementations are used;
+- `copy()` function can be used to copy an object altering some of its properties, but keeping the rest unchanged. 
+
 ### Enum Classes
+
+### Objects
+
+- Provides an easy way to create singletons.
+- Objects in an expression are initialized immediately, whereas object declarations are lazily instantiated.  
 
 <br/> 
 
