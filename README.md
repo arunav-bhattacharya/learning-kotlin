@@ -77,11 +77,90 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 
 ### Variables
 
-### Basic Types
+- Immutable variables are defined as `val` and mutable variables are defined as `var`
+- The type is automatically determined by Kotlin if not specified
 
-### Loops
+    ```
+        var name="Arunav"
+        var age=Int
+        age = 20
+        name = "Madhuri"
+        val address=String
+        address = "Phoenix, Arizona"    
+    ```  
 
-  
+### Basic Data Types
+
+- In Kotlin everything is an object. 
+- The different data types in Kotlin are - **Numbers, Characters, Booleans, Arrays, Unsigned integers, Strings**.
+- There is no implicit type conversion. Using helper functions we can do type conversion.  
+- There are different literal constants for integral values for -
+    - Decimal (123)
+    - Long (123L)
+    - Hexadecimal (0x0F)
+    - Binary (0b00001011)
+    - Double (123.5)
+    - Float (123.5f)
+- We can use underscores in numerical literals to make it more readable
+    `val oneMillion = 1_000_000`
+
+- Similar to Java, `Char` and is written inside single quotes on the other hand `String` is written inside double quotes.
+- Multi-line `String` can be written inside a pair of 3 double quotes """ 
+    ```
+        val multiLineString = """
+            Hello there, 
+            How are you ?
+            """
+    ```    
+- String literals can contain template expressions, i.e. pieces of code that are evaluated and whose results are concatenated into the string. A template expression starts with a dollar sign ($) and consists of either a simple name: 
+    ```
+        val person = "Name: $name; Age: $age; Address: $address"
+    ```     
+[Additional Reading](https://kotlinlang.org/docs/reference/basic-types.html)
+
+### Loops & Ranges
+
+- Traditional `for`, `while`, `do..while` loops are supported in Kotlin
+- `break` and `continue` also are supported
+- We can use ranges inside for loops
+    - `..` : Incrementing 
+    - `downTo` : Decrementing
+    - `step` : no. of steps increment or decrement can happen
+    ```
+        for (i in 1..10) {
+            println(i)
+        }
+        for (i in 1..10 step 3) {
+            println(i)
+        }
+        for (i in 10 downTo 1 step 2) {
+            println(i)
+        }
+    ```
+- We can use label to break out of all the nested loops
+
+### Conditionals 
+
+- In Kotlin, `if` can be used as a statement or an expression. When used as expression it returns a value and hence there is no separate ternary operator.
+- Instead of switch statements, we have `when` statements in Kotlin. default case is referred as `else`.
+- When `if` and `when` are used as expression, the `else` is mandatory. 
+
+[Additional Reading](https://kotlinlang.org/docs/reference/control-flow.html)  
+
+### Packages 
+
+- By default Kotlin imports a number of packages.
+- Depending on target platform, additional packages are imported for JVM and JS.
+- The syntax for specifying a package and importing from a package are similar to what we have in Java.
+- A source file may start with a package declaration.
+- Apart from the default imports, each file may contain its own import directives.
+- If there is a name clash, we can disambiguate by using `as` keyword to locally rename the clashing entity.
+    ```
+        import org.example.Message // Message is accessible
+        import org.test.Message as testMessage // testMessage stands for 'org.test.Message'
+    ```
+
+[Additional Reading](https://kotlinlang.org/docs/reference/packages.html)
 <br/>
 
  

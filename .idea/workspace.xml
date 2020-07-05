@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/1-basics/src/com/arunav/kotlin/basics/Basics.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-basics/src/com/arunav/kotlin/basics/Conditionals.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1-basics/src/com/arunav/kotlin/basics/Loops.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1-basics/src/Basics.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,11 +50,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/1-basics/src/com/arunav/kotlin/basics" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/images" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Kotlin.ConditionalsKt">
     <configuration name="BasicsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="1-basics" />
       <option name="VM_PARAMETERS" />
@@ -58,7 +65,33 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="BasicsKt" />
+      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.basics.BasicsKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConditionalsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="1-basics" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.basics.ConditionalsKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoopsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="1-basics" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.basics.LoopsKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -66,9 +99,23 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.ConditionalsKt" />
+        <item itemvalue="Kotlin.LoopsKt" />
         <item itemvalue="Kotlin.BasicsKt" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -123,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593935562103</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="README.md">
+      <created>1593935627079</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1593935627079</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -138,34 +192,38 @@
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="478" y="157" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1536.960@0.0.1536.960" timestamp="1593931916039" />
-    <state x="385" y="82" key="CommitChangelistDialog2" timestamp="1593935561938">
+    <state x="385" y="82" key="CommitChangelistDialog2" timestamp="1593935626004">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="385" y="82" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1593935561938" />
-    <state width="1494" height="258" key="GridCell.Tab.0.bottom" timestamp="1593935531729">
+    <state x="385" y="82" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1593935626004" />
+    <state width="1494" height="267" key="GridCell.Tab.0.bottom" timestamp="1593940584791">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="258" key="GridCell.Tab.0.bottom/0.0.1536.960@0.0.1536.960" timestamp="1593935531729" />
-    <state width="1494" height="258" key="GridCell.Tab.0.center" timestamp="1593935531729">
+    <state width="1494" height="267" key="GridCell.Tab.0.bottom/0.0.1536.960@0.0.1536.960" timestamp="1593940584791" />
+    <state width="1494" height="267" key="GridCell.Tab.0.center" timestamp="1593940584790">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="258" key="GridCell.Tab.0.center/0.0.1536.960@0.0.1536.960" timestamp="1593935531729" />
-    <state width="1494" height="258" key="GridCell.Tab.0.left" timestamp="1593935531728">
+    <state width="1494" height="267" key="GridCell.Tab.0.center/0.0.1536.960@0.0.1536.960" timestamp="1593940584790" />
+    <state width="1494" height="267" key="GridCell.Tab.0.left" timestamp="1593940584790">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="258" key="GridCell.Tab.0.left/0.0.1536.960@0.0.1536.960" timestamp="1593935531728" />
-    <state width="1494" height="258" key="GridCell.Tab.0.right" timestamp="1593935531729">
+    <state width="1494" height="267" key="GridCell.Tab.0.left/0.0.1536.960@0.0.1536.960" timestamp="1593940584790" />
+    <state width="1494" height="267" key="GridCell.Tab.0.right" timestamp="1593940584790">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="258" key="GridCell.Tab.0.right/0.0.1536.960@0.0.1536.960" timestamp="1593935531729" />
+    <state width="1494" height="267" key="GridCell.Tab.0.right/0.0.1536.960@0.0.1536.960" timestamp="1593940584790" />
     <state x="269" y="119" key="SettingsEditor" timestamp="1593932702471">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="269" y="119" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1593932702471" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1593935564757">
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1593935631550">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1593935564757" />
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1593935631550" />
+    <state x="419" y="244" width="698" height="472" key="find.popup" timestamp="1593935980421">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state x="419" y="244" width="698" height="472" key="find.popup/0.0.1536.960@0.0.1536.960" timestamp="1593935980421" />
     <state x="100" y="208" key="new project wizard" timestamp="1593931947619">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
