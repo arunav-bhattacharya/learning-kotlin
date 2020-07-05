@@ -19,7 +19,7 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 ### Kotlin Compiler - `kotlinc` 
 
 - `kotlinc` is the Kotlin Compiler. On Mac, Kotlin can be installed using brew which internally installs `kotlinc` by default under `/usr/local/bin/kotlinc` -
-    ```
+    ```shell script
         brew install kotlin
         ~ %which kotlinc
         /usr/local/bin/kotlinc
@@ -31,7 +31,7 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 
 - Some examples of using the Kotlin REPL from Terminal -
 
-    ```
+    ```shell script
         ~ %kotlinc
         Welcome to Kotlin version 1.3.72 (JRE 1.8.0_251-b08)
         Type :help for help, :quit for quit
@@ -57,7 +57,8 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
     
 - Below is a sample kotlin program `Basics.kt` 
  
-    ```
+ 
+    ```kotlin
         fun greet(names: List<String>){
             print("Welcome ")
             for (name in names)
@@ -71,12 +72,12 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
     ```
 - In order to compile and execute the program as Java bytecode, we need to compile it using `kotlinc-jvm` and then run as  `kotlin` or `java` as shown below -    
     
-    ```
-       > kotlinc-jvm Basics.kt
-       > ls
-       o/p BasicsKt.class  META-INF 
-       > kotlin Basics
-       o/p Welcome Arunav, Kaushik, Sanjoy, to the world of Kotlin !
+    ```shell script
+       ~ %kotlinc-jvm Basics.kt
+       ~ %ls
+       BasicsKt.class  META-INF 
+       ~ %kotlin Basics
+       Welcome Arunav, Kaushik, Sanjoy, to the world of Kotlin !
     ```
 
 ### Variables - `var` & `val`
@@ -84,7 +85,8 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 - Immutable variables are defined as `val` and mutable variables are defined as `var`
 - The type is automatically determined by Kotlin if not specified
 
-    ```
+
+    ```kotlin
         var name="Arunav"
         var age=Int
         age = 20
@@ -110,7 +112,9 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 
 - Similar to Java, `Char` and is written inside single quotes on the other hand `String` is written inside double quotes.
 - Multi-line `String` can be written inside a pair of 3 double quotes """ 
-    ```
+
+
+    ```kotlin
         val multiLineString = """
             Hello there, 
             How are you ?
@@ -130,7 +134,9 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
     - `..` : Incrementing 
     - `downTo` : Decrementing
     - `step` : no. of steps increment or decrement can happen
-    ```
+    
+    
+    ```kotlin
         for (i in 1..10) {
             println(i)
         }
@@ -149,6 +155,28 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 - Instead of switch statements, we have `when` statements in Kotlin. default case is referred as `else`.
 - When `if` and `when` are used as expression, the `else` is mandatory. 
 
+
+    ```kotlin
+        fun whenConditions(str: String) {
+            when(str){
+                "Red" -> println("The color code is 4")
+                "Blue" -> println("The color code is 8")
+                else -> println("Couldn't find the color code")
+            }
+        }
+        fun ifConditions() {
+            val a = 30
+            val b = 20
+        
+            val result = if (a > b){
+                "a is greater than b"
+            } else {
+                "b is greater than a"
+            }
+            println(result)
+        }
+    ```
+    
 [Additional Reading](https://kotlinlang.org/docs/reference/control-flow.html)  
 
 ### Packages 
@@ -159,7 +187,9 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 - A source file may start with a package declaration.
 - Apart from the default imports, each file may contain its own import directives.
 - If there is a name clash, we can disambiguate by using `as` keyword to locally rename the clashing entity.
-    ```
+
+
+    ```kotlin
         import org.example.Message // Message is accessible
         import org.test.Message as testMessage // testMessage stands for 'org.test.Message'
     ```
@@ -185,10 +215,29 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 - In case of ambiguity in case of multiple parameters & default value being used in some cases, then the calling part of the function can use **named** parameters.
 - Also the ordering of the functions can be in any sequence when using named parameters 
 
+
+    ```kotlin
+        fun person(name: String, address: String = "", email: String = "", phone: String) {
+            println("Name=$name, Address=$address, Email=$email, Phone=$phone")
+        }
+    ```
 ### Unlimited Parameters - `vararg`
 
 - When a function parameter is specified as `vararg` it means it can have unlimited number of parameters.
 - In case of passing vararg to another function we can use the **spread operator (\*)**.
+
+
+    ```kotlin
+        fun greetPeople(vararg names: String) {
+            print("Welcome ")
+            printNames(*names)
+            println("to the world of Kotlin using vararg")
+        }
+        fun printNames(vararg names: String) {
+            for (name in names)
+                print("$name, ")
+        }
+    ```
 
 [Additional Reading](https://kotlinlang.org/docs/reference/functions.html)
 
@@ -237,13 +286,31 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 - We can `override` and provide explicit implementations of `equals()`, `hashCode()` or `toString()` in the data class body, then these functions are not generated, and the explicit implementations are used;
 - `copy()` function can be used to copy an object altering some of its properties, but keeping the rest unchanged. 
 
+
+    ```kotlin
+      data class EmployeeData(var id: Int, var name: String, var email: String) {
+          override fun toString(): String {
+              return super.toString()
+          }
+      }
+      fun main() {
+      
+          val e1 = EmployeeData(1, "Ram", "ram@gmail.com")
+          val e2 = EmployeeData(2, "Shyam", "shyam@gmail.com")
+    
+          val e3 = e1.copy(email = "ram2@gmail.com")
+      }    
+    ```
+
+
 ### Enum Classes
 
-- Each enum constant is an object. Enum constants are separated with commas.
+- Each `enum` constant is an object. Enum constants are separated with commas.
 - Enum constants can also declare their own anonymous classes with their corresponding methods, as well as overriding base methods.
 - **If the enum class defines any members, separate the enum constant definitions from the member definitions with a semicolon.**
 
-    ```
+
+    ```kotlin
         enum class ProtocolState {
             WAITING {
                 override fun signal() = TALKING
@@ -256,7 +323,8 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
             abstract fun signal(): ProtocolState
         }
     ```
-
+    
+    
 ### Objects
 
 - Provides an easy way to create singletons.

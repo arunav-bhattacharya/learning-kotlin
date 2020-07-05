@@ -226,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593985371277</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Classes">
+      <created>1593985633526</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1593985633526</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -244,11 +251,11 @@
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="478" y="157" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1536.960@0.0.1536.960" timestamp="1593931916039" />
-    <state x="385" y="82" key="CommitChangelistDialog2" timestamp="1593985371125">
+    <state x="385" y="82" key="CommitChangelistDialog2" timestamp="1593985633420">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="385" y="82" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1593972564816" />
-    <state x="385" y="82" key="CommitChangelistDialog2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593985371125" />
+    <state x="385" y="82" key="CommitChangelistDialog2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593985633420" />
     <state width="1494" height="267" key="GridCell.Tab.0.bottom" timestamp="1593985350893">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
@@ -273,11 +280,11 @@
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="269" y="119" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1593970127406" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1593985376171">
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1593985635402">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1593972567753" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593985376171" />
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593985635402" />
     <state x="419" y="244" width="698" height="472" key="find.popup" timestamp="1593935980421">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
