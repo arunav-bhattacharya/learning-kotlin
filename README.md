@@ -4,9 +4,13 @@
 
 ## **1. Basics**
 
-### `kotlinc`
+Kotlin is another programming language on the JVM. IntelliJ or Eclipse already have the Kotlin compiler so don't need to download it separately if we are using any of these IDEs.
+
+<img src="./images/JVM.png" width="80%"> 
 
 ## Introduction
+
+### `kotlinc` - The Kotlin REPL
 
 <br/>
  
