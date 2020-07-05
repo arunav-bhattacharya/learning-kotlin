@@ -1,10 +1,14 @@
 # Learning Kotlin
 
-> Kotlin is a statically typed, fluent, elegant, programming language that compiles to Java or JavaScript. 
->
+> Kotlin is a statically typed, fluent & elegant programming language that compiles to Java or JavaScript. 
+> For a very quick start to Kotlin follow these links -
+> - [Basic Syntax](https://kotlinlang.org/docs/reference/basic-syntax.html)
+> - [Idioms](https://kotlinlang.org/docs/reference/idioms.html)
+> - [Coding Conventions](https://kotlinlang.org/docs/reference/coding-conventions.html)
+
 <br/> 
 
-# **1. Getting Started**
+# **1. Getting Familiar**
 
 IntelliJ or Eclipse already have the Kotlin compiler so don't need to download it separately if we are using any of these IDEs.
 
@@ -75,7 +79,7 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
        o/p Welcome Arunav, Kaushik, Sanjoy, to the world of Kotlin !
     ```
 
-### Variables
+### Variables - `var` & `val`
 
 - Immutable variables are defined as `val` and mutable variables are defined as `var`
 - The type is automatically determined by Kotlin if not specified
@@ -161,16 +165,32 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
     ```
 
 [Additional Reading](https://kotlinlang.org/docs/reference/packages.html)
+
 <br/>
 
  
-## Functions
+## Intro to Functions
 
-### `fun`
+### Have `fun` in Kotlin
+
+- Functions in Kotlin are prefixed with `fun`
+- Some return types in function -
+    - `Unit` : This is the default return type. Unit is kind of equivalent to void in other languages. But in kotlin we can check if the value of a variable is `Unit` 
+    - `Nothing` : Nothing is a return type when a function returns exception.
+- **Single expression** function doesn't need a function block    
 
 ### Default & Named Parameters
 
-### Unlimited Parameters
+- We can pass **default** parameters to function arguments
+- In case of ambiguity in case of multiple parameters & default value being used in some cases, then the calling part of the function can use **named** parameters.
+- Also the ordering of the functions can be in any sequence when using named parameters 
+
+### Unlimited Parameters - `vararg`
+
+- When a function parameter is specified as `vararg` it means it can have unlimited number of parameters.
+- In case of passing vararg to another function we can use the **spread operator (\*)**.
+
+[Additional Reading](https://kotlinlang.org/docs/reference/functions.html)
 
 <br/> 
 
@@ -180,7 +200,7 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 
 ### Visibility Modifiers
 
-### Data Classes
+### `data` Classes
 
 ### Enum Classes
 
@@ -260,7 +280,7 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 <br/> 
 
 
-# **2. Advanced**
+# **2. Some Advanced Concepts**
 
 ## Functions - A Deeper look
 <br/> 
