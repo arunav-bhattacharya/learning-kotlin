@@ -4,13 +4,13 @@
 >
 <br/> 
 
-# **1. Basics**
+# **1. Getting Started**
 
 IntelliJ or Eclipse already have the Kotlin compiler so don't need to download it separately if we are using any of these IDEs.
 
 <img src="./images/JVM.png"> 
 
-## Introduction
+## Basics
 
 ### Kotlin Compiler - `kotlinc` 
 
@@ -74,34 +74,105 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
        > kotlin Basics
        o/p Welcome Arunav, Kaushik, Sanjoy, to the world of Kotlin !
     ```
+
+## Variables
+
+## Basic Types
+
+
+## Loops
+
   
 <br/>
+
  
 ## Functions
+
+### `fun`
+
+### Default & Named Parameters
+
+### Unlimited Parameters
 
 <br/> 
 
 ## Classes
 
+### Member functions
+
+### Visibility Modifiers
+
+### Data Classes
+
+### Enum Classes
+
 <br/> 
 
 ## Inheritance 
+
+### Abstract Classes
+
+### Interfaces
+
+<br/> 
+
+## Nulls
 
 <br/> 
 
 ## Some useful tricks
 
+### Type casting 
+
+### Tuples
+
+### Deconstructing values
+
+### Exceptions 
+
+### Constants
+
+### Annotations
+
 <br/> 
 
 ## Functional Style
+
+### Higher Order Functions
+
+### Lambda Expressions
+
+### Closures
+
+### Extension Functions 
 
 <br/> 
 
 ## Interoperability
 
+### Java in Kotlin
+
+### Working with nulls from Java
+
+### Kotlin in Java
+
+### Top-level functions & properties in Kotlin
+
+### Extension functions from Java
+
+### Interop with Java 7 & 8
+
 <br/> 
 
 ## Standard Library
+
+### Kotlin Collections
+
+### Filter, map, flatMap
+
+### Lazy Evaluation with Sequences
+
+### String Extension
 
 <br/> 
 
