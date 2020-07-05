@@ -239,6 +239,24 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 
 ### Enum Classes
 
+- Each enum constant is an object. Enum constants are separated with commas.
+- Enum constants can also declare their own anonymous classes with their corresponding methods, as well as overriding base methods.
+- **If the enum class defines any members, separate the enum constant definitions from the member definitions with a semicolon.**
+
+    ```
+        enum class ProtocolState {
+            WAITING {
+                override fun signal() = TALKING
+            },
+        
+            TALKING {
+                override fun signal() = WAITING
+            };
+        
+            abstract fun signal(): ProtocolState
+        }
+    ```
+
 ### Objects
 
 - Provides an easy way to create singletons.
