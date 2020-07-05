@@ -4,7 +4,7 @@
 >
 <br/> 
 
-## **1. Basics**
+# **1. Basics**
 
 IntelliJ or Eclipse already have the Kotlin compiler so don't need to download it separately if we are using any of these IDEs.
 
@@ -92,7 +92,7 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 <br/> 
 
 
-## **2. Advanced**
+# **2. Advanced**
 
 ## Functions - A Deeper look
 <br/> 
