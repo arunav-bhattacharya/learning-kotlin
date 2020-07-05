@@ -55,10 +55,10 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
  
     ```
         fun greet(names: List<String>){
-            print("Hello ")
+            print("Welcome ")
             for (name in names)
                 print(name + ", ")
-            println("in the world of Kotlin !")
+            println("to the world of Kotlin !")
         }
         
         fun main(){
@@ -72,7 +72,7 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
        > ls
        o/p BasicsKt.class  META-INF 
        > kotlin Basics
-       o/p Hello Arunav, Kaushik, Sanjoy, in the world of Kotlin !
+       o/p Welcome Arunav, Kaushik, Sanjoy, to the world of Kotlin !
     ```
   
 <br/>

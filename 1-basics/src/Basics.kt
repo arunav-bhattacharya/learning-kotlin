@@ -1,8 +1,8 @@
 fun greet(names: List<String>){
-    print("Hello ")
+    print("Welcome ")
     for (name in names)
         print(name + ", ")
-    println("in the world of Kotlin !")
+    println("to the world of Kotlin !")
 }
 
 fun main(){
