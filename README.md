@@ -12,7 +12,7 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 
 ## Introduction
 
-### `kotlinc` 
+### Kotlin Compiler - `kotlinc` 
 
 - `kotlinc` is the Kotlin Compiler. On Mac, Kotlin can be installed using brew which internally installs `kotlinc` by default under `/usr/local/bin/kotlinc` -
     ```
@@ -20,8 +20,10 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
         ~ %which kotlinc
         /usr/local/bin/kotlinc
     ```  
+
+- Once `kotlinc` is installed we can run Kotlin scripts on REPL or we can directly write programs and execute them. We'll take a look at both of them. 
   
-### Kotlin REPL
+### Using Kotlin REPL
 
 - Some examples of using the Kotlin REPL from Terminal -
 
@@ -49,13 +51,30 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 
 ### Compile and run a Kotlin program 
     
+- Below is a sample kotlin program `Basics.kt` 
+ 
     ```
-    fun(
+        fun greet(names: List<String>){
+            print("Hello ")
+            for (name in names)
+                print(name + ", ")
+            println("in the world of Kotlin !")
+        }
+        
+        fun main(){
+            greet(listOf("Arunav", "Kaushik", "Sanjoy"))
+        }
     ```
-    kotlinc-jvm sample.kt
+- In order to compile and execute the program as Java bytecode, we need to compile it using `kotlinc-jvm` and then run as  `kotlin` or `java` as shown below -    
+    
+    ```
+       > kotlinc-jvm Basics.kt
+       > ls
+       o/p BasicsKt.class  META-INF 
+       > kotlin Basics
+       o/p Hello Arunav, Kaushik, Sanjoy, in the world of Kotlin !
+    ```
   
-<br/>  
-###  
 <br/>
  
 ## Functions
