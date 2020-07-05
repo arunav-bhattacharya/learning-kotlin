@@ -75,12 +75,11 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
        o/p Welcome Arunav, Kaushik, Sanjoy, to the world of Kotlin !
     ```
 
-## Variables
+### Variables
 
-## Basic Types
+### Basic Types
 
-
-## Loops
+### Loops
 
   
 <br/>
