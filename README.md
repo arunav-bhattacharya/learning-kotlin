@@ -1,22 +1,27 @@
 # Learning Kotlin
-
+>
 > Kotlin is a statically typed, fluent & elegant programming language that compiles to Java or JavaScript. 
 > For a very quick start to Kotlin follow these links -
 > - [Basic Syntax](https://kotlinlang.org/docs/reference/basic-syntax.html)
 > - [Idioms](https://kotlinlang.org/docs/reference/idioms.html)
 > - [Coding Conventions](https://kotlinlang.org/docs/reference/coding-conventions.html)
+>
+> This document is split into 2 parts - 
+>   A. Getting Familiar
+>   B. Some advanced concepts 
+>
 
 <br/> 
 
-# **1. Getting Familiar**
+# **A. Getting Familiar**
 
 IntelliJ or Eclipse already have the Kotlin compiler so don't need to download it separately if we are using any of these IDEs.
 
 <img src="./images/JVM.png"> 
 
-## Basics
+## 1. Basics
 
-### Kotlin Compiler - `kotlinc` 
+### 1.a. Kotlin Compiler - `kotlinc` 
 
 - `kotlinc` is the Kotlin Compiler. On Mac, Kotlin can be installed using brew which internally installs `kotlinc` by default under `/usr/local/bin/kotlinc` -
     ```shell script
@@ -27,7 +32,7 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 
 - Once `kotlinc` is installed we can run Kotlin scripts on REPL or we can directly write programs and execute them. We'll take a look at both of them. 
   
-### Using Kotlin REPL
+### 1.b. Using Kotlin REPL
 
 - Some examples of using the Kotlin REPL from Terminal -
 
@@ -53,7 +58,7 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 
 - Kotlin REPL can be run from IntelliJ Kotlin REPL, which provides syntax highlighting and suggestions for ease of use in REPL.
 
-### Compile and run a Kotlin program 
+### 1.c. Compile and run a Kotlin program 
     
 - Below is a sample kotlin program `Basics.kt` 
  
@@ -70,6 +75,7 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
             greet(listOf("Arunav", "Kaushik", "Sanjoy"))
         }
     ```
+    
 - In order to compile and execute the program as Java bytecode, we need to compile it using `kotlinc-jvm` and then run as  `kotlin` or `java` as shown below -    
     
     ```shell script
@@ -80,7 +86,7 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
        Welcome Arunav, Kaushik, Sanjoy, to the world of Kotlin !
     ```
 
-### Variables - `var` & `val`
+### 1.d. Variables - `var` & `val`
 
 - Immutable variables are defined as `val` and mutable variables are defined as `var`
 - The type is automatically determined by Kotlin if not specified
@@ -95,7 +101,7 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
         address = "Phoenix, Arizona"    
     ```  
 
-### Basic Data Types
+### 1.e. Basic Data Types
 
 - In Kotlin everything is an object. 
 - The different data types in Kotlin are - **Numbers, Characters, Booleans, Arrays, Unsigned integers, Strings**.
@@ -126,7 +132,7 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
     ```     
 [Additional Reading](https://kotlinlang.org/docs/reference/basic-types.html)
 
-### Loops & Ranges
+### 1.f. Loops & Ranges
 
 - Traditional `for`, `while`, `do..while` loops are supported in Kotlin
 - `break` and `continue` also are supported
@@ -149,7 +155,7 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
     ```
 - We can use label to break out of all the nested loops
 
-### Conditionals 
+### 1.g. Conditionals 
 
 - In Kotlin, `if` can be used as a statement or an expression. When used as expression it returns a value and hence there is no separate ternary operator.
 - Instead of switch statements, we have `when` statements in Kotlin. default case is referred as `else`.
@@ -179,7 +185,7 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
     
 [Additional Reading](https://kotlinlang.org/docs/reference/control-flow.html)  
 
-### Packages 
+### 1.h. Packages 
 
 - By default Kotlin imports a number of packages.
 - Depending on target platform, additional packages are imported for JVM and JS.
@@ -199,9 +205,9 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 <br/>
 
  
-## Intro to Functions
+## 2. Intro to Functions
 
-### Have `fun` in Kotlin
+### 2.a. Have `fun` in Kotlin
 
 - Functions in Kotlin are prefixed with `fun`
 - Some return types in function -
@@ -209,7 +215,7 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
     - `Nothing` : Nothing is a return type when a function returns exception.
 - **Single expression** function doesn't need a function block    
 
-### Default & Named Parameters
+### 2.b. Default & Named Parameters
 
 - We can pass **default** parameters to function arguments
 - In case of ambiguity in case of multiple parameters & default value being used in some cases, then the calling part of the function can use **named** parameters.
@@ -221,7 +227,8 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
             println("Name=$name, Address=$address, Email=$email, Phone=$phone")
         }
     ```
-### Unlimited Parameters - `vararg`
+    
+### 2.c. Unlimited Parameters - `vararg`
 
 - When a function parameter is specified as `vararg` it means it can have unlimited number of parameters.
 - In case of passing vararg to another function we can use the **spread operator (\*)**.
@@ -243,7 +250,11 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 
 <br/> 
 
-## Classes
+## 3. Classes
+
+Kotlin is an object oriented language and it supports all the different features of object-oriented programming.
+
+### 3.a. `class` & `construtor`
 
 - Classes can be defined with or without any {}.
 - Classes has properties and not fields. Properties can be defined as `val` or `var`.
@@ -254,26 +265,63 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 - Secondary constructors can be created by using the `constructor` keyword. 
 - If the class has a primary constructor, each secondary constructor needs to **delegate to the primary constructor**, either directly or indirectly through another secondary constructor(s) using the `this` keyword.
 - `var` is not allowed inside secondary constructors.
+- We can define member functions inside classes similar to how we defined functions. It will have access to all the properties inside the class.
+
+
+    ```kotlin
+        class Customer(var id: Int = -1, var name: String) {
+            var email: String = ""
+            init {
+                name = name.toUpperCase()
+            }
+            constructor(id: Int = -1, name: String, email: String) : this(id, name) {
+                if (email == "")
+                    this.email = "$name@example.com"
+                else
+                    this.email = email
+            }
+           fun printCustomer() {
+                println("id=${id}, name=${name}, email=${email}")
+            }            
+        }
+    ```
 
 [Additional Reading](https://kotlinlang.org/docs/reference/classes.html)
 
-### Custom Getters & Setters
+### 3.b. Custom Getters & Setters
 
+- The full syntax for declaring a property is 
+ 
+    ```kotlin
+      var <propertyName>[: <PropertyType>] [= <property_initializer>]
+          [<getter>]
+          [<setter>]
+    ```      
+  
 - We can create custom getters and setters inside kotlin classes by using the `get()` and `set()` methods with each properties.
 - `field` is a special keyword in Kotlin that is used to set a value to a property.
 
+
+    ```kotlin
+        class Employee(val id: Int = Random.nextInt().absoluteValue, val name: String, val yearOfBirth: Int) {
+            var age: Int = 0
+                get() = Calendar.getInstance().get(Calendar.YEAR) - yearOfBirth
+            var ssn: String = ""
+                set(value) {
+                    field = value
+                }
+        }
+    ```
+
 [Additional Reading](https://kotlinlang.org/docs/reference/properties.html)
 
-### Member functions
-
-- We can define member functions inside classes similar to how we defined functions. 
-- It will have access to all the properties inside the class 
-
-### Visibility Modifiers
+### 3.c. Visibility Modifiers
 
 <img src="./images/visibility.png"> 
 
-### `data` Classes
+[Additional Reading](https://kotlinlang.org/docs/reference/visibility-modifiers.html)
+
+### 3.d. `data` Classes
 
 - In order to reduce verbose code, Kotlin has `data` classes which automatically derives -
     - `equals()` / `hashCode()`
@@ -302,12 +350,13 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
       }    
     ```
 
+### 3.e. Enum Classes
 
-### Enum Classes
-
+- Enum classes are used for creating a bunch of enumerated values. 
+- We can customize and iterate over them as well.
 - Each `enum` constant is an object. Enum constants are separated with commas.
-- Enum constants can also declare their own anonymous classes with their corresponding methods, as well as overriding base methods.
-- **If the enum class defines any members, separate the enum constant definitions from the member definitions with a semicolon.**
+- Enum constants can override base methods.
+- **When enum class has any members, the enum constants must be separated from the member definitions with a semicolon.**
 
 
     ```kotlin
@@ -315,20 +364,32 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
             WAITING {
                 override fun signal() = TALKING
             },
-        
             TALKING {
                 override fun signal() = WAITING
             };
-        
             abstract fun signal(): ProtocolState
         }
     ```
     
-    
-### Objects
+### 3.f. Objects
 
+- In Kotlin we can directly create an object without creating a class.
 - Provides an easy way to create singletons.
 - Objects in an expression are initialized immediately, whereas object declarations are lazily instantiated.  
+
+    ```kotlin
+        object Circle{
+            var radius = 2
+        }
+        fun draw(){
+            var rectangle = object {
+                val length = 10
+                val breadth = 7 
+            }
+            println("Drawing Rectangle of length ${rectangle.length} and breadth ${rectangle.breadth}")
+            println("Drawing Circle of radius ${Circle.radius}")
+        }
+    ```
 
 <br/> 
 
