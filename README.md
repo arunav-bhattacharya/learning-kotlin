@@ -393,23 +393,79 @@ Kotlin is an object oriented language and it supports all the different features
 
 <br/> 
 
-## Inheritance 
+## 4. Inheritance 
 
 - Base class in Kotlin is `Any`, similar to `Object` is Java. All classes are inherits from `Any`. 
-- By default all classes are `final`. 
-- In order to make a class non-final we need to make it `open`.
+- By default all classes are `final`. In order to make a class non-final we need to make it `open`.
 - Similarly members are also by default final. In order to override in the child class, we need to make the method `open` in the parent class.
+- `data` classes can also be inherited in Kotlin.
 
-### Abstract Classes
+    ```kotlin
+        open class Person() {
+            open fun validate() {
+                println("Validating in Person")
+            }
+        }        
+        open class Customer : Person {
+            final override fun validate() {
+                println("Validating in Customer")
+            }
+            constructor() : super() {
+                println("Inside Customer constructor")
+            }
+        }
+        data class SpecialCustomer(var id: Int) : Customer()
+    ```
+  
+### 4.a. Abstract Classes
 
 - Similar to Java
 
-### Interfaces
+    ```kotlin
+        abstract class AbstractEntity {
+            // Having a state inside abstract class
+            val isActive = true
+        
+            // Abstract method
+            abstract fun load()
+        
+            // Default method
+            fun status(): String {
+                return isActive.toString()
+            }
+        }
+        
+        class EmployeeEntity : AbstractEntity() {
+            override fun load() {
+                println("Loading EmployeeEntity..")
+            }
+        }
+    ```
 
-- Similar to Java 8. 
+### 4.b. Interfaces
+
+- Similar to Java 8 onwards. 
 - Can have default implementations.
-- Can define abstract properties but cannot have values for it.
-- However, we can define custom getters and setters on interface properties.
+- Can define abstract properties but cannot have a state for it.
+- However, we can define custom getters and setters on interface properties. But properties inside interfaces doesn't have a backing `field`.
+
+    ```kotlin
+        interface CustomerRepo {
+            // Interfaces cannot maintain state, but can have custom getters & setters
+            var isEmpty : Boolean
+                get() = true
+                set(value){
+                    println("Doing something with the value $value")
+                }
+            // This is a default implementation
+            fun load(obj: Customer){
+                println("Loading Customer Data")
+            }
+        
+            fun getById(id: Int) : Customer
+        }
+    ```
+
 - When a class implements multiple interfaces, say A and B, and both have a method with the same name, say foo(), then Kotlin provides a way for the implementing class to resolve the conflict by specifying the interfaces in Angular brackets <>.
 
     ```kotlin
@@ -442,13 +498,44 @@ Kotlin is an object oriented language and it supports all the different features
 >   - Secondly we can have a class that implements multiple interfaces, but it can extend only one class. 
 >   
 
-### Generics
+### 4.c. Generics
 
-- Similar to Java. Will revisit later.
+- Similar to Java. Will revisit later in details.
+
+    ```kotlin
+        interface Repository<T> {
+            fun getById(id: Int): T
+            fun getAll(): List<T>
+            fun<U> getAddDataById(id: Int) : U
+        }
+        
+        class GenericRepo<T> : Repository<T> {
+            override fun getById(id: Int): T {
+                println("Getting by id = $id ")
+                throw UnsupportedOperationException("Not implemented")
+            }
+            override fun getAll(): List<T> {
+                println("Fetching all")
+                throw UnsupportedOperationException("Not implemented")
+            }  
+            override fun <U> getAddDataById(id: Int): U {
+                println("Getting additional data by Id")
+                throw UnsupportedOperationException("Not implemented")
+            }
+        }
+        
+        fun main() {
+            val customerRepo = GenericRepo<Customer>()
+            val employeeRepo = GenericRepo<EmployeeEntity>()
+            customerRepo.getById(10)
+            employeeRepo.getAll()
+            employeeRepo.getAddDataById<EmployeeAddData>(22)
+        }
+    ```
 
 <br/> 
 
-## Nulls
+## 5. Nulls
 
 - Kotlin is a null-safe language
 - We cannot assign types to `null`.

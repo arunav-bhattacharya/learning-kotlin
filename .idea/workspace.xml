@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance/AbstractClasses.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance/Generics.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance/Inheritance.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance/Interfaces.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance/AbstractClasses.kt" beforeDir="false" afterPath="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance/AbstractClasses.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance/Generics.kt" beforeDir="false" afterPath="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance/Generics.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance/Inheritance.kt" beforeDir="false" afterPath="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance/Inheritance.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance/Interfaces.kt" beforeDir="false" afterPath="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance/Interfaces.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -261,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594004321028</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Inheritance">
+      <created>1594008362601</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1594008362601</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -275,25 +281,27 @@
     <MESSAGE value="Functions" />
     <MESSAGE value="Classes" />
     <MESSAGE value="README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md" />
+    <MESSAGE value="Inheritance" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inheritance" />
   </component>
   <component name="WindowStateProjectService">
     <state x="368" y="147" width="800" height="714" key="#Intentions" timestamp="1593991749740">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="368" y="147" width="800" height="714" key="#Intentions/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593991749740" />
-    <state x="530" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1593993251834">
+    <state x="530" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1594010903829">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
+    <state x="530" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1536.960@0.0.1536.960" timestamp="1594010903829" />
     <state x="530" y="204" key="#com.intellij.ide.util.MemberChooser/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593993251834" />
     <state x="478" y="157" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1593931916039">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="478" y="157" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1536.960@0.0.1536.960" timestamp="1593931916039" />
-    <state x="385" y="82" key="CommitChangelistDialog2" timestamp="1594004320909">
+    <state x="385" y="82" key="CommitChangelistDialog2" timestamp="1594008361517">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="385" y="82" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1593972564816" />
+    <state x="385" y="82" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1594008361517" />
     <state x="385" y="82" key="CommitChangelistDialog2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594004320909" />
     <state width="1494" height="267" key="GridCell.Tab.0.bottom" timestamp="1594008302341">
       <screen x="0" y="0" width="1536" height="960" />
@@ -319,10 +327,10 @@
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="269" y="119" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1594008327163" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594004322551">
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594008385861">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1593972567753" />
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1594008385861" />
     <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594004322551" />
     <state x="419" y="244" width="698" height="472" key="find.popup" timestamp="1593935980421">
       <screen x="0" y="0" width="1536" height="960" />

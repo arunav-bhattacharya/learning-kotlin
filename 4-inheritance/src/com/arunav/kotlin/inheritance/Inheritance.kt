@@ -18,12 +18,13 @@ open class Customer : Person {
     }
 }
 
-class SpecialCustomer : Customer() {
-
+data class SpecialCustomer(var id: Int) : Customer() {
 }
 
 fun main() {
     val customer = Customer()
-
     customer.validate()
+
+    val specialCustomer = SpecialCustomer(1)
+    specialCustomer.validate()
 }
