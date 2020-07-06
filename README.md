@@ -685,6 +685,10 @@ Kotlin is an object oriented language and it supports all the different features
 
 ### Higher Order Functions
 
+- In funtional style of programming we can pass functions as arguments to other functions.
+- In Kotlin, method references are denoted as `::` and lambda expressions are expressed with an "->" similar to Java
+- We can pass a method reference or a lambda expression to a function that accepts a function as an argument
+
 [Additional Reading]()
 
 ### Lambda Expressions
