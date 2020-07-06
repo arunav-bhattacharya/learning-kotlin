@@ -557,8 +557,6 @@ Kotlin is an object oriented language and it supports all the different features
 
 ## 6. Some useful tricks
 
-
-
 ### Type casting 
 
 ### Tuples
@@ -573,7 +571,7 @@ Kotlin is an object oriented language and it supports all the different features
 
 <br/> 
 
-## Functional Style
+## 7. Functional Style
 
 ### Higher Order Functions
 
@@ -585,7 +583,7 @@ Kotlin is an object oriented language and it supports all the different features
 
 <br/> 
 
-## Interoperability
+## 8. Interoperability
 
 ### Java in Kotlin
 
@@ -601,7 +599,7 @@ Kotlin is an object oriented language and it supports all the different features
 
 <br/> 
 
-## Standard Library
+## 9. Standard Library
 
 ### Kotlin Collections
 
@@ -613,7 +611,7 @@ Kotlin is an object oriented language and it supports all the different features
 
 <br/> 
 
-## Build Tools
+## 10. Build Tools
 
 <br/> 
 <br/> 
