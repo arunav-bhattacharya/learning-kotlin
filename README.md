@@ -542,11 +542,11 @@ Kotlin is an object oriented language and it supports all the different features
 - Every non-nullable type has a nullable counterpart suffixed by `?`
 - In order to return a `null` from a function the return type can be changed to its nullable counterpart by suffixing with `?`.
 - Kotlin requires method calls on nullable references to be prefixed with either the safe-call operator or the non-null assertion operator.
-    - Safe-call operator (?): The null-check and call to a method or a property can be done using the Safe call operator in one step. If the reference is null, then the safe-call operator will return null. But when using the Elvis Operator (?:), we can return a default value in case of null.
+    - **Safe-call operator (?):** The null-check and call to a method or a property can be done using the Safe call operator in one step. If the reference is null, then the safe-call operator will return null. But when using the **Elvis Operator (?:)**, we can return a default value in case of null.
         ```kotlin
           return name?.reversed()?.toUpperCase()?:"Joker"
         ```
-    - Non-Null operator (!!) : **DO NOT USE THIS OPERATOR.** This operator can be used when we don't want Kotlin to do a null check. 
+    - **Non-Null operator (!!) : DO NOT USE THIS OPERATOR.** This operator can be used when we don't want Kotlin to do a null check. 
     
 [Additional Reading](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0051.xhtml)
     
