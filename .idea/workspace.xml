@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__9_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7-functional/7-functional.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7-functional/src/com/arunav/kotlin/functional/Functional.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/6-useful-constructs/src/com/arunav/kotlin/constructs/Tuples.kt" beforeDir="false" afterPath="$PROJECT_DIR$/6-useful-constructs/src/com/arunav/kotlin/constructs/Tuples.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1-basics/1-basics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/1-basics/1-basics.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2-functions/2-functions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/2-functions/2-functions.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3-classes/3-classes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/3-classes/3-classes.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4-inheritance/4-inheritance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/4-inheritance/4-inheritance.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5-nulls/5-nulls.iml" beforeDir="false" afterPath="$PROJECT_DIR$/5-nulls/5-nulls.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6-useful-constructs/6-useful-constructs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/6-useful-constructs/6-useful-constructs.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,12 +37,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="$PROJECT_DIR$/.idea" />
-      </set>
-    </option>
+  <component name="MavenRunner">
+    <option name="jreName" value="11" />
   </component>
   <component name="ProjectId" id="1eFy0gd91AIfJMZS397sMluSoa9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -39,15 +48,17 @@
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -61,7 +72,20 @@
       <recent name="$PROJECT_DIR$/1-basics/src/com/arunav/kotlin/basics" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.TuplesKt">
+  <component name="RunManager" selected="Kotlin.FunctionalKt">
+    <configuration name="FunctionalKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="7-functional" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.functional.FunctionalKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="InheritanceKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="4-inheritance" />
       <option name="VM_PARAMETERS" />
@@ -83,19 +107,6 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.nulls.NullsKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ObjectsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="3-classes" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.classes.ObjectsKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -129,26 +140,15 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.FunctionalKt" />
         <item itemvalue="Kotlin.TuplesKt" />
         <item itemvalue="Kotlin.TypeCastingKt" />
         <item itemvalue="Kotlin.NullsKt" />
         <item itemvalue="Kotlin.InheritanceKt" />
-        <item itemvalue="Kotlin.ObjectsKt" />
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -159,6 +159,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1593931413945</updated>
+      <workItem from="1594067806461" duration="1197000" />
     </task>
     <task id="LOCAL-00001" summary="/.idea files">
       <created>1593931867457</created>
@@ -328,8 +329,18 @@
       <option name="project" value="LOCAL" />
       <updated>1594023795826</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Useful-constructs">
+      <created>1594066089216</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1594066089216</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -362,52 +373,56 @@
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="478" y="157" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1536.960@0.0.1536.960" timestamp="1593931916039" />
-    <state x="385" y="82" key="CommitChangelistDialog2" timestamp="1594066076431">
+    <state x="600" y="377" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1594068029280">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="385" y="82" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1594066076431" />
+    <state x="600" y="377" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.960@0.0.1536.960" timestamp="1594068029280" />
+    <state x="385" y="82" key="CommitChangelistDialog2" timestamp="1594066088036">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state x="385" y="82" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1594066088036" />
     <state x="385" y="82" key="CommitChangelistDialog2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594004320909" />
-    <state width="1494" height="275" key="GridCell.Tab.0.bottom" timestamp="1594066069998">
+    <state width="1494" height="258" key="GridCell.Tab.0.bottom" timestamp="1594069005458">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="275" key="GridCell.Tab.0.bottom/0.0.1536.960@0.0.1536.960" timestamp="1594066069998" />
+    <state width="1494" height="258" key="GridCell.Tab.0.bottom/0.0.1536.960@0.0.1536.960" timestamp="1594069005458" />
     <state width="1494" height="267" key="GridCell.Tab.0.bottom/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593999832265" />
-    <state width="1494" height="275" key="GridCell.Tab.0.center" timestamp="1594066069997">
+    <state width="1494" height="258" key="GridCell.Tab.0.center" timestamp="1594069005458">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="275" key="GridCell.Tab.0.center/0.0.1536.960@0.0.1536.960" timestamp="1594066069997" />
+    <state width="1494" height="258" key="GridCell.Tab.0.center/0.0.1536.960@0.0.1536.960" timestamp="1594069005458" />
     <state width="1494" height="267" key="GridCell.Tab.0.center/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593999832265" />
-    <state width="1494" height="275" key="GridCell.Tab.0.left" timestamp="1594066069997">
+    <state width="1494" height="258" key="GridCell.Tab.0.left" timestamp="1594069005457">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="275" key="GridCell.Tab.0.left/0.0.1536.960@0.0.1536.960" timestamp="1594066069997" />
+    <state width="1494" height="258" key="GridCell.Tab.0.left/0.0.1536.960@0.0.1536.960" timestamp="1594069005457" />
     <state width="1494" height="267" key="GridCell.Tab.0.left/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593999832265" />
-    <state width="1494" height="275" key="GridCell.Tab.0.right" timestamp="1594066069997">
+    <state width="1494" height="258" key="GridCell.Tab.0.right" timestamp="1594069005458">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="275" key="GridCell.Tab.0.right/0.0.1536.960@0.0.1536.960" timestamp="1594066069997" />
+    <state width="1494" height="258" key="GridCell.Tab.0.right/0.0.1536.960@0.0.1536.960" timestamp="1594069005458" />
     <state width="1494" height="267" key="GridCell.Tab.0.right/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593999832265" />
-    <state x="269" y="119" key="SettingsEditor" timestamp="1594008327163">
+    <state x="269" y="119" key="SettingsEditor" timestamp="1594068090906">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="269" y="119" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1594008327163" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594023798429">
+    <state x="269" y="119" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1594068090906" />
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594066091044">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1594023798429" />
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1594066091044" />
     <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594004322551" />
     <state x="419" y="244" width="698" height="472" key="find.popup" timestamp="1593935980421">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="419" y="244" width="698" height="472" key="find.popup/0.0.1536.960@0.0.1536.960" timestamp="1593935980421" />
-    <state x="100" y="208" key="new project wizard" timestamp="1594018061322">
+    <state x="100" y="208" key="new project wizard" timestamp="1594066116341">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="100" y="208" key="new project wizard/0.0.1536.960@0.0.1536.960" timestamp="1594018061322" />
+    <state x="100" y="208" key="new project wizard/0.0.1536.960@0.0.1536.960" timestamp="1594066116341" />
     <state x="100" y="208" key="new project wizard/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594000990313" />
-    <state x="433" y="228" width="670" height="676" key="search.everywhere.popup" timestamp="1593977121009">
+    <state x="433" y="228" width="670" height="676" key="search.everywhere.popup" timestamp="1594066996504">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="433" y="228" width="670" height="676" key="search.everywhere.popup/0.0.1536.960@0.0.1536.960" timestamp="1593977121009" />
+    <state x="433" y="228" width="670" height="676" key="search.everywhere.popup/0.0.1536.960@0.0.1536.960" timestamp="1594066996504" />
   </component>
 </project>
