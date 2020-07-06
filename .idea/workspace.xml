@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__9_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7-functional/7-functional.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7-functional/src/com/arunav/kotlin/functional/Functional.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1-basics/1-basics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/1-basics/1-basics.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2-functions/2-functions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/2-functions/2-functions.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3-classes/3-classes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/3-classes/3-classes.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4-inheritance/4-inheritance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/4-inheritance/4-inheritance.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5-nulls/5-nulls.iml" beforeDir="false" afterPath="$PROJECT_DIR$/5-nulls/5-nulls.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/6-useful-constructs/6-useful-constructs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/6-useful-constructs/6-useful-constructs.iml" afterDir="false" />
-    </list>
+    <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="Getting Functional" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,7 +145,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1593931413945</updated>
-      <workItem from="1594067806461" duration="1197000" />
+      <workItem from="1594067806461" duration="1518000" />
     </task>
     <task id="LOCAL-00001" summary="/.idea files">
       <created>1593931867457</created>
@@ -336,11 +322,29 @@
       <option name="project" value="LOCAL" />
       <updated>1594066089216</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Getting Functional">
+      <created>1594069257216</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1594069257216</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -357,7 +361,8 @@
     <MESSAGE value="Nulls" />
     <MESSAGE value="readme" />
     <MESSAGE value="Useful-constructs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Useful-constructs" />
+    <MESSAGE value="Getting Functional" />
+    <option name="LAST_COMMIT_MESSAGE" value="Getting Functional" />
   </component>
   <component name="WindowStateProjectService">
     <state x="368" y="147" width="800" height="714" key="#Intentions" timestamp="1593991749740">
@@ -382,34 +387,38 @@
     </state>
     <state x="385" y="82" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1594066088036" />
     <state x="385" y="82" key="CommitChangelistDialog2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594004320909" />
-    <state width="1494" height="258" key="GridCell.Tab.0.bottom" timestamp="1594069005458">
+    <state width="1494" height="258" key="GridCell.Tab.0.bottom" timestamp="1594069110082">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="258" key="GridCell.Tab.0.bottom/0.0.1536.960@0.0.1536.960" timestamp="1594069005458" />
+    <state width="1494" height="258" key="GridCell.Tab.0.bottom/0.0.1536.960@0.0.1536.960" timestamp="1594069110082" />
     <state width="1494" height="267" key="GridCell.Tab.0.bottom/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593999832265" />
-    <state width="1494" height="258" key="GridCell.Tab.0.center" timestamp="1594069005458">
+    <state width="1494" height="258" key="GridCell.Tab.0.center" timestamp="1594069110081">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="258" key="GridCell.Tab.0.center/0.0.1536.960@0.0.1536.960" timestamp="1594069005458" />
+    <state width="1494" height="258" key="GridCell.Tab.0.center/0.0.1536.960@0.0.1536.960" timestamp="1594069110081" />
     <state width="1494" height="267" key="GridCell.Tab.0.center/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593999832265" />
-    <state width="1494" height="258" key="GridCell.Tab.0.left" timestamp="1594069005457">
+    <state width="1494" height="258" key="GridCell.Tab.0.left" timestamp="1594069110081">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="258" key="GridCell.Tab.0.left/0.0.1536.960@0.0.1536.960" timestamp="1594069005457" />
+    <state width="1494" height="258" key="GridCell.Tab.0.left/0.0.1536.960@0.0.1536.960" timestamp="1594069110081" />
     <state width="1494" height="267" key="GridCell.Tab.0.left/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593999832265" />
-    <state width="1494" height="258" key="GridCell.Tab.0.right" timestamp="1594069005458">
+    <state width="1494" height="258" key="GridCell.Tab.0.right" timestamp="1594069110082">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="258" key="GridCell.Tab.0.right/0.0.1536.960@0.0.1536.960" timestamp="1594069005458" />
+    <state width="1494" height="258" key="GridCell.Tab.0.right/0.0.1536.960@0.0.1536.960" timestamp="1594069110082" />
     <state width="1494" height="267" key="GridCell.Tab.0.right/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593999832265" />
+    <state x="356" y="230" key="IDE.errors.dialog" timestamp="1594069333671">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state x="356" y="230" key="IDE.errors.dialog/0.0.1536.960@0.0.1536.960" timestamp="1594069333671" />
     <state x="269" y="119" key="SettingsEditor" timestamp="1594068090906">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="269" y="119" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1594068090906" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594066091044">
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594069286229">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1594066091044" />
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1594069286229" />
     <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594004322551" />
     <state x="419" y="244" width="698" height="472" key="find.popup" timestamp="1593935980421">
       <screen x="0" y="0" width="1536" height="960" />
