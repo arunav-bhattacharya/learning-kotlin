@@ -543,14 +543,18 @@ Kotlin is an object oriented language and it supports all the different features
 - We cannot return `null` from a function nor pass `null` as an argument in Kotlin.
 - Every non-nullable type has a nullable counterpart suffixed by `?`
 - In order to return a `null` from a function the return type can be changed to its nullable counterpart by suffixing with `?`.
+
     ```kotlin
       fun nickName(name: String?) : String? {}
     ```
+  
 - Kotlin requires method calls on nullable references to be prefixed with either the safe-call operator or the non-null assertion operator.
     - **Safe-call operator (?):** The null-check and call to a method or a property can be done using the Safe call operator in one step. If the reference is null, then the safe-call operator will return null. But when using the **Elvis Operator (?:)**, we can return a default value in case of null.
+  
         ```kotlin
           return name?.reversed()?.toUpperCase()?:"Joker"
         ```
+      
     - **Non-Null operator (!!) : DO NOT USE THIS OPERATOR.** This operator can be used when we don't want Kotlin to do a null check. 
 
 [Kotlin Docs - Null Safety](https://kotlinlang.org/docs/reference/null-safety.html)    
@@ -558,19 +562,74 @@ Kotlin is an object oriented language and it supports all the different features
     
 <br/> 
 
-## 6. Some useful tricks
+## 6. Some useful language constructs
 
-### Type casting 
+### 6.a. Type casting
 
-### Tuples
+- We can check whether an object conforms to a given type at runtime by using the `is` operator or its negated form `!is`
+- **Smart Casts:**
+    - The Kotlin compiler tracks `is`-checks and explicit casts for immuatable values and automatically inserts safe-casts
 
-### Deconstructing values
+        ```kotlin
+            fun demo(x: Any) {
+                if (x is String) {
+                    print(x.length) // x is automatically cast to String
+                }
+            }
+        ```
+    
+    - The compiler is smart enough to know a cast to be safe if a negative check leads to a return
+
+        ```kotlin
+            if (x !is String) return            
+            print(x.length) // x is automatically cast to String
+        ```
+              
+    - or in the right-hand side of `&&` and `||`
+
+        ```kotlin
+            // x is automatically cast to string on the right-hand side of `||`
+            if (x !is String || x.length == 0) return
+        ```
+      
+    - Such smart casts work for when-expressions and while-loops as well
+    
+        ```kotlin
+            when (x) {
+                is Int -> print(x + 1)
+                is String -> print(x.length + 1)
+                is IntArray -> print(x.sum())
+            }
+        ```  
+      
+- **Safe (nullable) cast operator:**
+    - Illegal casting throws an exception. Such casting is called unsafe cast. Unsafe cast is done in Kotlin using the **infix operator `as`**.
+    - To avoid unsafe cast we can use safe cast using **as?** that returns `null` on failure
+
+        ```kotlin
+          val x: String? = y as String?
+        ```
+      
+[Additional Reading](https://kotlinlang.org/docs/reference/typecasts.html)
+
+### 6.b. Tuples - `Pair` & `Triple`
+
+- Kotlin provides two specific types: `Pair` for a tuple of size two and `Triple` for a size of three to quickly create two or three objects as a collection
+    ```kotlin
+          println(Pair("Tom", "Jerry"))
+    ```
+- Both `Pair` and `Triple` are immutable and are useful to create a grouping of two and three values, respectively.
+- For creating more than three immutable values, then `data` class is the option.
+
+[Additional Reading](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0043.xhtml#sec.pair)
+
+### 6.c. Deconstructing values
+
+[Additional Reading]()
 
 ### Exceptions 
 
-### Constants
-
-### Annotations
+[Additional Reading]()
 
 <br/> 
 
@@ -578,11 +637,19 @@ Kotlin is an object oriented language and it supports all the different features
 
 ### Higher Order Functions
 
+[Additional Reading]()
+
 ### Lambda Expressions
+
+[Additional Reading]()
 
 ### Closures
 
+[Additional Reading]()
+
 ### Extension Functions 
+
+[Additional Reading]()
 
 <br/> 
 
