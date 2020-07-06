@@ -211,8 +211,8 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
 
 - Functions in Kotlin are prefixed with `fun`
 - Some return types in function -
-    - `Unit` : This is the default return type. Unit is kind of equivalent to void in other languages. But in kotlin we can check if the value of a variable is `Unit` 
-    - `Nothing` : Nothing is a return type when a function returns exception.
+    - `Unit` : This is the default return type. Unit is kind of equivalent to void in other languages. But in kotlin we can check if the value of a variable is `Unit`.
+    - `Nothing` : Nothing is a return type when a function returns exception. `Nothing` is substitutable for any class including `Int`, `Double`, `String`, etc.
 - **Single expression** function doesn't need a function block    
 
 ### 2.b. Default & Named Parameters
@@ -397,7 +397,7 @@ Kotlin is an object oriented language and it supports all the different features
 
 - Base class in Kotlin is `Any`, similar to `Object` is Java. All classes are inherits from `Any`. 
 - By default all classes are `final`. 
-- In order to make a class non-final we need to make it `open`  
+- In order to make a class non-final we need to make it `open`.
 - Similarly members are also by default final. In order to override in the child class, we need to make the method `open` in the parent class.
 
 ### Abstract Classes
@@ -442,9 +442,17 @@ Kotlin is an object oriented language and it supports all the different features
 >   - Secondly we can have a class that implements multiple interfaces, but it can extend only one class. 
 >   
 
+### Generics
+
+- Similar to Java. Will revisit later.
+
 <br/> 
 
 ## Nulls
+
+- Kotlin is a null-safe language
+- We cannot assign types to `null`.
+- null check is done in Kotlin by appending `?` to the defining type 
 
 <br/> 
 
