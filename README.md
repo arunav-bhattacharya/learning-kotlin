@@ -498,6 +498,8 @@ Kotlin is an object oriented language and it supports all the different features
 >   - Secondly we can have a class that implements multiple interfaces, but it can extend only one class. 
 >   
 
+[Additional Reading](https://kotlinlang.org/docs/reference/interfaces.html)
+
 ### 4.c. Generics
 
 - Similar to Java. Will revisit later in details.
