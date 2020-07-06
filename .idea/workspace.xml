@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3-classes/src/com/arunav/kotlin/classes/Objects.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__6_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4-inheritance/4-inheritance.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3-classes/src/com/arunav/kotlin/classes/GettersNSetters.kt" beforeDir="false" afterPath="$PROJECT_DIR$/3-classes/src/com/arunav/kotlin/classes/GettersNSetters.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3-classes/src/com/arunav/kotlin/classes/Priority.kt" beforeDir="false" afterPath="$PROJECT_DIR$/3-classes/src/com/arunav/kotlin/classes/PriorityEnum.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -244,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593990154939</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="README.md">
+      <created>1593999871001</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1593999871001</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -270,11 +276,11 @@
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="478" y="157" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1536.960@0.0.1536.960" timestamp="1593931916039" />
-    <state x="385" y="82" key="CommitChangelistDialog2" timestamp="1593990154830">
+    <state x="385" y="82" key="CommitChangelistDialog2" timestamp="1593999870868">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="385" y="82" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1593972564816" />
-    <state x="385" y="82" key="CommitChangelistDialog2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593990154830" />
+    <state x="385" y="82" key="CommitChangelistDialog2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593999870868" />
     <state width="1494" height="267" key="GridCell.Tab.0.bottom" timestamp="1593999832265">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
@@ -299,19 +305,20 @@
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="269" y="119" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1593970127406" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1593990159194">
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1593999874791">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1593972567753" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593990159194" />
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593999874791" />
     <state x="419" y="244" width="698" height="472" key="find.popup" timestamp="1593935980421">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="419" y="244" width="698" height="472" key="find.popup/0.0.1536.960@0.0.1536.960" timestamp="1593935980421" />
-    <state x="100" y="208" key="new project wizard" timestamp="1593972601991">
+    <state x="100" y="208" key="new project wizard" timestamp="1594000990313">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="100" y="208" key="new project wizard/0.0.1536.960@0.0.1536.960" timestamp="1593972601991" />
+    <state x="100" y="208" key="new project wizard/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594000990313" />
     <state x="433" y="228" width="670" height="676" key="search.everywhere.popup" timestamp="1593977121009">
       <screen x="0" y="0" width="1536" height="960" />
     </state>

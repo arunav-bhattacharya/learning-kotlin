@@ -395,9 +395,52 @@ Kotlin is an object oriented language and it supports all the different features
 
 ## Inheritance 
 
+- Base class in Kotlin is `Any`, similar to `Object` is Java. All classes are inherits from `Any`. 
+- By default all classes are `final`. 
+- In order to make a class non-final we need to make it `open`  
+- Similarly members are also by default final. In order to override in the child class, we need to make the method `open` in the parent class.
+
 ### Abstract Classes
 
+- Similar to Java
+
 ### Interfaces
+
+- Similar to Java 8. 
+- Can have default implementations.
+- Can define abstract properties but cannot have values for it.
+- However, we can define custom getters and setters on interface properties.
+- When a class implements multiple interfaces, say A and B, and both have a method with the same name, say foo(), then Kotlin provides a way for the implementing class to resolve the conflict by specifying the interfaces in Angular brackets <>.
+
+    ```kotlin
+        interface A {
+            fun foo() { print("A") }
+            fun bar()
+        }
+        interface B {
+            fun foo() { print("B") }
+            fun bar() { print("bar") }
+        }
+        class C : A {
+            override fun bar() { print("bar") }
+        }
+        class D : A, B {
+            override fun foo() {
+                super<A>.foo()
+                super<B>.foo()
+            }
+            override fun bar() {
+                super<B>.bar()
+            }
+        }
+    ```
+
+> **Difference between Abstract Classes and Interfaces**:
+>   
+> In both abstract classes and interfaces, we can define abstract methods as well as provide default implementation of some methods. But below are the major differences between them - 
+>   - In abstract classes we can maintain state, but in interfaces we cannot. We can define properties inside an interface, but we cannot maintain value or state inside it.
+>   - Secondly we can have a class that implements multiple interfaces, but it can extend only one class. 
+>   
 
 <br/> 
 

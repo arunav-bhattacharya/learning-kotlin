@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/1-basics/1-basics.iml" filepath="$PROJECT_DIR$/1-basics/1-basics.iml" />
       <module fileurl="file://$PROJECT_DIR$/2-functions/2-functions.iml" filepath="$PROJECT_DIR$/2-functions/2-functions.iml" />
       <module fileurl="file://$PROJECT_DIR$/3-classes/3-classes.iml" filepath="$PROJECT_DIR$/3-classes/3-classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4-inheritance/4-inheritance.iml" filepath="$PROJECT_DIR$/4-inheritance/4-inheritance.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin.iml" filepath="$PROJECT_DIR$/kotlin.iml" />
     </modules>
   </component>
