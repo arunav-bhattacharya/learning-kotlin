@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__8_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6-useful-constructs/6-useful-constructs.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6-useful-constructs/src/com/arunav/kotlin/constructs/Tuples.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6-useful-constructs/src/com/arunav/kotlin/constructs/TypeCasting.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6-useful-constructs/src/com/arunav/kotlin/constructs/Tuples.kt" beforeDir="false" afterPath="$PROJECT_DIR$/6-useful-constructs/src/com/arunav/kotlin/constructs/Tuples.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +61,7 @@
       <recent name="$PROJECT_DIR$/1-basics/src/com/arunav/kotlin/basics" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.TypeCastingKt">
+  <component name="RunManager" selected="Kotlin.TuplesKt">
     <configuration name="InheritanceKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="4-inheritance" />
       <option name="VM_PARAMETERS" />
@@ -105,14 +101,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PriorityEnumKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="3-classes" />
+    <configuration name="TuplesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="6-useful-constructs" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.classes.PriorityEnumKt" />
+      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.constructs.TuplesKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,11 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.TuplesKt" />
         <item itemvalue="Kotlin.TypeCastingKt" />
         <item itemvalue="Kotlin.NullsKt" />
         <item itemvalue="Kotlin.InheritanceKt" />
         <item itemvalue="Kotlin.ObjectsKt" />
-        <item itemvalue="Kotlin.PriorityEnumKt" />
       </list>
     </recent_temporary>
   </component>
@@ -325,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594017644619</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Useful-constructs">
+      <created>1594023795826</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1594023795826</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -342,7 +345,8 @@
     <MESSAGE value="Inheritance" />
     <MESSAGE value="Nulls" />
     <MESSAGE value="readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme" />
+    <MESSAGE value="Useful-constructs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Useful-constructs" />
   </component>
   <component name="WindowStateProjectService">
     <state x="368" y="147" width="800" height="714" key="#Intentions" timestamp="1593991749740">
@@ -358,39 +362,39 @@
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="478" y="157" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1536.960@0.0.1536.960" timestamp="1593931916039" />
-    <state x="385" y="82" key="CommitChangelistDialog2" timestamp="1594017644474">
+    <state x="385" y="82" key="CommitChangelistDialog2" timestamp="1594066076431">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="385" y="82" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1594017644474" />
+    <state x="385" y="82" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1594066076431" />
     <state x="385" y="82" key="CommitChangelistDialog2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594004320909" />
-    <state width="1494" height="275" key="GridCell.Tab.0.bottom" timestamp="1594020580993">
+    <state width="1494" height="275" key="GridCell.Tab.0.bottom" timestamp="1594066069998">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="275" key="GridCell.Tab.0.bottom/0.0.1536.960@0.0.1536.960" timestamp="1594020580993" />
+    <state width="1494" height="275" key="GridCell.Tab.0.bottom/0.0.1536.960@0.0.1536.960" timestamp="1594066069998" />
     <state width="1494" height="267" key="GridCell.Tab.0.bottom/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593999832265" />
-    <state width="1494" height="275" key="GridCell.Tab.0.center" timestamp="1594020580992">
+    <state width="1494" height="275" key="GridCell.Tab.0.center" timestamp="1594066069997">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="275" key="GridCell.Tab.0.center/0.0.1536.960@0.0.1536.960" timestamp="1594020580992" />
+    <state width="1494" height="275" key="GridCell.Tab.0.center/0.0.1536.960@0.0.1536.960" timestamp="1594066069997" />
     <state width="1494" height="267" key="GridCell.Tab.0.center/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593999832265" />
-    <state width="1494" height="275" key="GridCell.Tab.0.left" timestamp="1594020580992">
+    <state width="1494" height="275" key="GridCell.Tab.0.left" timestamp="1594066069997">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="275" key="GridCell.Tab.0.left/0.0.1536.960@0.0.1536.960" timestamp="1594020580992" />
+    <state width="1494" height="275" key="GridCell.Tab.0.left/0.0.1536.960@0.0.1536.960" timestamp="1594066069997" />
     <state width="1494" height="267" key="GridCell.Tab.0.left/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593999832265" />
-    <state width="1494" height="275" key="GridCell.Tab.0.right" timestamp="1594020580992">
+    <state width="1494" height="275" key="GridCell.Tab.0.right" timestamp="1594066069997">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="275" key="GridCell.Tab.0.right/0.0.1536.960@0.0.1536.960" timestamp="1594020580992" />
+    <state width="1494" height="275" key="GridCell.Tab.0.right/0.0.1536.960@0.0.1536.960" timestamp="1594066069997" />
     <state width="1494" height="267" key="GridCell.Tab.0.right/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593999832265" />
     <state x="269" y="119" key="SettingsEditor" timestamp="1594008327163">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="269" y="119" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1594008327163" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594017645901">
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594023798429">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1594017645901" />
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1594023798429" />
     <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594004322551" />
     <state x="419" y="244" width="698" height="472" key="find.popup" timestamp="1593935980421">
       <screen x="0" y="0" width="1536" height="960" />

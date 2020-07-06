@@ -9,13 +9,22 @@
 > This document is split into 2 parts - 
 >   A. Getting Familiar
 >   B. Some advanced concepts 
->
+> 
+> My takeaways from Kotlin till now -
+>   1. null-safe language - usage of nullable type - safe-call & elvis operators
+>   2. No checked exception - Reduces clutter in code
+>   3. Using default & named parameters in functions
+>   4. Using `data` class accompanied by copy() method 
+>   5. Smart casting
+>   6. Object destructuring
+>   7. Custom getters & setters
+>   
 
 <br/> 
 
 # **A. Getting Familiar**
 
-IntelliJ or Eclipse already have the Kotlin compiler so don't need to download it separately if we are using any of these IDEs.
+## IntelliJ or Eclipse already have the Kotlin compiler so don't need to download it separately if we are using any of these IDEs.
 
 <img src="./images/JVM.png"> 
 
@@ -140,7 +149,6 @@ IntelliJ or Eclipse already have the Kotlin compiler so don't need to download i
     - `..` : Incrementing 
     - `downTo` : Decrementing
     - `step` : no. of steps increment or decrement can happen
-    
     
     ```kotlin
         for (i in 1..10) {
@@ -615,6 +623,7 @@ Kotlin is an object oriented language and it supports all the different features
 ### 6.b. Tuples - `Pair` & `Triple`
 
 - Kotlin provides two specific types: `Pair` for a tuple of size two and `Triple` for a size of three to quickly create two or three objects as a collection
+
     ```kotlin
           println(Pair("Tom", "Jerry"))
     ```
@@ -623,13 +632,52 @@ Kotlin is an object oriented language and it supports all the different features
 
 [Additional Reading](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0043.xhtml#sec.pair)
 
-### 6.c. Deconstructing values
+### 6.c. Destructuring
 
-[Additional Reading]()
+- Destructuring is to extract values into variables from an existing object.
+- The destructuring in Kotlin is based on the position of properties. In JavaScript object destructuring is based on name of properties. 
+- We can skip properties while destructuring by putting underscores`(_)`
 
-### Exceptions 
+    ```kotlin
+        fun getFullName() = Triple("John", "Quincy", "Adams")
+        val (first, middle, last) = getFullName()
+        val (f,_, l) = getFullName()    
+    ```
 
-[Additional Reading]()
+[Additional Reading](https://kotlinlang.org/docs/reference/multi-declarations.html)
+
+### 6.d. Exceptions 
+
+- All exception classes in Kotlin are descendants of the class `Throwable`.
+- Kotlin does not have checked exceptions.
+- Every exception has a message, stack trace and an optional cause.
+- Sample exception block
+
+    ```kotlin
+        try {
+            // some code
+        }
+        catch (e: SomeException) {
+            // handler
+        }
+        finally {
+            // optional finally block
+        }
+    ```
+  
+- `try` is an expression, i.e., it can return a value
+- The returned value of a try-expression is either the last expression in the `try` block or the last expression in the `catch` block (or blocks). Contents of the `finally` block do not affect the result of the expression.
+- `throw` is an expression in Kotlin that returns a special type `Nothing`.
+
+    ```kotlin
+        fun fail(message: String): Nothing {
+            throw IllegalArgumentException(message)
+        }
+        val s = person.name ?: fail("Name required")
+        println(s)     // 's' is known to be initialized at this point
+    ```
+  
+[Additional Reading](https://kotlinlang.org/docs/reference/exceptions.html)
 
 <br/> 
 
