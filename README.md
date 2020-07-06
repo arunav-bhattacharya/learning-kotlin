@@ -552,7 +552,8 @@ Kotlin is an object oriented language and it supports all the different features
           return name?.reversed()?.toUpperCase()?:"Joker"
         ```
     - **Non-Null operator (!!) : DO NOT USE THIS OPERATOR.** This operator can be used when we don't want Kotlin to do a null check. 
-    
+
+[Kotlin Docs - Null Safety](https://kotlinlang.org/docs/reference/null-safety.html)    
 [Additional Reading](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0051.xhtml)
     
 <br/> 
