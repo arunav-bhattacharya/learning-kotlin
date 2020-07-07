@@ -821,17 +821,21 @@ Kotlin is an object oriented language and it supports all the different features
 
 [Additional Reading](https://kotlinlang.org/docs/reference/collections-overview.html)
     
-### 9.b. Operations overview
+### 9.b. Collection Common Operations
 
 - Common operations are available for both read-only and mutable collections. Common operations fall into these groups:
-    - Transformations
-    - Filtering
-    - plus and minus operators
-    - Grouping
-    - Retrieving collection parts
-    - Retrieving single elements
-    - Ordering
-    - Aggregate operations
+    - [Transformations](https://kotlinlang.org/docs/reference/collection-transformations.html)
+    - [Filtering](https://kotlinlang.org/docs/reference/collection-filtering.html)
+    - [plus and minus operators](https://kotlinlang.org/docs/reference/collection-plus-minus.html)
+    - [Grouping](https://kotlinlang.org/docs/reference/collection-grouping.html)
+    - [Retrieving collection parts](https://kotlinlang.org/docs/reference/collection-parts.html)
+    - [Retrieving single elements](https://kotlinlang.org/docs/reference/collection-elements.html)
+    - [Ordering](https://kotlinlang.org/docs/reference/collection-ordering.html)
+    - [Aggregate operations](https://kotlinlang.org/docs/reference/collection-aggregate.html)
+    - [Write Operations](https://kotlinlang.org/docs/reference/collection-write.html)
+    - [List Operations](https://kotlinlang.org/docs/reference/list-operations.html)
+    - [Set Operations](https://kotlinlang.org/docs/reference/set-operations.html)
+    - [Map Operations](https://kotlinlang.org/docs/reference/map-operations.html)
     
 - Some of the more frequently used operations are - 
     - `forEach`

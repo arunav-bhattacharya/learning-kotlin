@@ -177,7 +177,7 @@
       <option name="presentableId" value="Default" />
       <updated>1593931413945</updated>
       <workItem from="1594067806461" duration="1518000" />
-      <workItem from="1594069543780" duration="20768000" />
+      <workItem from="1594069543780" duration="21127000" />
     </task>
     <task id="LOCAL-00001" summary="/.idea files">
       <created>1593931867457</created>
@@ -403,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594107771078</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="README.md">
+      <created>1594107883231</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1594107883231</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,11 +521,11 @@
     </state>
     <state x="269" y="119" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1594075991330" />
     <state x="269" y="119" key="SettingsEditor/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594090852620" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594107776217">
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594107887167">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1594069286229" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594107776217" />
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594107887167" />
     <state x="419" y="244" width="698" height="474" key="find.popup" timestamp="1594075239531">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
@@ -528,11 +535,11 @@
     </state>
     <state x="100" y="208" key="new project wizard/0.0.1536.960@0.0.1536.960" timestamp="1594066116341" />
     <state x="100" y="169" key="new project wizard/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594090430127" />
-    <state x="433" y="228" width="670" height="676" key="search.everywhere.popup" timestamp="1594105133900">
+    <state x="433" y="228" width="670" height="676" key="search.everywhere.popup" timestamp="1594108134600">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="433" y="228" width="670" height="676" key="search.everywhere.popup/0.0.1536.960@0.0.1536.960" timestamp="1594066996504" />
-    <state x="433" y="228" width="670" height="676" key="search.everywhere.popup/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594105133900" />
+    <state x="433" y="228" width="670" height="676" key="search.everywhere.popup/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594108134600" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/kotlin$FunctionalKt.ic" NAME="FunctionalKt Coverage Results" MODIFIED="1594079015288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
