@@ -22,17 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="Getting Functional &amp; Readme on Interoperability">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__10_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__11_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__12_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8-interoperability/8-interoperability.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8-interoperability/src/com/arunav/java/interop/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/8-interoperability/src/com/arunav/kotlin/interop/Employee.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/9-standard-libraries/9-standard-libraries.iml" afterDir="false" />
+    <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/7-functional/src/com/arunav/kotlin/functional/Functional.kt" beforeDir="false" afterPath="$PROJECT_DIR$/7-functional/src/com/arunav/kotlin/functional/Functional.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,15 +77,15 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/9-standard-libraries/src" />
       <recent name="$PROJECT_DIR$/6-useful-constructs/src/com/arunav/kotlin/constructs" />
       <recent name="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance" />
       <recent name="$PROJECT_DIR$/3-classes/src/com/arunav/kotlin/classes" />
       <recent name="$PROJECT_DIR$/2-functions/src/com/arunav/kotlin/functions" />
-      <recent name="$PROJECT_DIR$/1-basics/src/com/arunav/kotlin/basics" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images" />
     </key>
   </component>
   <component name="RunManager" selected="Kotlin.FunctionalKt">
@@ -185,7 +176,7 @@
       <option name="presentableId" value="Default" />
       <updated>1593931413945</updated>
       <workItem from="1594067806461" duration="1518000" />
-      <workItem from="1594069543780" duration="14929000" />
+      <workItem from="1594069543780" duration="15232000" />
     </task>
     <task id="LOCAL-00001" summary="/.idea files">
       <created>1593931867457</created>
@@ -383,7 +374,21 @@
       <option name="project" value="LOCAL" />
       <updated>1594090496149</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Initialized interoperability &amp; standard library modules">
+      <created>1594091326951</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1594091326951</updated>
+    </task>
+    <task id="LOCAL-00030" summary="README.md">
+      <created>1594091439213</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1594091439213</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,14 +416,15 @@
     <MESSAGE value="Kotlin Basics - Variables, Conditionals, Loops &amp; Ranges, Packages" />
     <MESSAGE value="Functions" />
     <MESSAGE value="Classes" />
-    <MESSAGE value="README.md" />
     <MESSAGE value="Inheritance" />
     <MESSAGE value="Nulls" />
     <MESSAGE value="readme" />
     <MESSAGE value="Useful-constructs" />
     <MESSAGE value="Getting Functional" />
     <MESSAGE value="Getting Functional &amp; Readme on Interoperability" />
-    <option name="LAST_COMMIT_MESSAGE" value="Getting Functional &amp; Readme on Interoperability" />
+    <MESSAGE value="Initialized interoperability &amp; standard library modules" />
+    <MESSAGE value="README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="README.md" />
   </component>
   <component name="WindowStateProjectService">
     <state x="368" y="147" width="800" height="714" key="#Intentions" timestamp="1593991749740">
@@ -439,6 +445,10 @@
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="600" y="377" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.960@0.0.1536.960" timestamp="1594068029280" />
+    <state x="436" y="152" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1594091195089">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state x="436" y="152" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594091195089" />
     <state x="385" y="82" key="CommitChangelistDialog2" timestamp="1594066088036">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
@@ -489,11 +499,11 @@
     </state>
     <state x="269" y="119" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1594075991330" />
     <state x="269" y="119" key="SettingsEditor/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594090852620" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594090497687">
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594091443539">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1594069286229" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594090497687" />
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594091443539" />
     <state x="419" y="244" width="698" height="474" key="find.popup" timestamp="1594075239531">
       <screen x="0" y="0" width="1536" height="960" />
     </state>

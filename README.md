@@ -345,7 +345,7 @@ Kotlin is an object oriented language and it supports all the different features
     - The primary constructor needs to have at least one parameter
     - All primary constructor parameters need to be marked as `val` or `var`
     - Data classes cannot be abstract, open, sealed or inner
-- We can `override` and provide explicit implementations of `equals()`, `hashCode()` or `toString()` in the data class body, then these functions are not generated, and the explicit implementations are used;
+- We can `override` and provide explicit implementations of `equals()`, `hashCode()` or `toString()` in the `data` class body. These functions are not generated then and the explicit implementations are used;
 - `copy()` function can be used to copy an object altering some of its properties, but keeping the rest unchanged. 
 
 
