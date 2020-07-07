@@ -24,11 +24,13 @@
 
 # **A. Getting Familiar**
 
-## IntelliJ or Eclipse already have the Kotlin compiler so don't need to download it separately if we are using any of these IDEs.
+> IntelliJ or Eclipse already have the Kotlin compiler so don't need to download it separately if we are using any of these IDEs.
 
 <img src="./images/JVM.png"> 
 
 ## 1. Basics
+
+> In this section we will learn about some basic constructs about Kotlin.
 
 ### 1.a. Kotlin Compiler - `kotlinc` 
 
@@ -215,6 +217,8 @@
  
 ## 2. Intro to Functions
 
+> In this section, we'll be doing an introduction to functions in Kotlin 
+
 ### 2.a. Have `fun` in Kotlin
 
 - Functions in Kotlin are prefixed with `fun`
@@ -263,6 +267,8 @@
 Kotlin is an object oriented language and it supports all the different features of object-oriented programming.
 
 ### 3.a. `class` & `construtor`
+
+> In this section, we'll get started with the OO concepts in Kotlin. 
 
 - Classes can be defined with or without any {}.
 - Classes has properties and not fields. Properties can be defined as `val` or `var`.
@@ -402,6 +408,8 @@ Kotlin is an object oriented language and it supports all the different features
 <br/> 
 
 ## 4. Inheritance 
+
+> We'll extend the OO concepts in Kotlin by looking into Inheritance, Interfaces, Abstract classes & Generics.
 
 - Base class in Kotlin is `Any`, similar to `Object` is Java. All classes are inherits from `Any`. 
 - By default all classes are `final`. In order to make a class non-final we need to make it `open`.
@@ -572,6 +580,8 @@ Kotlin is an object oriented language and it supports all the different features
 
 ## 6. Some useful language constructs
 
+> In this section we will take a look at some of the useful language constructs that Kotlin provides, which will help us deepen our understanding of the further sections
+
 ### 6.a. Type casting
 
 - We can check whether an object conforms to a given type at runtime by using the `is` operator or its negated form `!is`
@@ -683,47 +693,114 @@ Kotlin is an object oriented language and it supports all the different features
 
 ## 7. Functional Style
 
-### Higher Order Functions
+> We'll get functional in this section. Learn about some key concepts how Kotlin supports functional programming.
 
-- In funtional style of programming we can pass functions as arguments to other functions.
-- In Kotlin, method references are denoted as `::` and lambda expressions are expressed with an "->" similar to Java
-- We can pass a method reference or a lambda expression to a function that accepts a function as an argument
+### 7.a. Higher Order Functions
 
-[Additional Reading]()
+- A higher order function is a function that can takes a function as an argument, or return a function.  
+- In Kotlin, method references are denoted as `::` and lambda expressions are expressed with "->", similar to Java.
+- We can pass a method reference or a lambda expression to a function that accepts a function as an argument.
 
-### Lambda Expressions
 
-[Additional Reading]()
+### 7.b. Lambda Expressions
 
-### Closures
+- For single parameter in a lambda expression, we don't have to explicitly define the parameter in the lambda expression. Instead we can refer to the parameter as `it` in the body of the expression. Let's see an example -
 
-[Additional Reading]()
+    ```kotlin
+        someFunc(3, {x -> x*x})
+        someFunc(3, {it * it})
+    ```
+  
+- **Dropping the brackets** when calling higher-order function:  
+     - When the last or the only parameter of a function is a function, then when calling the higher-order function, the function parameter can be passed outside the parentheses of the function call
 
-### Extension Functions 
+    ```kotlin
+        operation(5) { it * it }
+    ```
 
-[Additional Reading]()
+- In lambdas as well we can use object destructuring
+
+
+### 7.c. Anonymous Functions
+
+- We can pass functions with no names as a parameter to higher-order functions. These are called anonymous functions.
+- The difference with a lambda function and anonymous function is that in anonymous functions we can have multiple return points, but lambdas have just one.
+
+    ```kotlin
+        operation(7, fun(x): Int {
+            if (x < 0)
+                return 0
+            else
+                return Math.sqrt(x.toDouble()).toInt()
+        })
+    ```
+
+### 7.d. Closures
+
+- A lambda expression or anonymous function (as well as a local function and an object expression) can access its closure, i.e. the variables declared in the outer scope, also known as *lexical scoping*. 
+- The variables captured in the closure can be modified in the lambda. Such a lambda is called closure.
+
+> **Note**
+>
+> Keep closure as pure functions to avoid confusion and to minimize errors
+
+[Additional Reading](https://kotlinlang.org/docs/reference/lambdas.html)
+
+### 7.e. Extension Functions
+
+- Extension function allows extending functionality of class without inheriting from it.
+- Scope of exception functions is packages. In order to use outside the package, we need to import the package with the extension function.
+- Member function takes precedence over extension function when both have same names and definition.
+- Extensions are resolved **statically**. By defining an extension, we do not insert new members into a class, but merely make new functions callable with the dot-notation on variables of this type.
+
+[Additional Reading](https://kotlinlang.org/docs/reference/extensions.html)
 
 <br/> 
 
 ## 8. Interoperability
 
+> Kotlin is 100% interoperable with Java. Its 2 way - Java to Kotlin and Kotlin to Java as well.
+
 ### Java in Kotlin
 
 ### Working with nulls from Java
 
+- Java nullable types become Platform types in Kotlin
+
 ### Kotlin in Java
+
+- Properties in Kotlin will automatically be converted to corresponding get() and set() methods when the same is used inside a Java class.
+- **`@JvmField`**: For properties defined inside Kotlin code to be accessible from Java, this annotation in Kotlin code will help discover the property in Java code
+- **`@JvmOverloads`**: For default parameters defined in Kotlin methods, Java won't have direct access to the overloaded method without specifying value for the default parameter. With `@JvmOverloads` annotation on the Kotlin method, Java class will now have access to the overloaded method without that particular default parameter. 
+- **`@JvmName`**: Kotlin provides us with a feature of having a different name to a particular method when a method is referenced inside a Java code by using the `@JvmName` annotation.
+- **`@Throws`**: When an exception is thrown from a method in Kotlin, the same needs to be annotated with `@Throws` in order for the Java class to handle it.
 
 ### Top-level functions & properties in Kotlin
 
+- Top level functions when compiled by default generates a bytecode file with name <filename>Kt.class. 
+- In order to reference these functions inside Java we can simply call the function as <filename>Kt.functionName().
+- In order to change the name of the default class name we can use the annotation at the top of the Kotlin file -
+
+    ```kotlin
+      @file:JvmName("MyKotlinClass")
+    ```
+  
+- Top level properties can again be accessed by default using get() and set() methods inside Java.
+- In case we want to access the property as a field name in Java class, then the same needs to be prefixed using `const` in the Kotlin file.
+
 ### Extension functions from Java
 
-### Interop with Java 7 & 8
+- Extension functions can be accessed from Java using the Kotlin-className.functionName() similar to accessing a static method in Java.
 
 <br/> 
 
 ## 9. Standard Library
 
 ### Kotlin Collections
+
+- Lists
+- Sets
+- Maps
 
 ### Filter, map, flatMap
 

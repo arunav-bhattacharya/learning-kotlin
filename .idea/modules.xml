@@ -9,6 +9,8 @@
       <module fileurl="file://$PROJECT_DIR$/5-nulls/5-nulls.iml" filepath="$PROJECT_DIR$/5-nulls/5-nulls.iml" />
       <module fileurl="file://$PROJECT_DIR$/6-useful-constructs/6-useful-constructs.iml" filepath="$PROJECT_DIR$/6-useful-constructs/6-useful-constructs.iml" />
       <module fileurl="file://$PROJECT_DIR$/7-functional/7-functional.iml" filepath="$PROJECT_DIR$/7-functional/7-functional.iml" />
+      <module fileurl="file://$PROJECT_DIR$/8-interoperability/8-interoperability.iml" filepath="$PROJECT_DIR$/8-interoperability/8-interoperability.iml" />
+      <module fileurl="file://$PROJECT_DIR$/9-standard-libraries/9-standard-libraries.iml" filepath="$PROJECT_DIR$/9-standard-libraries/9-standard-libraries.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin.iml" filepath="$PROJECT_DIR$/kotlin.iml" />
     </modules>
   </component>
