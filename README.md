@@ -22,7 +22,7 @@
 
 <br/> 
 
-# **A. Getting Familiar**
+# **Part I - Getting Familiar**
 
 > IntelliJ or Eclipse already have the Kotlin compiler so don't need to download it separately if we are using any of these IDEs.
 
@@ -761,15 +761,15 @@ Kotlin is an object oriented language and it supports all the different features
 
 > Kotlin is 100% interoperable with Java. Its 2 way - Java to Kotlin and Kotlin to Java as well.
 
-### Java in Kotlin
+### 8.a. Java in Kotlin
 
 [Additional Reading](https://kotlinlang.org/docs/reference/java-interop.html)
 
-### Working with nulls from Java
+### 8.b. Working with nulls from Java
 
 - Java nullable types become Platform types in Kotlin
 
-### Kotlin in Java
+### 8.c. Kotlin in Java
 
 - Properties in Kotlin will automatically be converted to corresponding get() and set() methods when the same is used inside a Java class.
 - **`@JvmField`**: For properties defined inside Kotlin code to be accessible from Java, this annotation in Kotlin code will help discover the property in Java code
@@ -780,7 +780,7 @@ Kotlin is an object oriented language and it supports all the different features
 [Additional Reading](https://kotlinlang.org/docs/reference/java-to-kotlin-interop.html)
 
 
-### Top-level functions & properties in Kotlin
+### 8.d. Top-level functions & properties in Kotlin
 
 - Top level functions when compiled by default generates a bytecode file with name <filename>Kt.class. 
 - In order to reference these functions inside Java we can simply call the function as <filename>Kt.functionName().
@@ -793,7 +793,7 @@ Kotlin is an object oriented language and it supports all the different features
 - Top level properties can again be accessed by default using get() and set() methods inside Java.
 - In case we want to access the property as a field name in Java class, then the same needs to be prefixed using `const` in the Kotlin file.
 
-### Extension functions from Java
+### 8.e. Extension functions from Java
 
 - Extension functions can be accessed from Java using the Kotlin-className.functionName() similar to accessing a static method in Java.
 
@@ -801,27 +801,82 @@ Kotlin is an object oriented language and it supports all the different features
 
 ## 9. Standard Library
 
-### Kotlin Collections
+### 9.a. Kotlin Std Library & Collections
 
-- Lists
-- Sets
-- Maps
+<img src="./images/collections.png"/>
 
-### Filter, map, flatMap
+- Kotlin has a very small standard library (~800Kb).
+- Kotlin does not have its own collections. What it has is some interfaces on top of Java collections - 
+    - Mutable 
+    - Immutable
+- Collections are 
+    - List
+    - Array (including equivalent primitive type)
+    - Set
+    - Map
+    - HashMap
+    - HashSet, etc...
+    
+- Use Kotlin helper functions when working with Collections. It automatically determines which class to call. For example when defining an empty list using `emptyList<>()`, it uses `kotlin.collections.EmptyList`, whereas when defining using `Arrays.asList()` it uses `java.util.Arrays$ArrayList`
 
-### Lazy Evaluation with Sequences
+[Additional Reading](https://kotlinlang.org/docs/reference/collections-overview.html)
+    
+### 9.b. Operations overview
 
-### String Extension
+- Common operations are available for both read-only and mutable collections. Common operations fall into these groups:
+    - Transformations
+    - Filtering
+    - plus and minus operators
+    - Grouping
+    - Retrieving collection parts
+    - Retrieving single elements
+    - Ordering
+    - Aggregate operations
+    
+- Some of the more frequently used operations are - 
+    - `forEach`
+    - `map`
+    - `filter`
+    - `reduce`
+    - `flatMap`
+    - `take`, etc...
+
+[Additional Reading](https://kotlinlang.org/docs/reference/collection-operations.html)
+
+### Sequences - Lazy Evaluation
+
+- Sequences are equivalent to Java Streams
+- Parallel sequences is not available on Kotlin
+- Using sequences for evaluating collections lazily -
+    - `asSequence()`
+    - `generateSequence()`
+    - `lazy()`, etc...
+
+[Additional Reading](https://kotlinlang.org/docs/reference/sequences.html)
+
+### String Extensions
+
+- A bunch of String manipulation functions are available in Kotlin. Check it out here - 
+    [Kotlin String Functions](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/)
+
+- Some utility functions to checkout -
+    - `run()` 
+    - `with()`
+    - `apply()`
+    - `let()`, etc...
+[Additional Reading](https://kotlinlang.org/docs/tutorials/kotlin-for-py/functional-programming.html#nice-utility-functions)
 
 <br/> 
 
 ## 10. Build Tools
 
+- We can use standard build tools like Ant, Maven, Gradle, etc to build Kotlin projects.
+
 <br/> 
 <br/> 
 
 
-# **2. Some Advanced Concepts**
+# **Part II -  Some Advanced Concepts**
 
 ## Functions - A Deeper look
 <br/> 
