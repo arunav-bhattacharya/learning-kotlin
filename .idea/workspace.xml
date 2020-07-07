@@ -23,14 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="README.md">
-      <change afterPath="$PROJECT_DIR$/9-collections/src/com.arunav.kotlin.stdlib/Collections.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/9-collections/src/com.arunav.kotlin.stdlib/OperationsOnCollections.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/9-collections/src/com.arunav.kotlin.stdlib/Sequences.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/9-collections/src/com.arunav.kotlin.stdlib/StringExtensions.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/collections.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/9-standard-libraries/9-standard-libraries.iml" beforeDir="false" afterPath="$PROJECT_DIR$/9-collections/9-collections.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +177,7 @@
       <option name="presentableId" value="Default" />
       <updated>1593931413945</updated>
       <workItem from="1594067806461" duration="1518000" />
-      <workItem from="1594069543780" duration="20631000" />
+      <workItem from="1594069543780" duration="20768000" />
     </task>
     <task id="LOCAL-00001" summary="/.idea files">
       <created>1593931867457</created>
@@ -403,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594091569545</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="README.md">
+      <created>1594107771078</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1594107771078</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,11 +514,11 @@
     </state>
     <state x="269" y="119" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1594075991330" />
     <state x="269" y="119" key="SettingsEditor/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594090852620" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594091573023">
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594107776217">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1594069286229" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594091573023" />
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594107776217" />
     <state x="419" y="244" width="698" height="474" key="find.popup" timestamp="1594075239531">
       <screen x="0" y="0" width="1536" height="960" />
     </state>

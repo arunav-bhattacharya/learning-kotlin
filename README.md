@@ -864,6 +864,7 @@ Kotlin is an object oriented language and it supports all the different features
     - `with()`
     - `apply()`
     - `let()`, etc...
+    
 [Additional Reading](https://kotlinlang.org/docs/tutorials/kotlin-for-py/functional-programming.html#nice-utility-functions)
 
 <br/> 
