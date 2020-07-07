@@ -364,7 +364,7 @@ Kotlin is an object oriented language and it supports all the different features
       }    
     ```
 
-### 3.e. Enum Classes
+### 3.e. `enum` Classes
 
 - Enum classes are used for creating a bunch of enumerated values. 
 - We can customize and iterate over them as well.
