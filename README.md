@@ -763,6 +763,8 @@ Kotlin is an object oriented language and it supports all the different features
 
 ### Java in Kotlin
 
+[Additional Reading](https://kotlinlang.org/docs/reference/java-interop.html)
+
 ### Working with nulls from Java
 
 - Java nullable types become Platform types in Kotlin
@@ -774,6 +776,9 @@ Kotlin is an object oriented language and it supports all the different features
 - **`@JvmOverloads`**: For default parameters defined in Kotlin methods, Java won't have direct access to the overloaded method without specifying value for the default parameter. With `@JvmOverloads` annotation on the Kotlin method, Java class will now have access to the overloaded method without that particular default parameter. 
 - **`@JvmName`**: Kotlin provides us with a feature of having a different name to a particular method when a method is referenced inside a Java code by using the `@JvmName` annotation.
 - **`@Throws`**: When an exception is thrown from a method in Kotlin, the same needs to be annotated with `@Throws` in order for the Java class to handle it.
+
+[Additional Reading](https://kotlinlang.org/docs/reference/java-to-kotlin-interop.html)
+
 
 ### Top-level functions & properties in Kotlin
 
