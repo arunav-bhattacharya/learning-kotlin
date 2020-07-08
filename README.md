@@ -976,7 +976,7 @@ Kotlin is an object oriented language and it supports all the different features
 
 <br/>
 
-## 11. Class Scenarios
+## 11. More about Classes
 
 > In this section we will take a look some more features around classes
 
@@ -1024,7 +1024,6 @@ Kotlin is an object oriented language and it supports all the different features
 > - Kotlin provides an auto-backing field for cases where you want to "store" information 
 > - We can use `typealias` for providing better semantics to other data types 
 
-### 11.e. Type aliases
 
 <br/>    
 
