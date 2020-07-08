@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/1-basics/1-basics.iml" filepath="$PROJECT_DIR$/1-basics/1-basics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10-adv-functions/10-adv-functions.iml" filepath="$PROJECT_DIR$/10-adv-functions/10-adv-functions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/11-adv-classes/11-adv-classes.iml" filepath="$PROJECT_DIR$/11-adv-classes/11-adv-classes.iml" />
       <module fileurl="file://$PROJECT_DIR$/2-functions/2-functions.iml" filepath="$PROJECT_DIR$/2-functions/2-functions.iml" />
       <module fileurl="file://$PROJECT_DIR$/3-classes/3-classes.iml" filepath="$PROJECT_DIR$/3-classes/3-classes.iml" />
       <module fileurl="file://$PROJECT_DIR$/4-inheritance/4-inheritance.iml" filepath="$PROJECT_DIR$/4-inheritance/4-inheritance.iml" />

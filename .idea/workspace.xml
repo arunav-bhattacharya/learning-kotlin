@@ -23,7 +23,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="README.md">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__13_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__14_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10-adv-functions/10-adv-functions.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10-adv-functions/src/com/arunav/kotlin/advanced/functions/Anonymous.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10-adv-functions/src/com/arunav/kotlin/advanced/functions/DSLs.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10-adv-functions/src/com/arunav/kotlin/advanced/functions/InfixNotation.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10-adv-functions/src/com/arunav/kotlin/advanced/functions/Inline.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10-adv-functions/src/com/arunav/kotlin/advanced/functions/LambdaExtensions.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10-adv-functions/src/com/arunav/kotlin/advanced/functions/LocalFunctions.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/10-adv-functions/src/com/arunav/kotlin/advanced/functions/ReturnsNLocalReturns.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11-adv-classes/11-adv-classes.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11-adv-classes/src/com/arunav/kotlin/advanced/classes/CompanionObjects.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11-adv-classes/src/com/arunav/kotlin/advanced/classes/LateInit.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11-adv-classes/src/com/arunav/kotlin/advanced/classes/NestedClasses.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7-functional/src/com/arunav/kotlin/functional/ExtensionFunctions.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/operator-overloading.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/7-functional/src/com/arunav/kotlin/functional/Functional.kt" beforeDir="false" afterPath="$PROJECT_DIR$/7-functional/src/com/arunav/kotlin/functional/Functional.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,6 +81,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ToolWindowCoverage.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
@@ -75,7 +94,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -89,67 +108,67 @@
       <recent name="$PROJECT_DIR$/images" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.FunctionalKt">
-    <configuration name="FunctionalKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="7-functional" />
+  <component name="RunManager" selected="Kotlin.CompanionObjectsKt">
+    <configuration name="AdvancedClassesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="11-adv-classes" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.functional.FunctionalKt" />
+      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.advanced.classes.AdvancedClassesKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InheritanceKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="4-inheritance" />
+    <configuration name="CompanionObjectsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="11-adv-classes" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.inheritance.InheritanceKt" />
+      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.advanced.classes.CompanionObjectsKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NullsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="5-nulls" />
+    <configuration name="DSLsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="10-adv-functions" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.nulls.NullsKt" />
+      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.advanced.functions.DSLsKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TuplesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="6-useful-constructs" />
+    <configuration name="NestedClassesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="11-adv-classes" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.constructs.TuplesKt" />
+      <option name="MAIN_CLASS_NAME" value="NestedClassesKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TypeCastingKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="6-useful-constructs" />
+    <configuration name="ReturnsNLocalReturnsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="10-adv-functions" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.constructs.TypeCastingKt" />
+      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.advanced.functions.ReturnsNLocalReturnsKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -157,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.FunctionalKt" />
-        <item itemvalue="Kotlin.TuplesKt" />
-        <item itemvalue="Kotlin.TypeCastingKt" />
-        <item itemvalue="Kotlin.NullsKt" />
-        <item itemvalue="Kotlin.InheritanceKt" />
+        <item itemvalue="Kotlin.CompanionObjectsKt" />
+        <item itemvalue="Kotlin.NestedClassesKt" />
+        <item itemvalue="Kotlin.AdvancedClassesKt" />
+        <item itemvalue="Kotlin.DSLsKt" />
+        <item itemvalue="Kotlin.ReturnsNLocalReturnsKt" />
       </list>
     </recent_temporary>
   </component>
@@ -177,7 +196,7 @@
       <option name="presentableId" value="Default" />
       <updated>1593931413945</updated>
       <workItem from="1594067806461" duration="1518000" />
-      <workItem from="1594069543780" duration="21127000" />
+      <workItem from="1594069543780" duration="48946000" />
     </task>
     <task id="LOCAL-00001" summary="/.idea files">
       <created>1593931867457</created>
@@ -410,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594107883231</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="README.md">
+      <created>1594108291929</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1594108291929</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,10 +479,10 @@
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="368" y="147" width="800" height="714" key="#Intentions/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593991749740" />
-    <state x="530" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1594010903829">
+    <state x="530" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1594200723459">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="530" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1536.960@0.0.1536.960" timestamp="1594010903829" />
+    <state x="530" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1536.960@0.0.1536.960" timestamp="1594200723459" />
     <state x="530" y="204" key="#com.intellij.ide.util.MemberChooser/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593993251834" />
     <state x="478" y="157" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1594090706748">
       <screen x="0" y="0" width="1536" height="960" />
@@ -467,35 +493,35 @@
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="600" y="377" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.960@0.0.1536.960" timestamp="1594068029280" />
-    <state x="436" y="152" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1594107678445">
+    <state x="436" y="152" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1594144818590">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="436" y="152" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594107678445" />
+    <state x="436" y="152" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594144818590" />
     <state x="385" y="82" key="CommitChangelistDialog2" timestamp="1594066088036">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="385" y="82" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1594066088036" />
     <state x="385" y="82" key="CommitChangelistDialog2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594004320909" />
-    <state width="1494" height="245" key="GridCell.Tab.0.bottom" timestamp="1594090674661">
+    <state width="1494" height="245" key="GridCell.Tab.0.bottom" timestamp="1594203849522">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="245" key="GridCell.Tab.0.bottom/0.0.1536.960@0.0.1536.960" timestamp="1594077298782" />
-    <state width="1494" height="245" key="GridCell.Tab.0.bottom/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594090674661" />
-    <state width="1494" height="245" key="GridCell.Tab.0.center" timestamp="1594090674660">
+    <state width="1494" height="245" key="GridCell.Tab.0.bottom/0.0.1536.960@0.0.1536.960" timestamp="1594203849522" />
+    <state width="1494" height="245" key="GridCell.Tab.0.bottom/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594167137786" />
+    <state width="1494" height="245" key="GridCell.Tab.0.center" timestamp="1594203849521">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="245" key="GridCell.Tab.0.center/0.0.1536.960@0.0.1536.960" timestamp="1594077298781" />
-    <state width="1494" height="245" key="GridCell.Tab.0.center/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594090674660" />
-    <state width="1494" height="245" key="GridCell.Tab.0.left" timestamp="1594090674659">
+    <state width="1494" height="245" key="GridCell.Tab.0.center/0.0.1536.960@0.0.1536.960" timestamp="1594203849521" />
+    <state width="1494" height="245" key="GridCell.Tab.0.center/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594167137785" />
+    <state width="1494" height="245" key="GridCell.Tab.0.left" timestamp="1594203849520">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="245" key="GridCell.Tab.0.left/0.0.1536.960@0.0.1536.960" timestamp="1594077298781" />
-    <state width="1494" height="245" key="GridCell.Tab.0.left/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594090674659" />
-    <state width="1494" height="245" key="GridCell.Tab.0.right" timestamp="1594090674661">
+    <state width="1494" height="245" key="GridCell.Tab.0.left/0.0.1536.960@0.0.1536.960" timestamp="1594203849520" />
+    <state width="1494" height="245" key="GridCell.Tab.0.left/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594167137784" />
+    <state width="1494" height="245" key="GridCell.Tab.0.right" timestamp="1594203849522">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="245" key="GridCell.Tab.0.right/0.0.1536.960@0.0.1536.960" timestamp="1594077298782" />
-    <state width="1494" height="245" key="GridCell.Tab.0.right/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594090674661" />
+    <state width="1494" height="245" key="GridCell.Tab.0.right/0.0.1536.960@0.0.1536.960" timestamp="1594203849522" />
+    <state width="1494" height="245" key="GridCell.Tab.0.right/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594167137786" />
     <state width="1494" height="319" key="GridCell.Tab.1.bottom" timestamp="1594079115662">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
@@ -516,30 +542,30 @@
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="356" y="230" key="IDE.errors.dialog/0.0.1536.960@0.0.1536.960" timestamp="1594069333671" />
-    <state x="269" y="119" key="SettingsEditor" timestamp="1594090852620">
+    <state x="269" y="119" key="SettingsEditor" timestamp="1594201968691">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="269" y="119" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1594075991330" />
+    <state x="269" y="119" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1594201968691" />
     <state x="269" y="119" key="SettingsEditor/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594090852620" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594107887167">
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594108294658">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1594069286229" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594107887167" />
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594108294658" />
     <state x="419" y="244" width="698" height="474" key="find.popup" timestamp="1594075239531">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="419" y="244" width="698" height="474" key="find.popup/0.0.1536.960@0.0.1536.960" timestamp="1594075239531" />
-    <state x="100" y="169" key="new project wizard" timestamp="1594090430127">
+    <state x="212" y="93" key="new project wizard" timestamp="1594199997982">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="100" y="208" key="new project wizard/0.0.1536.960@0.0.1536.960" timestamp="1594066116341" />
-    <state x="100" y="169" key="new project wizard/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594090430127" />
-    <state x="433" y="228" width="670" height="676" key="search.everywhere.popup" timestamp="1594108134600">
+    <state x="212" y="93" key="new project wizard/0.0.1536.960@0.0.1536.960" timestamp="1594199997982" />
+    <state x="100" y="169" key="new project wizard/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594143021812" />
+    <state x="433" y="228" width="670" height="676" key="search.everywhere.popup" timestamp="1594195358041">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="433" y="228" width="670" height="676" key="search.everywhere.popup/0.0.1536.960@0.0.1536.960" timestamp="1594066996504" />
-    <state x="433" y="228" width="670" height="676" key="search.everywhere.popup/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594108134600" />
+    <state x="433" y="228" width="670" height="676" key="search.everywhere.popup/0.0.1536.960@0.0.1536.960" timestamp="1594195358041" />
+    <state x="433" y="228" width="670" height="676" key="search.everywhere.popup/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594167086152" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/kotlin$FunctionalKt.ic" NAME="FunctionalKt Coverage Results" MODIFIED="1594079015288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

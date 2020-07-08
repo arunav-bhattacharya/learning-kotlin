@@ -10,14 +10,16 @@
 >   A. Getting Familiar
 >   B. Some advanced concepts 
 > 
-> My takeaways from Kotlin till now -
->   1. null-safe language - usage of nullable type - safe-call & elvis operators
->   2. No checked exception - Reduces clutter in code
->   3. Using default & named parameters in functions
->   4. Using `data` class accompanied by copy() method 
+> My takeaways from Kotlin till now when compared to Java -
+>   1. **null-safe** language - usage of nullable type - safe-call & elvis operators
+>   2. **No checked exception** - Reduces clutter in code
+>   3. Using **default & named parameters** in functions
+>   4. Using `data` class accompanied by **copy()** method 
 >   5. Smart casting
->   6. Object destructuring
->   7. Custom getters & setters
+>   6. **Object destructuring**
+>   7. **Extension Functions**
+>   8. `infix` notation
+>   9. **Creating DSLs** using infix notation & lambda extensions
 >   
 
 <br/> 
@@ -720,22 +722,7 @@ Kotlin is an object oriented language and it supports all the different features
 
 - In lambdas as well we can use object destructuring
 
-
-### 7.c. Anonymous Functions
-
-- We can pass functions with no names as a parameter to higher-order functions. These are called anonymous functions.
-- The difference with a lambda function and anonymous function is that in anonymous functions we can have multiple return points, but lambdas have just one.
-
-    ```kotlin
-        operation(7, fun(x): Int {
-            if (x < 0)
-                return 0
-            else
-                return Math.sqrt(x.toDouble()).toInt()
-        })
-    ```
-
-### 7.d. Closures
+### 7.c. Closures
 
 - A lambda expression or anonymous function (as well as a local function and an object expression) can access its closure, i.e. the variables declared in the outer scope, also known as *lexical scoping*. 
 - The variables captured in the closure can be modified in the lambda. Such a lambda is called closure.
@@ -746,12 +733,15 @@ Kotlin is an object oriented language and it supports all the different features
 
 [Additional Reading](https://kotlinlang.org/docs/reference/lambdas.html)
 
-### 7.e. Extension Functions
+### 7.d. Extension Functions
 
 - Extension function allows extending functionality of class without inheriting from it.
 - Scope of exception functions is packages. In order to use outside the package, we need to import the package with the extension function.
 - Member function takes precedence over extension function when both have same names and definition.
 - Extensions are resolved **statically**. By defining an extension, we do not insert new members into a class, but merely make new functions callable with the dot-notation on variables of this type.
+
+> Note :
+>   - There needs to be a discipline when using extension methods
 
 [Additional Reading](https://kotlinlang.org/docs/reference/extensions.html)
 
@@ -867,37 +857,185 @@ Kotlin is an object oriented language and it supports all the different features
     - `run()` 
     - `with()`
     - `apply()`
-    - `let()`, etc...
+    - `let()`
+    - `also()`
+    - `takeIf()`
+    - `takeUnless()`
     
 [Additional Reading](https://kotlinlang.org/docs/tutorials/kotlin-for-py/functional-programming.html#nice-utility-functions)
 
 <br/> 
 
-## 10. Build Tools
-
-- We can use standard build tools like Ant, Maven, Gradle, etc to build Kotlin projects.
+> Note
+> 
+> - We can use standard build tools like Ant, Maven, Gradle, etc to build Kotlin projects.
 
 <br/> 
 <br/> 
 
 
-# **Part II -  Some Advanced Concepts**
+# **Part II - Some Advanced Concepts**
 
-## Functions - A Deeper look
-<br/> 
+## 10. Functions - A Deeper look
+> In this section we'll take a deeper look at functions
 
-## Class Scenarios
+### 10.a. Nested/Local functions
+ 
+- Nested or local functions are functions defined inside another function. The local functions are not accessible outside the enclosing function.
+    
+### 10.b. `infix` functions
+ 
+- Functions prefixed with `infix` can be accessed without the dot notation and we can call the functions without parentheses `()`
+- This is applicable to member and extension functions only
+- Only one parameter is supported in an infix function
+
+### 10.c. Anonymous Functions
+
+- We can pass functions with no names as a parameter to higher-order functions. These are called anonymous functions.
+- The difference with a lambda function and **anonymous function** is that in anonymous functions we can have multiple return points, but lambdas have just one.
+
+    ```kotlin
+        operation(7, fun(x): Int {
+            if (x < 0)
+                return 0
+            else
+                return Math.sqrt(x.toDouble()).toInt()
+        })
+    ```
+
+### 10.d. `inline` Functions
+
+- Functions prefixed with `inline` are inline functions.
+- When bytecode is generated for `inline` functions, the body of the function is copied to the place from where the actual function call is done. This reduces the call stack. 
+- Performance can be improved for functions by making it `inline`, if they have another function as a parameter.
+- `inline` functions without function as parameters will not have performance improvement.
+- A particular lambda-function parameter in `inline` function can be made non-inline by prefixing the parameter with `noinline`.
+- We cannot reference the function parameter with another variable inside an inline function. If the function parameter is declared as `noinline` then this is possible.
+- When an exception is thrown from an inline function the stack trace doesn't show the function separately.
+
+### 10.e. Returns and Local Returns in Kotlin
+
+- When we do a `return` from a lambda function, it returns from the enclosing function inside which it is defined. For example - 
+
+    ```kotlin
+        fun containingFunction(){
+            val numbers = 1..100
+            numbers.forEach{
+                if(it % 5 == 0)
+                    return
+            }
+            println("After forEach")
+        }
+    ```
+  
+  In this case the `println` statement is not executed because the `return` statement, which is defined inside a lambda function,  returns from the `containingFunction()`.  
+- Non-local returns, i.e., `return` from a lambda function is allowed only when the function in which lambda expression is invoked is an `inline` function. In our example `forEach()` is an `inline` function.
+- In order to make lambda to return to forEach we can use labels. For example in the below case the code will return to `forEach` - 
+
+    ```kotlin
+        fun containingFunction(){
+            val numbers = 1..100
+            numbers.forEach @myLabel{
+                if(it % 5 == 0)
+                    return@myLabel
+            }
+            println("After forEach")
+        }
+    ```
+  
+- On the other hand, when a local `return` is called from an anonymous function it returns to the enclosing function and not to the outer function. 
+
+### 10.f. Tail Recursion using `tailrec`
+
+- When a function is tail recursive, Kotlin provides us a way to optimize the execution of it by prefixing the function with `tailrec`. This optimizes the generated bytecode by replacing it with for loops or GOTO calls. 
+
+### 10.g. Operator Overloading
+
+- Kotlin allows us to provide implementations for a predefined set of operators on our types. 
+- These operators have fixed symbolic representation (like + or *) and fixed precedence
+
+[Additional Reading](https://kotlinlang.org/docs/reference/operator-overloading.html)
+
+<img src="./images/operator-overloading.png" />
+
+### 10.h. Lambda Extensions - Creating DSLs
+
+- Lambda extensions helps us create Domain Specific Languages (DSLs) like Gradle, SQL Dialects, JSON DSL, etc.
+- Using the `invoke()` function
+ 
+[Kotlin in Action](https://learning.oreilly.com/library/view/kotlin-in-action/9781617293290/kindle_split_022.html)
+[Venkat](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0107.xhtml#chap.dsl)
+
+[Additional Reading](https://kotlinlang.org/docs/reference/type-safe-builders.html)
+
+### 10.i. Functional Constructs
+
+**Open Source Library** - [funKTionale](https://github.com/MarioAriasC/funKTionale/wiki)
+    - Supports composition, currying, memoization, etc...
+
 <br/>
 
-## Delegation
+## 11. Class Scenarios
+
+> In this section we will take a look some more features around classes
+
+### 11.a. Late Initialization using `lateinit`
+
+- Kotlin provides a way to define properties by not initializing them. This can be done by prefixing the property with the keyword `lateinit`. 
+
+### 11.b. Nested Classes
+
+- Kotlin supports nested class. 
+- Nested classes can be accessed outer class by using the OuterClass.InnerClass notation both in Java and Kotlin.
+- In order for the Nested class to access properties of the outer class, we need to define the nested class prefixed with `inner` keyword
+
+### 11.c. Companion Objects & hiding constructors
+
+- Allows creating equivalent of static members in Java
+- An `object` inside a class can be prefixed with `companion`. This makes the functions inside the object accessible outside the class by without referencing using the object name.
+- Each class can have only one single `companion` object, inside which we can multiple functions.
+- By prefixing the functions inside the object with the annotation `@JvmStatic`, it becomes accessible to Java as static methods accessible by the classname. 
+- We can make the constructor private by saying `private constructor` during class definition. That way it wont be accessible outside the object.
+ 
+    ```kotlin
+        class Log private constructor() {
+            companion object Factory {
+                fun createFileLog(fileName: String): Log = Log(fileName)
+            }
+            constructor(fileName: String) : this() {}
+        }
+        
+        fun main() {
+            Log.createFileLog("file.txt")
+        }
+    ``` 
+
+### 11.d. Sealed classes
+
+- Sealed classes are used for representing restricted class hierarchies, where a value can have one of the types from a limited set, but cannot have any other type.
+- A class can be made `sealed` by prefixing it with the `sealed` keyword.  
+- A `sealed` class is abstract by itself. It cannot be instantiated directly and can have abstract members.
+- Sealed classes are not allowed to have non-private constructors (their constructors are private by default).
+
+> **Some Tips**
+>
+> The key benefit of using sealed classes comes into play when you use them in a when expression. If it's possible to verify that the statement covers all cases, you don't need to add an else clause to the statement. However, this works only if you use when as an expression (using the result) and not as a statement.  
+> Kotlin provides an auto-backing field for cases where you want to "store" information 
+> We can use `typealias` for providing better semantics to other data types 
+
+### 11.e. Type aliases
+
+<br/>    
+
+## 12. Delegation
 <br/> 
 
-## Generics
+## 13. Generics
 <br/> 
 
-## Metaprogramming
+## 14. Metaprogramming
 <br/> 
 
-## Asynchronous Programming
+## 15. Asynchronous Programming
 <br/> 
  

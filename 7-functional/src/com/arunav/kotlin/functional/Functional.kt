@@ -27,7 +27,6 @@ fun transaction(db: Database, code: () -> Unit) {
     }
 }
 
-
 fun main() {
     // Using method references for passing a function as a parameter
     println(operation(2, 7, ::sum))
@@ -72,6 +71,7 @@ fun main() {
             return Math.sqrt(x.toDouble()).toInt()
     })
 
+    // Closure
     var factor = 2
     val mutateIt:(Int) -> Int = { x ->
         factor = 3
@@ -79,8 +79,6 @@ fun main() {
     }
     //operation(5, mutateIt)
     println("Initial Factor=$factor, mutated output=${mutateIt.invoke(5)}, final factor=$factor")
-
-    //TODO - Extension Functions
 }
 
 class Database {
