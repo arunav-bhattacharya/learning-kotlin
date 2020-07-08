@@ -965,7 +965,7 @@ Kotlin is an object oriented language and it supports all the different features
 
 - Learn more from here -  
     - [Kotlin in Action](https://learning.oreilly.com/library/view/kotlin-in-action/9781617293290/kindle_split_022.html)
-    - [Venkat](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0107.xhtml#chap.dsl)
+    - [Programming Kotlin by Venkat](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0107.xhtml#chap.dsl)
 
 [Additional Reading](https://kotlinlang.org/docs/reference/type-safe-builders.html)
 
@@ -990,7 +990,7 @@ Kotlin is an object oriented language and it supports all the different features
 - Nested classes can be accessed outer class by using the OuterClass.InnerClass notation both in Java and Kotlin.
 - In order for the Nested class to access properties of the outer class, we need to define the nested class prefixed with `inner` keyword
 
-### 11.c. Companion Objects & hiding constructors
+### 11.c. `companion` Objects & hiding constructors
 
 - Allows creating equivalent of static members in Java
 - An `object` inside a class can be prefixed with `companion`. This makes the functions inside the object accessible outside the class by without referencing using the object name.
@@ -1020,9 +1020,9 @@ Kotlin is an object oriented language and it supports all the different features
 
 > **Some Tips**
 >
-> The key benefit of using sealed classes comes into play when you use them in a when expression. If it's possible to verify that the statement covers all cases, you don't need to add an else clause to the statement. However, this works only if you use when as an expression (using the result) and not as a statement.  
-> Kotlin provides an auto-backing field for cases where you want to "store" information 
-> We can use `typealias` for providing better semantics to other data types 
+> - The key benefit of using sealed classes comes into play when you use them in a when expression. If it's possible to verify that the statement covers all cases, you don't need to add an else clause to the statement. However, this works only if you use when as an expression (using the result) and not as a statement.  
+> - Kotlin provides an auto-backing field for cases where you want to "store" information 
+> - We can use `typealias` for providing better semantics to other data types 
 
 ### 11.e. Type aliases
 
