@@ -962,9 +962,10 @@ Kotlin is an object oriented language and it supports all the different features
 
 - Lambda extensions helps us create Domain Specific Languages (DSLs) like Gradle, SQL Dialects, JSON DSL, etc.
 - Using the `invoke()` function
- 
-[Kotlin in Action](https://learning.oreilly.com/library/view/kotlin-in-action/9781617293290/kindle_split_022.html)
-[Venkat](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0107.xhtml#chap.dsl)
+
+- Learn more from here -  
+    - [Kotlin in Action](https://learning.oreilly.com/library/view/kotlin-in-action/9781617293290/kindle_split_022.html)
+    - [Venkat](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0107.xhtml#chap.dsl)
 
 [Additional Reading](https://kotlinlang.org/docs/reference/type-safe-builders.html)
 

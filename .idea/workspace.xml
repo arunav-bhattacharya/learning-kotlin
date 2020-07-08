@@ -22,26 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="README.md">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__13_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__14_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10-adv-functions/10-adv-functions.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10-adv-functions/src/com/arunav/kotlin/advanced/functions/Anonymous.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10-adv-functions/src/com/arunav/kotlin/advanced/functions/DSLs.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10-adv-functions/src/com/arunav/kotlin/advanced/functions/InfixNotation.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10-adv-functions/src/com/arunav/kotlin/advanced/functions/Inline.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10-adv-functions/src/com/arunav/kotlin/advanced/functions/LambdaExtensions.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10-adv-functions/src/com/arunav/kotlin/advanced/functions/LocalFunctions.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10-adv-functions/src/com/arunav/kotlin/advanced/functions/ReturnsNLocalReturns.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/11-adv-classes/11-adv-classes.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/11-adv-classes/src/com/arunav/kotlin/advanced/classes/CompanionObjects.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/11-adv-classes/src/com/arunav/kotlin/advanced/classes/LateInit.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/11-adv-classes/src/com/arunav/kotlin/advanced/classes/NestedClasses.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7-functional/src/com/arunav/kotlin/functional/ExtensionFunctions.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/operator-overloading.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="Kotlin Advanced">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/7-functional/src/com/arunav/kotlin/functional/Functional.kt" beforeDir="false" afterPath="$PROJECT_DIR$/7-functional/src/com/arunav/kotlin/functional/Functional.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -196,7 +178,7 @@
       <option name="presentableId" value="Default" />
       <updated>1593931413945</updated>
       <workItem from="1594067806461" duration="1518000" />
-      <workItem from="1594069543780" duration="48946000" />
+      <workItem from="1594069543780" duration="49159000" />
     </task>
     <task id="LOCAL-00001" summary="/.idea files">
       <created>1593931867457</created>
@@ -436,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594108291929</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Kotlin Advanced">
+      <created>1594206522667</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1594206522667</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,7 +461,8 @@
     <MESSAGE value="Getting Functional &amp; Readme on Interoperability" />
     <MESSAGE value="Initialized interoperability &amp; standard library modules" />
     <MESSAGE value="README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md" />
+    <MESSAGE value="Kotlin Advanced" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kotlin Advanced" />
   </component>
   <component name="WindowStateProjectService">
     <state x="368" y="147" width="800" height="714" key="#Intentions" timestamp="1593991749740">
@@ -547,10 +537,10 @@
     </state>
     <state x="269" y="119" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1594201968691" />
     <state x="269" y="119" key="SettingsEditor/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594090852620" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594108294658">
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594206527700">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1594069286229" />
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1594206527700" />
     <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594108294658" />
     <state x="419" y="244" width="698" height="474" key="find.popup" timestamp="1594075239531">
       <screen x="0" y="0" width="1536" height="960" />
