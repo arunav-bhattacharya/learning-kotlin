@@ -22,11 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="README.md">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__15_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/12-delegates/12-delegates.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/12-delegates/src/com.arunav.kotlin.delegates/Delegates.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="Delegates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -182,7 +178,7 @@
       <option name="presentableId" value="Default" />
       <updated>1593931413945</updated>
       <workItem from="1594067806461" duration="1518000" />
-      <workItem from="1594069543780" duration="59604000" />
+      <workItem from="1594069543780" duration="62028000" />
     </task>
     <task id="LOCAL-00001" summary="/.idea files">
       <created>1593931867457</created>
@@ -450,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594206907753</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Delegates">
+      <created>1594269852487</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1594269852487</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +490,8 @@
     <MESSAGE value="Initialized interoperability &amp; standard library modules" />
     <MESSAGE value="Kotlin Advanced" />
     <MESSAGE value="README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md" />
+    <MESSAGE value="Delegates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delegates" />
   </component>
   <component name="WindowStateProjectService">
     <state x="368" y="147" width="800" height="714" key="#Intentions" timestamp="1593991749740">
@@ -562,10 +566,10 @@
     </state>
     <state x="539" y="0" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1594262209979" />
     <state x="269" y="119" key="SettingsEditor/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594090852620" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594206912084">
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594269855184">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1594206912084" />
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1594269855184" />
     <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594108294658" />
     <state x="419" y="244" width="698" height="548" key="find.popup" timestamp="1594266303760">
       <screen x="0" y="0" width="1536" height="960" />

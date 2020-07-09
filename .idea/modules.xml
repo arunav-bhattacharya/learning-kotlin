@@ -6,6 +6,9 @@
       <module fileurl="file://$PROJECT_DIR$/10-adv-functions/10-adv-functions.iml" filepath="$PROJECT_DIR$/10-adv-functions/10-adv-functions.iml" />
       <module fileurl="file://$PROJECT_DIR$/11-adv-classes/11-adv-classes.iml" filepath="$PROJECT_DIR$/11-adv-classes/11-adv-classes.iml" />
       <module fileurl="file://$PROJECT_DIR$/12-delegates/12-delegates.iml" filepath="$PROJECT_DIR$/12-delegates/12-delegates.iml" />
+      <module fileurl="file://$PROJECT_DIR$/13-generics/13-generics.iml" filepath="$PROJECT_DIR$/13-generics/13-generics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/14-metaprogramming/14-metaprogramming.iml" filepath="$PROJECT_DIR$/14-metaprogramming/14-metaprogramming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/15-async-programming/15-async-programming.iml" filepath="$PROJECT_DIR$/15-async-programming/15-async-programming.iml" />
       <module fileurl="file://$PROJECT_DIR$/2-functions/2-functions.iml" filepath="$PROJECT_DIR$/2-functions/2-functions.iml" />
       <module fileurl="file://$PROJECT_DIR$/3-classes/3-classes.iml" filepath="$PROJECT_DIR$/3-classes/3-classes.iml" />
       <module fileurl="file://$PROJECT_DIR$/4-inheritance/4-inheritance.iml" filepath="$PROJECT_DIR$/4-inheritance/4-inheritance.iml" />

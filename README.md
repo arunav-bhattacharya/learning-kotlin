@@ -1066,9 +1066,52 @@
 <br/> 
 
 ## 13. Generics
+
+### 13.a. Variance 
+
+- Invariance 
+- Covariance
+- Contravariance
+
+### 13.b. Type Projections
+
+### 13.c. Generic functions & constraints
+
+### 13.d. Type Erasure
+
+[Additional Reading](https://kotlinlang.org/docs/reference/generics.html)
+
+> **Highlights**
+>
+> - Can impose conditions on type parameters using -
+>    - `T : Super` syntax
+>    - `where T: Super1, T: Super2`
+> - **Covariance** is indicated on the declaration using `out` modifier
+> - **Contravariance** is indicated on the declaration using `in` modifier
+> - Use-site declaration (like Java) is available when required 
+
 <br/> 
 
 ## 14. Metaprogramming
+
+### 14.a. Reflection
+
+[Additional Reading](https://kotlinlang.org/docs/reference/reflection.html)
+
+### 14.b. Creating custom Annotations
+
+[Additional Reading](https://kotlinlang.org/docs/reference/annotations.html)
+
+> **Highlights**
+>
+> - Allow for introspection of code at runtime
+> - Kotlin can use -
+>   - Java Reflections API
+>   - Kotlin Reflection API
+> - Reified type parameters 
+>   - Avoid type erasure
+>   - Limitations - applicable to `inline` only, cannot create instances of T
+> 
 <br/> 
 
 ## 15. Asynchronous Programming
