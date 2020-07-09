@@ -891,7 +891,7 @@
 - This is applicable to member and extension functions only
 - Only one parameter is supported in an infix function
 
-### 10.c. Anonymous Functions
+### 10.c. Anonymous functions
 
 - We can pass functions with no names as a parameter to higher-order functions. These are called anonymous functions.
 - The difference with a lambda function and **anonymous function** is that in anonymous functions we can have multiple return points, but lambdas have just one.
@@ -905,7 +905,7 @@
         })
     ```
 
-### 10.d. `inline` Functions
+### 10.d. `inline` functions
 
 - Functions prefixed with `inline` are inline functions.
 - When bytecode is generated for `inline` functions, the body of the function is copied to the place from where the actual function call is done. This reduces the call stack. 

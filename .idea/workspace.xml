@@ -22,8 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="Delegates">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="README.md">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__16_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__17_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__18_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/13-generics/13-generics.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14-metaprogramming/14-metaprogramming.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/15-async-programming/15-async-programming.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +183,7 @@
       <option name="presentableId" value="Default" />
       <updated>1593931413945</updated>
       <workItem from="1594067806461" duration="1518000" />
-      <workItem from="1594069543780" duration="62028000" />
+      <workItem from="1594069543780" duration="62290000" />
     </task>
     <task id="LOCAL-00001" summary="/.idea files">
       <created>1593931867457</created>
@@ -453,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594269852487</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="README.md">
+      <created>1594275846834</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1594275846834</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,9 +501,9 @@
     <MESSAGE value="Getting Functional &amp; Readme on Interoperability" />
     <MESSAGE value="Initialized interoperability &amp; standard library modules" />
     <MESSAGE value="Kotlin Advanced" />
-    <MESSAGE value="README.md" />
     <MESSAGE value="Delegates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delegates" />
+    <MESSAGE value="README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="README.md" />
   </component>
   <component name="WindowStateProjectService">
     <state x="368" y="147" width="800" height="714" key="#Intentions" timestamp="1593991749740">
@@ -566,20 +578,20 @@
     </state>
     <state x="539" y="0" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1594262209979" />
     <state x="269" y="119" key="SettingsEditor/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594090852620" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594269855184">
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594275849253">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1594269855184" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594108294658" />
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594275849253" />
     <state x="419" y="244" width="698" height="548" key="find.popup" timestamp="1594266303760">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="419" y="244" width="698" height="548" key="find.popup/0.0.1536.960@0.0.1536.960" timestamp="1594266303760" />
-    <state x="212" y="93" key="new project wizard" timestamp="1594254556751">
+    <state x="272" y="33" key="new project wizard" timestamp="1594275723788">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="212" y="93" key="new project wizard/0.0.1536.960@0.0.1536.960" timestamp="1594254556751" />
-    <state x="100" y="169" key="new project wizard/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594143021812" />
+    <state x="272" y="33" key="new project wizard/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594275723788" />
     <state x="433" y="228" width="670" height="676" key="search.everywhere.popup" timestamp="1594266233746">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
