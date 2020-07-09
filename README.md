@@ -20,6 +20,7 @@
 >   7. **Extension Functions**
 >   8. `infix` notation
 >   9. **Creating DSLs** using infix notation & lambda extensions
+>   10. Delegation
 >   
 
 <br/> 
@@ -266,23 +267,24 @@
 
 ## 3. Classes
 
-Kotlin is an object oriented language and it supports all the different features of object-oriented programming.
+> Kotlin is an object oriented language and it supports all the different features of object-oriented programming. In this section, we'll get started with the OO concepts in Kotlin.
 
 ### 3.a. `class` & `construtor`
 
-> In this section, we'll get started with the OO concepts in Kotlin. 
-
-- Classes can be defined with or without any {}.
-- Classes has properties and not fields. Properties can be defined as `val` or `var`.
-- To create instances of classes, we can simply call the Class using the className. There is no `new` keyword in Kotlin.
-- **All properties needs to be initialized if they are not passed using constructor**.
-- Constructor properties can have **default** or **named** parameters similar to functions.
-- We can initialize properties inside an `init{}` block of code inside the class.
-- Secondary constructors can be created by using the `constructor` keyword. 
-- If the class has a primary constructor, each secondary constructor needs to **delegate to the primary constructor**, either directly or indirectly through another secondary constructor(s) using the `this` keyword.
-- `var` is not allowed inside secondary constructors.
-- We can define member functions inside classes similar to how we defined functions. It will have access to all the properties inside the class.
-
+- `class`:  
+    - Classes can be defined with or without any {}.
+    - Classes has properties and not fields. Properties can be defined as `val` or `var`.
+    - To create instances of classes, we can simply call the Class using the className. There is no `new` keyword in Kotlin.
+    - **All properties needs to be initialized if they are not passed using constructor**.
+    - We can define member functions inside classes similar to how we defined functions. It will have access to all the properties inside the class.
+    
+- `constructor`:    
+    - Constructor properties can have **default** or **named** parameters similar to functions.
+    - We can initialize properties inside an `init{}` block of code inside the class.
+    - Secondary constructors can be created by using the `constructor` keyword. 
+    - If the class has a primary constructor, each secondary constructor needs to **delegate to the primary constructor**, either directly or indirectly through another secondary constructor(s) using the `this` keyword.
+    - `var` is not allowed inside secondary constructors.
+    - If parameter passed inside constructor is not defined as `val` or `var`, it can still be a parameter, but not a property of the class.
 
     ```kotlin
         class Customer(var id: Int = -1, var name: String) {
@@ -1028,6 +1030,39 @@ Kotlin is an object oriented language and it supports all the different features
 <br/>    
 
 ## 12. Delegation
+
+> In delegation, two objects are involved in handling a request: a receiving object delegates operations to its delegate. Kotlin inherently provides support for Delegation. In this section we'll take a look at it.
+
+### 12.a Delegating Methods/Functions 
+
+-  Kotlin requires the left side of the `by` to be an `interface`. The right side is an implementor of that interface.
+-  The delegating class implements the delegating interface, so a reference to the delegating class may be assigned to a reference of the delegating interface. Likewise, a reference to a delegating class may be passed to methods that expect a delegate interface.
+
+> **Some Useful Tips** 
+>
+> - Use **inheritance** if you want an object of a class to be _used in place of an object of another class_.
+> - Use **delegation** if you want an object of a class to simply _make use of an object of another class_.
+
+### 12.b. Delegating properties
+
+- When delegating properties, the delegated class needs to implement two functions `getValue()` and `setValue()`.
+- For knowing more about the property type passed in the get and set methods, visit this part after learning reflection in Kotlin.  
+
+[Additional Reading](https://kotlinlang.org/docs/reference/delegated-properties.html)
+
+### 12.c. Built-in Delegates in Kotlin
+
+- **`lazy`** : 
+    - Deferring creation of objects or executing computations until the time the result is truly needed.  The lazy function takes as argument a lambda expression that will perform the computation, but only on demand and not eagerly or immediately.
+- **`observable`** : 
+    - This is useful to observe or monitor changes to the value of a property. 
+    - The singleton object `kotlin.properties.Delegates` has an `observable()` convenience function to create a `ReadWriteProperty` delegate that will intercept any change to the variable or property it’s associated with. When a change occurs, the delegate will call an event handler you register with the `observable()` function. 
+    - The event handler receives three parameters of type KProperty which hold the metadata about the property, the old value, and the new value. It doesn’t return anything—that is, it’s a Unit or void function.
+- **`vetoable`** : 
+    - Is used to reject changes to properties based on some rules or business logic.
+    - Unlike the handler registered with observable, whose return type is `Unit`, the handler we register with vetoable returns a `Boolean` result. 
+    - A return value of `true` means a favorable nod to accept the change; `false` means reject. The change is discarded if we reject. 
+
 <br/> 
 
 ## 13. Generics
@@ -1037,5 +1072,10 @@ Kotlin is an object oriented language and it supports all the different features
 <br/> 
 
 ## 15. Asynchronous Programming
+
+<br/> 
+
+## 16. Building Web Applications using Ktor
+
 <br/> 
  

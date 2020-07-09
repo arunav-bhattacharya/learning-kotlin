@@ -23,6 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="README.md">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__15_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/12-delegates/12-delegates.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/12-delegates/src/com.arunav.kotlin.delegates/Delegates.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -80,17 +84,17 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/12-delegates/src" />
       <recent name="$PROJECT_DIR$/9-standard-libraries/src" />
       <recent name="$PROJECT_DIR$/6-useful-constructs/src/com/arunav/kotlin/constructs" />
       <recent name="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance" />
       <recent name="$PROJECT_DIR$/3-classes/src/com/arunav/kotlin/classes" />
-      <recent name="$PROJECT_DIR$/2-functions/src/com/arunav/kotlin/functions" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/images" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.CompanionObjectsKt">
+  <component name="RunManager" selected="Kotlin.DelegatesKt">
     <configuration name="AdvancedClassesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="11-adv-classes" />
       <option name="VM_PARAMETERS" />
@@ -130,6 +134,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DelegatesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="12-delegates" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.delegates.DelegatesKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NestedClassesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="11-adv-classes" />
       <option name="VM_PARAMETERS" />
@@ -143,26 +160,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReturnsNLocalReturnsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="10-adv-functions" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.advanced.functions.ReturnsNLocalReturnsKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.DelegatesKt" />
         <item itemvalue="Kotlin.CompanionObjectsKt" />
         <item itemvalue="Kotlin.NestedClassesKt" />
         <item itemvalue="Kotlin.AdvancedClassesKt" />
         <item itemvalue="Kotlin.DSLsKt" />
-        <item itemvalue="Kotlin.ReturnsNLocalReturnsKt" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +182,7 @@
       <option name="presentableId" value="Default" />
       <updated>1593931413945</updated>
       <workItem from="1594067806461" duration="1518000" />
-      <workItem from="1594069543780" duration="49347000" />
+      <workItem from="1594069543780" duration="59604000" />
     </task>
     <task id="LOCAL-00001" summary="/.idea files">
       <created>1593931867457</created>
@@ -439,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594206848788</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="README.md">
+      <created>1594206907753</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1594206907753</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,10 +494,10 @@
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="368" y="147" width="800" height="714" key="#Intentions/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593991749740" />
-    <state x="530" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1594200723459">
+    <state x="530" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1594262407053">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="530" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1536.960@0.0.1536.960" timestamp="1594200723459" />
+    <state x="530" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1536.960@0.0.1536.960" timestamp="1594262407053" />
     <state x="530" y="204" key="#com.intellij.ide.util.MemberChooser/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1593993251834" />
     <state x="478" y="157" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1594090706748">
       <screen x="0" y="0" width="1536" height="960" />
@@ -506,25 +517,25 @@
     </state>
     <state x="385" y="82" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1594066088036" />
     <state x="385" y="82" key="CommitChangelistDialog2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594004320909" />
-    <state width="1494" height="245" key="GridCell.Tab.0.bottom" timestamp="1594203849522">
+    <state width="1494" height="245" key="GridCell.Tab.0.bottom" timestamp="1594262764863">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="245" key="GridCell.Tab.0.bottom/0.0.1536.960@0.0.1536.960" timestamp="1594203849522" />
+    <state width="1494" height="245" key="GridCell.Tab.0.bottom/0.0.1536.960@0.0.1536.960" timestamp="1594262764863" />
     <state width="1494" height="245" key="GridCell.Tab.0.bottom/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594167137786" />
-    <state width="1494" height="245" key="GridCell.Tab.0.center" timestamp="1594203849521">
+    <state width="1494" height="245" key="GridCell.Tab.0.center" timestamp="1594262764862">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="245" key="GridCell.Tab.0.center/0.0.1536.960@0.0.1536.960" timestamp="1594203849521" />
+    <state width="1494" height="245" key="GridCell.Tab.0.center/0.0.1536.960@0.0.1536.960" timestamp="1594262764862" />
     <state width="1494" height="245" key="GridCell.Tab.0.center/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594167137785" />
-    <state width="1494" height="245" key="GridCell.Tab.0.left" timestamp="1594203849520">
+    <state width="1494" height="245" key="GridCell.Tab.0.left" timestamp="1594262764862">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="245" key="GridCell.Tab.0.left/0.0.1536.960@0.0.1536.960" timestamp="1594203849520" />
+    <state width="1494" height="245" key="GridCell.Tab.0.left/0.0.1536.960@0.0.1536.960" timestamp="1594262764862" />
     <state width="1494" height="245" key="GridCell.Tab.0.left/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594167137784" />
-    <state width="1494" height="245" key="GridCell.Tab.0.right" timestamp="1594203849522">
+    <state width="1494" height="245" key="GridCell.Tab.0.right" timestamp="1594262764862">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state width="1494" height="245" key="GridCell.Tab.0.right/0.0.1536.960@0.0.1536.960" timestamp="1594203849522" />
+    <state width="1494" height="245" key="GridCell.Tab.0.right/0.0.1536.960@0.0.1536.960" timestamp="1594262764862" />
     <state width="1494" height="245" key="GridCell.Tab.0.right/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594167137786" />
     <state width="1494" height="319" key="GridCell.Tab.1.bottom" timestamp="1594079115662">
       <screen x="0" y="0" width="1536" height="960" />
@@ -546,29 +557,29 @@
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="356" y="230" key="IDE.errors.dialog/0.0.1536.960@0.0.1536.960" timestamp="1594069333671" />
-    <state x="269" y="119" key="SettingsEditor" timestamp="1594201968691">
+    <state x="539" y="0" key="SettingsEditor" timestamp="1594262209979">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="269" y="119" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1594201968691" />
+    <state x="539" y="0" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1594262209979" />
     <state x="269" y="119" key="SettingsEditor/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594090852620" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594206850353">
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594206912084">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1594206850353" />
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1594206912084" />
     <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594108294658" />
-    <state x="419" y="244" width="698" height="474" key="find.popup" timestamp="1594075239531">
+    <state x="419" y="244" width="698" height="548" key="find.popup" timestamp="1594266303760">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="419" y="244" width="698" height="474" key="find.popup/0.0.1536.960@0.0.1536.960" timestamp="1594075239531" />
-    <state x="212" y="93" key="new project wizard" timestamp="1594199997982">
+    <state x="419" y="244" width="698" height="548" key="find.popup/0.0.1536.960@0.0.1536.960" timestamp="1594266303760" />
+    <state x="212" y="93" key="new project wizard" timestamp="1594254556751">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="212" y="93" key="new project wizard/0.0.1536.960@0.0.1536.960" timestamp="1594199997982" />
+    <state x="212" y="93" key="new project wizard/0.0.1536.960@0.0.1536.960" timestamp="1594254556751" />
     <state x="100" y="169" key="new project wizard/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594143021812" />
-    <state x="433" y="228" width="670" height="676" key="search.everywhere.popup" timestamp="1594195358041">
+    <state x="433" y="228" width="670" height="676" key="search.everywhere.popup" timestamp="1594266233746">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="433" y="228" width="670" height="676" key="search.everywhere.popup/0.0.1536.960@0.0.1536.960" timestamp="1594195358041" />
+    <state x="433" y="228" width="670" height="676" key="search.everywhere.popup/0.0.1536.960@0.0.1536.960" timestamp="1594266233746" />
     <state x="433" y="228" width="670" height="676" key="search.everywhere.popup/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594167086152" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
