@@ -1129,7 +1129,7 @@
 
 <img src="images/coroutines.png"/>
 
-### 15.b. Creating Coroutines
+### 15.b. Creating Coroutines - `launch` & `runBlocking`
 
 - While coroutines are part of the language’s standard library, we’ll have to download an additional library to make use of that package, which contains functions to easily create and work with coroutines.
 - The `runBlocking()` function from `kotlinx.coroutines.*` package takes a lambda as an argument and executes that within a coroutine.
@@ -1206,7 +1206,12 @@
 > - Kotlin provides a command-line option `-Dkotlinx.coroutines.debug` to display the details of the coroutine executing a function.
 
 
+### 15.e. `async` & `await`
 
+- `launch` returns an object of `Job` and there is no way to return a result from it. In order to execute a task asynchronously and return a value we need to use `async`.
+- `async()` has same parameters as `launch()`, but async returns a `Deferred<T>` future object, which has an `await()` method, among many other methods.
+- A call to `await()` will block the flow of execution but not the executing thread. Thus, the code in the caller and the code within the coroutine started by `async()` can run concurrently.
+- The call to `await()` will eventually return the result of the coroutine started using `async()`. 
+- If the coroutine started using `async()` throws an exception, then that exception will be propagated to the caller through the call to `await()`.
 
-- `async` & `await`
 <br/> 
