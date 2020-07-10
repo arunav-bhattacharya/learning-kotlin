@@ -2,38 +2,41 @@
 >
 > Kotlin is a statically typed, fluent & elegant programming language that compiles to Java or JavaScript. 
 > For a very quick start to Kotlin follow these links -
+>
 > - [Basic Syntax](https://kotlinlang.org/docs/reference/basic-syntax.html)
 > - [Idioms](https://kotlinlang.org/docs/reference/idioms.html)
 > - [Coding Conventions](https://kotlinlang.org/docs/reference/coding-conventions.html)
 >
 > This document is split into 2 parts - 
->   A. Getting Familiar
+>   A. Introduction to Kotlin
 >   B. Some advanced concepts 
 > 
 > My takeaways from Kotlin till now when compared to Java -
->   1. **null-safe** language - usage of nullable type - safe-call & elvis operators
->   2. **No checked exception** - Reduces clutter in code
->   3. Using **default & named parameters** in functions
->   4. Using `data` class accompanied by **copy()** method 
->   5. Smart casting
->   6. **Object destructuring**
->   7. **Extension Functions**
->   8. `infix` notation
->   9. **Creating DSLs** using infix notation & lambda extensions
->   10. Delegation
+>
+>   Key features: 
+>       1. **null-safe** language - usage of nullable type - safe-call & elvis operators
+>       2. **No checked exception** - Reduces clutter in code
+>       3. **Extension Functions**
+>       4. **Creating DSLs** using `infix` notation & lambda extensions
+>       5. **Delegation**
+>       6. **Coroutines**
+>
+>   Some more useful features:
+>       1. Object destructuring
+>       2. Using `data` class accompanied by _copy()_ method 
+>       3. Smart casting
+>       4. Using _default & named parameters_ in functions
 >   
 
 <br/> 
 
-# **Part I - Getting Familiar**
-
-> IntelliJ or Eclipse already have the Kotlin compiler so don't need to download it separately if we are using any of these IDEs.
-
-<img src="./images/JVM.png"> 
+# **Part I - Introduction to Kotlin**
 
 ## 1. Basics
 
-> In this section we will learn about some basic constructs about Kotlin.
+> In this section we will learn about some basic constructs about Kotlin. IntelliJ or Eclipse already have the Kotlin compiler so don't need to download it separately if we are using any of these IDEs.
+
+<img src="./images/JVM.png"> 
 
 ### 1.a. Kotlin Compiler - `kotlinc` 
 
@@ -217,6 +220,7 @@
 
 <br/>
 
+ 
  
 ## 2. Intro to Functions
 
@@ -1114,11 +1118,95 @@
 > 
 <br/> 
 
-## 15. Asynchronous Programming
+## 15. Asynchronous Programming - Coroutines
 
-<br/> 
+### 15.a. Understanding Coroutines 
 
-## 16. Building Web Applications using Ktor
+> Coroutines go hand in hand with **suspendible functions**, the execution of which may be _suspended and resumed_. These features are built in Kotlin using _continuations_, which are data structures used to preserve the internal state of a function in order to continue the function call later on.
 
-<br/> 
+- Unlike subroutines, which have a single point of entry, coroutines have multiple points of entry. Additionally, coroutines may remember state between calls.  
+- A call to a coroutine can jump right into the middle of the coroutine, where it left off in a previous call. Because of all this, we can implement cooperating functions—that is, functions that work in tandem—where two functions can run concurrently, with the flow of execution switching between them.
+
+<img src="images/coroutines.png"/>
+
+### 15.b. Creating Coroutines
+
+- While coroutines are part of the language’s standard library, we’ll have to download an additional library to make use of that package, which contains functions to easily create and work with coroutines.
+- The `runBlocking()` function from `kotlinx.coroutines.*` package takes a lambda as an argument and executes that within a coroutine.
+- `launch()` function starts a new coroutine to execute the given lambda, like `runBlocking()` function does, except the invoking code isn’t blocked for the completion of the coroutine.
+- Unlike the `runBlocking()` function, the `launch()` function returns a job, which can be used to wait on for completion or to cancel the task.
+
+    ```kotlin
+        runBlocking {
+            launch { task1() }
+            launch { task2() }
+            println("Calling task1() and task2() from main")
+        }
+    ```
+
+### 15.c. Interleaving calls with Suspension points
+
+- Kotlin coroutines library comes with suspension points—a function that will suspend execution of the current task and let another task execute. There are two functions to achieve this in the `kotlinx.coroutines.*` library: `delay()` and `yield()`.
+    - The `delay()` function will pause the currently executing task for the duration of milliseconds specified. 
+    - The `yield()` method doesn’t result in any explicit delays. But both these methods will give an opportunity for another pending task to execute.
+- Kotlin will permit the use of suspension points only in functions that are annotated with the `suspend` keyword. Marking a function with `suspend` doesn’t automatically make the function run in a coroutine.
+
+    ```kotlin
+        suspend fun task2() {
+            println("Starting task2 in ${Thread.currentThread()}")
+            yield()
+            println("Ending task2 in ${Thread.currentThread()}")
+        }
+    ```
+
+> **When to use coroutines**
+>
+>   - Suppose we have multiple tasks that can’t be run in parallel, maybe due to potential contention of shared resources used by them. Running the tasks sequentially one after the other may end up starving all but a few tasks. Sequential execution is especially not desirable if the tasks are long running or never ending. In such cases, we may let multiple tasks run cooperatively, using coroutines, and make steady progress on all tasks. 
+>   - We can also use coroutines to build an unbounded stream of data for creating Infinite Sequences.
+
+### 15.d. Couroutine Contexts
+
+- The call to `launch()` and `runBlocking()` functions by default execute in the same thread as the caller's coroutine scope as they carry a coroutine context from their scope.  
+
+- We may pass a `CoroutineContext` to these functions to set the execution context of the coroutines these functions start.
+
+#### 15.d.i. Threads in `CoroutineContext`
+
+- We may pass some pre-defined thread pool (`Dispatchers`) as `CoroutineContext` to these functions. Let's take a look at few of them - 
+
+    - `Dispatchers.Default`: This instructs the coroutine to execute in a thread from DefaultDispatcher thread pool. The number of threads in this pool is 2 or number of cores of the CPU, whichever is higher. This pool is for running **computation intensive** tasks.
+    - `Dispatchers.IO`: This instructs coroutines to execute in a pool that is dedicated for running **IO intensive** tasks. That pool may grow in size if threads are blocked on IO and more tasks are created.
+    - `Dispatchers.Main`: Used in android devices and Swing UI, for example, to run tasks that update the UI from only the `main` thread.
+    
+- We can pass custom thread pool (`Executors` API) to these functions as well.
  
+    - `SingleThreadExecutor`: Coroutines using this context will run concurrently instead of parallel.
+    - `FixedThreadPool`: Coroutines using this context can run in this custom pool with the number of threads passed in the configuration. 
+
+> Note:
+> 
+>   - When passing custom thread pool, we need to use Kotlin's extension functions to get a `CoroutineContext` from it using an `asCoroutineDispatcher()` function. 
+>   - Along with this function, we need to call `use()` function which takes care of closing the `Executors` pool. This `use()` function behaves like the _try-with-resources_ feature in Java.  
+
+#### 15.d.ii. Switching threads after Suspension Points using `CoroutineStart`
+
+-  We might have a scenario where we want a coroutine to start in the context of the caller but switch to a different thread at suspension point. We can use the `CoroutineStart`, the second optional argument to `launch()`. 
+- The different enums for `CoroutineStart` are -
+    - `DEFAULT`: To run the coroutine in the current context
+    - `LAZY`: Defer execution until an explicit `start()` is called
+    - `ATOMIC`: Used to run in non-cancellable mode
+    - `UNDISPATCHED`: To run in current context and then switch threads after suspension point
+
+#### 15.d.iii. Changing the `CoroutineContext` using `withContext()`
+
+- We can run a coroutine in one context and then change the context midway using the `withContext()`.
+
+> **Useful Tip**
+>
+> - Kotlin provides a command-line option `-Dkotlinx.coroutines.debug` to display the details of the coroutine executing a function.
+
+
+
+
+- `async` & `await`
+<br/> 
