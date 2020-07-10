@@ -22,18 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="README.md">
-      <change afterPath="$PROJECT_DIR$/15-async-programming/src/com/arunav/kotlin/async/Coroutines.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/15-async-programming/src/com/arunav/kotlin/async/CoroutinesContext.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/coroutines.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/annotations-13.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-1.3.61.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlin-stdlib-common-1.3.61.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/kotlinx-coroutines-core-1.3.3.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15-async-programming/15-async-programming.iml" beforeDir="false" afterPath="$PROJECT_DIR$/15-async-programming/15-async-programming.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/8-interoperability/8-interoperability.iml" beforeDir="false" afterPath="$PROJECT_DIR$/8-interoperability/8-interoperability.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -490,7 +480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594275902167</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Coroutines">
+      <created>1594347210961</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1594347210962</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -529,7 +526,8 @@
     <MESSAGE value="Kotlin Advanced" />
     <MESSAGE value="Delegates" />
     <MESSAGE value="README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md" />
+    <MESSAGE value="Coroutines" />
+    <option name="LAST_COMMIT_MESSAGE" value="Coroutines" />
   </component>
   <component name="WindowStateProjectService">
     <state x="368" y="147" width="800" height="714" key="#Intentions" timestamp="1593991749740">
@@ -562,10 +560,10 @@
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="456" y="223" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.960@0.0.1536.960" timestamp="1594327835726" />
-    <state x="385" y="82" key="CommitChangelistDialog2" timestamp="1594066088036">
+    <state x="385" y="82" key="CommitChangelistDialog2" timestamp="1594347210682">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="385" y="82" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1594066088036" />
+    <state x="385" y="82" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1594347210682" />
     <state x="385" y="82" key="CommitChangelistDialog2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594004320909" />
     <state width="1494" height="275" key="GridCell.Tab.0.bottom" timestamp="1594346737880">
       <screen x="0" y="0" width="1536" height="960" />
@@ -616,10 +614,10 @@
     </state>
     <state x="427" y="0" key="SettingsEditor/0.0.1536.960@0.0.1536.960" timestamp="1594347070657" />
     <state x="269" y="119" key="SettingsEditor/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594090852620" />
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594275904938">
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2" timestamp="1594347212821">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1594269855184" />
+    <state x="368" y="221" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1594347212821" />
     <state x="368" y="221" key="Vcs.Push.Dialog.v2/1536.0.2048.1152/0.0.1536.960@0.0.1536.960" timestamp="1594275904938" />
     <state x="721" y="318" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1594344486885">
       <screen x="0" y="0" width="1536" height="960" />

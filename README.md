@@ -14,18 +14,18 @@
 > My takeaways from Kotlin till now when compared to Java -
 >
 >   Key features: 
->       1. **null-safe** language - usage of nullable type - safe-call & elvis operators
->       2. **No checked exception** - Reduces clutter in code
->       3. **Extension Functions**
->       4. **Creating DSLs** using `infix` notation & lambda extensions
->       5. **Delegation**
->       6. **Coroutines**
+>    1. **null-safe** language - usage of nullable type - safe-call & elvis operators
+>    2. **No checked exception** - Reduces clutter in code
+>    3. **Extension Functions**
+>    4. **Creating DSLs** using `infix` notation & lambda extensions
+>    5. **Delegation**
+>    6. **Coroutines**
 >
 >   Some more useful features:
->       1. Object destructuring
->       2. Using `data` class accompanied by _copy()_ method 
->       3. Smart casting
->       4. Using _default & named parameters_ in functions
+>    1. Object destructuring
+>    2. Using `data` class accompanied by _copy()_ method 
+>    3. Smart casting
+>    4. Using _default & named parameters_ in functions
 >   
 
 <br/> 
