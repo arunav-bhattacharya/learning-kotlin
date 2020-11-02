@@ -1201,9 +1201,10 @@
 
 - We can run a coroutine in one context and then change the context midway using the `withContext()`.
 
-> **Useful Tip**
+> **Useful Tips**
 >
 > - Kotlin provides a command-line option `-Dkotlinx.coroutines.debug` to display the details of the coroutine executing a function.
+> - Behind the scenes, coroutines are managed using **[continuations](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.coroutines/-continuation/)**. Continuations are highly powerful data structures - programs can capture and preserve the state of execution in one thread and restore them when needed in another thread.
 
 
 ### 15.e. `async` & `await`

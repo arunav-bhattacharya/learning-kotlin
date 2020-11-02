@@ -23,8 +23,28 @@ fun playingWithVariables() {
     print(multiLineString)
 }
 
-fun main() {
-    greet(listOf("Arunav", "Kaushik", "Sanjoy"))
-    playingWithVariables()
+fun greet2(names: List<String>) {
+    println("Welcome")
+    for (name in names)
+        println(name)
 }
 
+fun variables2() {
+    var name = "Arpita"
+    var age: Int
+    age = 25
+    val address: String = "Kolkata, India"
+    val person1 = "Name= $name, Age=$age, Address=$address"
+    println("\n" + person1)
+    name = "Madhuri"
+    age = 30
+    val person2 = "Name= $name, Age=$age, Address=$address"
+    println(person2)
+}
+
+fun main() {
+    greet(listOf("Arunav", "Kaushik", "Sanjoy"))
+    greet2(listOf("Arunav", "Kaushik", "Sanjoy"))
+    playingWithVariables()
+    variables2()
+}

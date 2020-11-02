@@ -3,6 +3,16 @@ package com.arunav.kotlin.basics
 fun main() {
     ifConditions()
     whenConditions("Green")
+    when2(0)
+}
+
+fun when2(number: Int){
+
+    when {
+        number > 0 -> println("Positive number")
+        number < 0 -> println("Negative number")
+        else -> println("Zero")
+    }
 }
 
 fun whenConditions(str: String) {
