@@ -23,14 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/15-async-programming/src/com/arunav/kotlin/async/example/Airport.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/15-async-programming/src/com/arunav/kotlin/async/example/AirportInfo.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/klaxon-5.2.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/1-basics/src/com/arunav/kotlin/basics/Basics.kt" beforeDir="false" afterPath="$PROJECT_DIR$/1-basics/src/com/arunav/kotlin/basics/Basics.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/1-basics/src/com/arunav/kotlin/basics/Conditionals.kt" beforeDir="false" afterPath="$PROJECT_DIR$/1-basics/src/com/arunav/kotlin/basics/Conditionals.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15-async-programming/15-async-programming.iml" beforeDir="false" afterPath="$PROJECT_DIR$/15-async-programming/15-async-programming.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1-basics/src/com/arunav/kotlin/basics/Loops.kt" beforeDir="false" afterPath="$PROJECT_DIR$/1-basics/src/com/arunav/kotlin/basics/LoopsNRanges.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2-functions/src/com/arunav/kotlin/functions/Functions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/2-functions/src/com/arunav/kotlin/functions/Functions.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,19 +112,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AsyncNAwaitKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="15-async-programming" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.async.AsyncNAwaitKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BasicsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="1-basics" />
       <option name="VM_PARAMETERS" />
@@ -153,33 +138,46 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoopsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+    <configuration name="FunctionsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="2-functions" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.functions.FunctionsKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoopsNRangesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="1-basics" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.basics.LoopsKt" />
+      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.basics.LoopsNRangesKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Kotlin.AsyncNAwaitKt" />
       <item itemvalue="Kotlin.AirportInfoKt" />
       <item itemvalue="Kotlin.BasicsKt" />
-      <item itemvalue="Kotlin.LoopsKt" />
       <item itemvalue="Kotlin.ConditionalsKt" />
+      <item itemvalue="Kotlin.FunctionsKt" />
+      <item itemvalue="Kotlin.LoopsNRangesKt" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.ConditionalsKt" />
+        <item itemvalue="Kotlin.LoopsNRangesKt" />
+        <item itemvalue="Kotlin.FunctionsKt" />
         <item itemvalue="Kotlin.BasicsKt" />
-        <item itemvalue="Kotlin.LoopsKt" />
         <item itemvalue="Kotlin.AirportInfoKt" />
-        <item itemvalue="Kotlin.AsyncNAwaitKt" />
       </list>
     </recent_temporary>
   </component>
@@ -509,7 +507,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594353417214</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Basics revisions">
+      <created>1604285182259</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1604285182259</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -549,41 +554,56 @@
     <MESSAGE value="Coroutines" />
     <MESSAGE value="readme" />
     <MESSAGE value="async &amp; await" />
-    <option name="LAST_COMMIT_MESSAGE" value="async &amp; await" />
+    <MESSAGE value="Basics revisions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basics revisions" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2006" height="335" key="GridCell.Tab.0.bottom" timestamp="1604284410032">
+    <state x="-1504" y="88" key="CommitChangelistDialog2" timestamp="1604285182086">
       <screen x="-2048" y="-64" width="2048" height="1152" />
     </state>
-    <state width="2006" height="335" key="GridCell.Tab.0.bottom/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604284410032" />
+    <state x="-1504" y="88" key="CommitChangelistDialog2/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285182086" />
+    <state width="1485" height="400" key="GridCell.Tab.0.bottom" timestamp="1604300795737">
+      <screen x="-2560" y="-32" width="2560" height="1440" />
+    </state>
+    <state width="2006" height="335" key="GridCell.Tab.0.bottom/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285131862" />
+    <state width="1485" height="400" key="GridCell.Tab.0.bottom/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604300795737" />
     <state width="2006" height="335" key="GridCell.Tab.0.bottom/0.0.2048.1152@0.0.2048.1152" timestamp="1604282585833" />
-    <state width="2006" height="335" key="GridCell.Tab.0.center" timestamp="1604284410031">
-      <screen x="-2048" y="-64" width="2048" height="1152" />
+    <state width="1485" height="400" key="GridCell.Tab.0.center" timestamp="1604300795736">
+      <screen x="-2560" y="-32" width="2560" height="1440" />
     </state>
-    <state width="2006" height="335" key="GridCell.Tab.0.center/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604284410031" />
+    <state width="2006" height="335" key="GridCell.Tab.0.center/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285131861" />
+    <state width="1485" height="400" key="GridCell.Tab.0.center/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604300795736" />
     <state width="2006" height="335" key="GridCell.Tab.0.center/0.0.2048.1152@0.0.2048.1152" timestamp="1604282585832" />
-    <state width="2006" height="335" key="GridCell.Tab.0.left" timestamp="1604284410031">
-      <screen x="-2048" y="-64" width="2048" height="1152" />
+    <state width="1485" height="400" key="GridCell.Tab.0.left" timestamp="1604300795736">
+      <screen x="-2560" y="-32" width="2560" height="1440" />
     </state>
-    <state width="2006" height="335" key="GridCell.Tab.0.left/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604284410031" />
+    <state width="2006" height="335" key="GridCell.Tab.0.left/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285131860" />
+    <state width="1485" height="400" key="GridCell.Tab.0.left/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604300795736" />
     <state width="2006" height="335" key="GridCell.Tab.0.left/0.0.2048.1152@0.0.2048.1152" timestamp="1604282585832" />
-    <state width="2006" height="335" key="GridCell.Tab.0.right" timestamp="1604284410032">
-      <screen x="-2048" y="-64" width="2048" height="1152" />
+    <state width="1485" height="400" key="GridCell.Tab.0.right" timestamp="1604300795736">
+      <screen x="-2560" y="-32" width="2560" height="1440" />
     </state>
-    <state width="2006" height="335" key="GridCell.Tab.0.right/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604284410032" />
+    <state width="2006" height="335" key="GridCell.Tab.0.right/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285131861" />
+    <state width="1485" height="400" key="GridCell.Tab.0.right/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604300795736" />
     <state width="2006" height="335" key="GridCell.Tab.0.right/0.0.2048.1152@0.0.2048.1152" timestamp="1604282585833" />
-    <state x="-1523" y="151" key="SettingsEditor" timestamp="1604282761199">
-      <screen x="-2048" y="-64" width="2048" height="1152" />
+    <state x="-1904" y="237" key="SettingsEditor" timestamp="1604296452944">
+      <screen x="-2560" y="-32" width="2560" height="1440" />
     </state>
     <state x="-1523" y="151" key="SettingsEditor/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604282761199" />
+    <state x="-1904" y="237" key="SettingsEditor/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604296452944" />
+    <state x="-1424" y="252" key="Vcs.Push.Dialog.v2" timestamp="1604285186494">
+      <screen x="-2048" y="-64" width="2048" height="1152" />
+    </state>
+    <state x="-1424" y="252" key="Vcs.Push.Dialog.v2/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285186494" />
     <state x="817" y="497" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604282526337">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="817" y="497" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1152@0.0.2048.1152" timestamp="1604282526337" />
-    <state x="-1332" y="101" width="615" height="822" key="find.popup" timestamp="1604283366400">
-      <screen x="-2048" y="-64" width="2048" height="1152" />
+    <state x="-1665" y="174" width="769" height="1028" key="find.popup" timestamp="1604291512850">
+      <screen x="-2560" y="-32" width="2560" height="1440" />
     </state>
     <state x="-1332" y="101" width="615" height="822" key="find.popup/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604283366400" />
+    <state x="-1665" y="174" width="769" height="1028" key="find.popup/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604291512850" />
     <state x="716" y="165" width="615" height="822" key="find.popup/0.0.2048.1152@0.0.2048.1152" timestamp="1604282556063" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">

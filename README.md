@@ -103,6 +103,8 @@
        Welcome Arunav, Kaushik, Sanjoy, to the world of Kotlin !
     ```
 
+- Unlike languages like Java, Kotlin doesn’t require a statement or expression to belong to a method and a method to belong to a class, at least not in the source code we write. When the code is compiled, or executed as script, Kotlin will create wrapper classes and methods as necessary to satisfy the JVM expectations.
+
 ### 1.d. Variables - `var` & `val`
 
 - Immutable variables are defined as `val` and mutable variables are defined as `var`
@@ -118,7 +120,20 @@
         address = "Phoenix, Arizona"    
     ```  
 
-### 1.e. Basic Data Types
+### 1.e. Equality Check 
+
+- **Structural Equality**: `equals()` method in Java, or `==` operator in Kotlin, is a comparison of values, called structural equality.
+
+- **Referential Equality**: `==` operator in Java, or `===` in Kotlin, is a comparison of references, called referential equality. Referential equality compares references and returns true if the two references are identical—that is, they refer to the same exact instance.
+
+    ```kotlin
+        println("hi" == "hi")  // true 
+        println("hi" == "Hi")  // false
+        println(null == "hi")  // false
+        println("hi" == null)  // false
+        println(null == null)  // true
+    ```
+### 1.f. Basic Data Types
 
 - In Kotlin everything is an object. 
 - The different data types in Kotlin are - **Numbers, Characters, Booleans, Arrays, Unsigned integers, Strings**.
@@ -149,7 +164,7 @@
     ```     
 [Additional Reading](https://kotlinlang.org/docs/reference/basic-types.html)
 
-### 1.f. Loops & Ranges
+### 1.g. Loops & Ranges
 
 - Traditional `for`, `while`, `do..while` loops are supported in Kotlin
 - `break` and `continue` also are supported
@@ -157,8 +172,28 @@
     - `..` : Incrementing 
     - `downTo` : Decrementing
     - `step` : no. of steps increment or decrement can happen
+- For skipping values without a particular rythm we can use the `filter()` method 
     
     ```kotlin
+        val oneToFive: IntRange = 1..5
+        // IntRange
+        for (i in oneToFive) {
+            println(i)
+        }
+    
+        val aToe: CharRange = 'a'..'e'
+        //CharRange
+        for (i in aToe) {
+            println(i)
+        }
+    
+        // ClosedRange - range of Strings
+        val seekHelp: ClosedRange<String> = "hell".."help"
+        println(seekHelp.contains("helm"))   // true
+        println(seekHelp.contains("hello"))  // true
+        println(seekHelp.contains("helo"))   // true
+        println(seekHelp.contains("hels"))   // false
+  
         for (i in 1..10) {
             println(i)
         }
@@ -168,10 +203,14 @@
         for (i in 10 downTo 1 step 2) {
             println(i)
         }
+        // Using filters in ranges
+        for (i in (1..12).filter { it % 3 == 0 || it % 5 == 0 }) {
+            println(i) //3, 5, 6, 9, 10, 12
+        }  
     ```
 - We can use label to break out of all the nested loops
 
-### 1.g. Conditionals 
+### 1.h. Conditionals 
 
 - In Kotlin, `if` can be used as a statement or an expression. When used as expression it returns a value and hence there is no separate ternary operator.
 - Instead of switch statements, we have `when` statements in Kotlin. default case is referred as `else`.
@@ -179,13 +218,23 @@
 
 
     ```kotlin
-        fun whenConditions(str: String) {
+        fun whenStatement(str: String) {
             when(str){
                 "Red" -> println("The color code is 4")
                 "Blue" -> println("The color code is 8")
                 else -> println("Couldn't find the color code")
             }
         }
+        
+        fun whenExpression(dayOfWeek: Any) = when (dayOfWeek) {
+            "Saturday", "Sunday" -> "Relax"
+            in listOf("Monday", "Tuesday", "Wednesday", "Thursday") -> "Work hard"
+            in 2..4 -> "Work hard"
+            "Friday" -> "Party"
+            is String -> "What?"
+            else -> "No clue"
+        }
+                
         fun ifConditions() {
             val a = 30
             val b = 20
@@ -201,7 +250,7 @@
     
 [Additional Reading](https://kotlinlang.org/docs/reference/control-flow.html)  
 
-### 1.h. Packages 
+### 1.i. Packages 
 
 - By default Kotlin imports a number of packages.
 - Depending on target platform, additional packages are imported for JVM and JS.
@@ -232,17 +281,33 @@
 - Some return types in function -
     - `Unit` : This is the default return type. Unit is kind of equivalent to void in other languages. But in kotlin we can check if the value of a variable is `Unit`.
     - `Nothing` : Nothing is a return type when a function returns exception. `Nothing` is substitutable for any class including `Int`, `Double`, `String`, etc.
-- **Single expression** function doesn't need a function block    
+- In Kotlin, we can’t say `val` or `var` for parameters, they’re implicitly `val`, and any effort to change the parameters’ values within functions or methods will result in compilation errors.    
+- **Single expression** function doesn't need a function block
+- If a block body is assigned as a single expression function, Kotlin will treat that as a lambda expression or an anonymous function. Check out the below examples. 
+
+
+    ```kotlin
+      fun f1() = 2
+      fun f2() = { 2 }
+      fun f3(factor: Int) = { n: Int -> n * factor }
+            
+      println(f1()) //2
+      println(f2()) //() -> kotlin.Int 
+      println(f2()()) //2
+      println(f3(2)) //(kotlin.Int) -> kotlin.Int        
+      println(f3(2)(3)) //6
+    ```
 
 ### 2.b. Default & Named Parameters
 
 - We can pass **default** parameters to function arguments
+- The default argument doesn’t have to be a literal; it may be an expression. Also, you may compute the default arguments for a parameter using the parameters to its left.
 - In case of ambiguity in case of multiple parameters & default value being used in some cases, then the calling part of the function can use **named** parameters.
 - Also the ordering of the functions can be in any sequence when using named parameters 
 
 
     ```kotlin
-        fun person(name: String, address: String = "", email: String = "", phone: String) {
+        fun person(name: String, address: String = "", email: String = "$name${name.length}@kotlin.lang", phone: String) {
             println("Name=$name, Address=$address, Email=$email, Phone=$phone")
         }
     ```

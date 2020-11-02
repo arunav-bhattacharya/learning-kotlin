@@ -31,6 +31,11 @@ fun greet2(names: List<String>) {
 
 fun variables2() {
     var name = "Arpita"
+    println()
+    println(name)
+    println("Kotlin class=" + name::class)
+    println("Underlying Java class=" + name::javaClass)
+
     var age: Int
     age = 25
     val address: String = "Kolkata, India"

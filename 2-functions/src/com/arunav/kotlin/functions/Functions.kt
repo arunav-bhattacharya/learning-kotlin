@@ -1,5 +1,15 @@
 package com.arunav.kotlin.functions
 
+/*
+ - Unit -> returning void
+ - Nothing -> throwing exception
+ - Single line functions can be written as an expression
+ - Default parameters can be passed as function arguments
+ - When calling a function we can pass named arguments. Arguments can be in any order when using named parameters
+ - Function arguments prefixed with `vararg` means variable number of arguments can be passed as parameters
+ - Spread(*) operator is used when passing a variable argument to another function accepting variable arguments
+*/
+
 fun hello(): Unit {
     println("I m returning void")
 }
@@ -17,7 +27,8 @@ fun sum(x: Int, y: Int): Int {
 fun singleLineSum(x: Int, y: Int) = x + y;
 
 // Using default Parameters
-fun person(name: String, address: String = "", email: String = "", phone: String) {
+// Email is used as a default argument that evaluates the an expression
+fun person(name: String, address: String = "", email: String = "$name${name.length}@kotlin.lang", phone: String) {
     println("Name=$name, Address=$address, Email=$email, Phone=$phone")
 }
 
@@ -32,7 +43,6 @@ fun printNames(vararg names: String) {
     for (name in names)
         print("$name, ")
 }
-
 
 fun main() {
     hello()
