@@ -11,7 +11,9 @@
       <module fileurl="file://$PROJECT_DIR$/15-async-programming/15-async-programming.iml" filepath="$PROJECT_DIR$/15-async-programming/15-async-programming.iml" />
       <module fileurl="file://$PROJECT_DIR$/2-functions/2-functions.iml" filepath="$PROJECT_DIR$/2-functions/2-functions.iml" />
       <module fileurl="file://$PROJECT_DIR$/3-classes/3-classes.iml" filepath="$PROJECT_DIR$/3-classes/3-classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3-collections/3-collections.iml" filepath="$PROJECT_DIR$/3-collections/3-collections.iml" />
       <module fileurl="file://$PROJECT_DIR$/4-inheritance/4-inheritance.iml" filepath="$PROJECT_DIR$/4-inheritance/4-inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4-type-safety/4-type-safety.iml" filepath="$PROJECT_DIR$/4-type-safety/4-type-safety.iml" />
       <module fileurl="file://$PROJECT_DIR$/5-nulls/5-nulls.iml" filepath="$PROJECT_DIR$/5-nulls/5-nulls.iml" />
       <module fileurl="file://$PROJECT_DIR$/6-useful-constructs/6-useful-constructs.iml" filepath="$PROJECT_DIR$/6-useful-constructs/6-useful-constructs.iml" />
       <module fileurl="file://$PROJECT_DIR$/7-functional/7-functional.iml" filepath="$PROJECT_DIR$/7-functional/7-functional.iml" />

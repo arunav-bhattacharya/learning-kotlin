@@ -269,8 +269,7 @@
 
 <br/>
 
- 
- 
+  
 ## 2. Intro to Functions
 
 > In this section, we'll be doing an introduction to functions in Kotlin 
@@ -334,7 +333,92 @@
 
 <br/> 
 
-## 3. Classes
+## 3. Collections
+
+> We'll explore different types of collections in Kotlin, including 
+> - Tuples - Pair & Triple
+> - Array
+> - List
+> - Set
+> - Map
+
+### 3.a Tuples - `Pair` & `Triple`
+
+- Tuples are sequences of objects of small, finite size.
+- `Pair` is a tuple of size two and `Triple` is a tuple of size three.
+- Both `Pair` & `Triple` are immutable. For mutability we can use `Array`.
+
+    ```kotlin
+       println(Pair("Tom", "Jerry"))
+       println(Triple("Tom", "Dick", "Harry"))    
+    ```
+
+### 3.b. Arrays
+
+[Arrays](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0044.xhtml)
+
+### 3.c. Lists
+
+[Lists](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0045.xhtml)
+
+### 3.d. Sets
+
+[Sets](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0046.xhtml)
+
+### 3.e. Maps
+
+- The key-value pairs are created using the `to()` extension function, available on any object in Kotlin. 
+- Using `mapOf()`, that takes a vararg of `Pair<K, V>`, we can create a map of key-values of different objects.
+
+
+[Maps](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0047.xhtml)
+
+<br/>
+
+## 4. Type Safety & Null Handling
+
+### `Any`
+
+- All classes in Kotlin extend from the base class `Any` similar to `Object` class in Java.
+- Methods like `hashCode()`, `equals()` and `toString()` are already implemented in `Any`.
+- In addition to these, `Any` has extension functions like `to()`, `let()`, `run()`,`apply()`, `also()`.  
+
+### `Nothing`
+
+- When a function returns nothing, the corresponding return type in Kotlin is `Nothing`. There is nothing similar in Java.
+- `Nothing` actually returns nothing, not even `void` (or `Unit` in Kotlin). `Nothing` is literally deeper than `void`.
+- `Nothing` can be substituted for any class (`Int`, `Double`, etc).
+- When used as a function return type that means that the function call will result in an exception.
+
+    ```kotlin
+      fun computeSqrt(n: Double): Double { 
+          if(n >= 0) {
+              return Math.sqrt(n) 
+          } else {
+              throw RuntimeException("No negative please") 
+          }
+      }
+    ```
+- In the above example `if` returns `Double`, but the `else` throws an Exception.
+
+### `null` Handling
+
+- BY default all objects in Kotlin is defined as not nullable unless specified otherwise. Every non-nullable Koltin object have a nullable counterpart. The nullable types have a `?` suffix.
+- Kotlin does `null` check during compile time -
+    - If the return type of a function is not defined as nullable and the function is returning `null`, the Kotlin code doesn't compile and throws an error.
+    - If `null` is passed in a function parameter when the parameter in the function is defined as not nullable.
+- **Safe-Call `(?.)` Operator**: 
+- **Elvis `(?:)` Operator**:
+- **Unsafe Assertion `(!!)` Operator**:    
+
+
+<br/>
+
+## 5. Generics
+
+<br/>
+
+## 4. Classes
 
 > Kotlin is an object oriented language and it supports all the different features of object-oriented programming. In this section, we'll get started with the OO concepts in Kotlin.
 
