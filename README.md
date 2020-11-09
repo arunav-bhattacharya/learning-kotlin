@@ -403,14 +403,51 @@
 
 ### `null` Handling
 
-- BY default all objects in Kotlin is defined as not nullable unless specified otherwise. Every non-nullable Koltin object have a nullable counterpart. The nullable types have a `?` suffix.
+- By default all objects in Kotlin is defined as not nullable unless specified otherwise. Every non-nullable Koltin object have a nullable counterpart. The nullable types have a `?` suffix.
 - Kotlin does `null` check during compile time -
     - If the return type of a function is not defined as nullable and the function is returning `null`, the Kotlin code doesn't compile and throws an error.
     - If `null` is passed in a function parameter when the parameter in the function is defined as not nullable.
-- **Safe-Call `(?.)` Operator**: 
-- **Elvis `(?:)` Operator**:
-- **Unsafe Assertion `(!!)` Operator**:    
+- **Safe-Call `(?.)` Operator**: The `null` check and call to a method or property can be merged in a single step using the `?.` operator. If the reference is `null`, the safe-call operator will result in `null`, otherwise the result will be the result of the method call or property.
 
+    ```kotlin
+      fun getNickName(name: String?) : String? {
+          return name?.reversed()?.toUppercase()
+      }
+    ```
+  
+- **Elvis `(?:)` Operator**: If we want to return something instead of `null`, when the reference is `null`, we can do that using the Elvis operator.
+
+    ```kotlin
+      fun getNickName(name: String?): String {
+          return name?.reversed()?.toUppercase()?:"What's there in a name ?"
+      }
+    ```
+ 
+- **Unsafe Assertion `(!!)` Operator**: It is NOT advisable to use this operator. This operator tells Kotlin compiler that it doesn't have to do any `null` check on a particular reference during compile time. If that reference is `null` during runtime and we are calling a method or property on that reference then that will result in a `NullPointerException` at runtime.
+
+    ```kotlin
+      fun getNickName(name: String?): String {
+          return name!!.reversed().toUppercase()
+      }
+    ```
+
+### Type Checking & Casting
+
+- Using the `is` operator we can do type-checking in Kotlin.
+- Once Kotlin determines the type during compile-time, Kotlin does a smart cast wherever possible.
+- Similarly, once an object reference is not `null`, it can apply smart casts to automatically cast a nullable type to a non-nullable type, saving an explicit cast. 
+
+    ```kotlin
+    fun whatToDo(dayOfWeek: Any) = when (dayOfWeek) {
+      "Saturday", "Sunday" -> "Relax"
+      in listOf("Monday", "Tuesday", "Wednesday", "Thursday") -> "Work hard" 
+      in 2..4 -> "Work hard"
+      "Friday" -> "Party"
+      is String -> "What?"
+      else -> "No clue"
+    }
+    ```
+- Using the `as` and `as?` operator we can do explicit type-casting in Kotlin. This might be required when Kotlin compiler is unable to do a smart cast.
 
 <br/>
 
