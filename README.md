@@ -448,10 +448,29 @@
     }
     ```
 - Using the `as` and `as?` operator we can do explicit type-casting in Kotlin. This might be required when Kotlin compiler is unable to do a smart cast.
+- In Kotlin there is nothing as implicit casting. It either has to be a smart cast or an explicit cast.
 
 <br/>
 
 ## 5. Generics
+
+- We can think of of objects from which we always _read_ as **Producers** and the ones we _write_ as **Consumers**. To remember this, we can use a mnemonic PECS (Producer -> extends and Consumer -> super).
+
+### Invariance
+
+- Let's say the class `Dog` is inherited from the class `Animal`. Any method that is expecting an `Animal` will be happy if we pass `Dog`, but if we try to pass `MutableList<Dog>` where `MutableList<Animal>` is expected, Kotlin compiler will throw an error. This is true in case of Java `List<>` as well. The reason for this compilation error is because the list being a mutable one, we can add an instance of another animal, lets say `Cat` in the `MutableList<Animal>`. If a MutableList<Dog> is passed to MutableList<Animal> , then whenever a `Cat` is added to the list it will throw a ClassCastException at runtime, instead it is throwing the error at compile time itself. This is called type invariance, i.e., we cannot vary on the type, i.e., `List<Dog>` is not a subtype of `List<Animal>`.  
+
+
+### Covariance
+
+- Sometimes you want the compiler to permit _covariance_ — that is, tell the compiler to permit the **use of a derived class** of a parametric type `T` in addition to allowing the type `T`, but without compromising type safety. In Java you use the syntax `<? extends T>` to convey _covariance_, but there’s a catch. You can use that syntax when you use a generic class, which is called _use-site variance_ or _type-projection_, but not when you define a class, which is called _declaration-site variance_. In Kotlin you can do both.
+
+- The `out` modifier tells the Kotlin compiler that items can only be read out of the Generic class, and hence it allows derived classes to be passed as parameter by still maintaining type safety.
+
+### Contravariance
+
+- Other times you want to tell the compiler to allow _contravariance_ — that is, **permit a super class** of a parametric type T where type T is expected. Once again, Java permits _contravariance_, with the syntax `<? super T>` but only at use-site and not declaration-site. Kotlin permits contravariance both at declaration-site and use-site.
+
 
 <br/>
 

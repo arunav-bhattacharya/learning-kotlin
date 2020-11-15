@@ -14,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/3-collections/3-collections.iml" filepath="$PROJECT_DIR$/3-collections/3-collections.iml" />
       <module fileurl="file://$PROJECT_DIR$/4-inheritance/4-inheritance.iml" filepath="$PROJECT_DIR$/4-inheritance/4-inheritance.iml" />
       <module fileurl="file://$PROJECT_DIR$/4-type-safety/4-type-safety.iml" filepath="$PROJECT_DIR$/4-type-safety/4-type-safety.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5-generics/5-generics.iml" filepath="$PROJECT_DIR$/5-generics/5-generics.iml" />
       <module fileurl="file://$PROJECT_DIR$/5-nulls/5-nulls.iml" filepath="$PROJECT_DIR$/5-nulls/5-nulls.iml" />
       <module fileurl="file://$PROJECT_DIR$/6-useful-constructs/6-useful-constructs.iml" filepath="$PROJECT_DIR$/6-useful-constructs/6-useful-constructs.iml" />
       <module fileurl="file://$PROJECT_DIR$/7-functional/7-functional.iml" filepath="$PROJECT_DIR$/7-functional/7-functional.iml" />
