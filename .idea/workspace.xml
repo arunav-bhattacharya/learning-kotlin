@@ -23,14 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__21_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5-generics/5-generics.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5-generics/src/com/arunav/kotlin/generics/_1Invariance.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5-generics/src/com/arunav/kotlin/generics/_2Covariance.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5-generics/src/com/arunav/kotlin/generics/_3Contravariance.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5-generics/src/com/arunav/kotlin/generics/_3GenericConstraints.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/5-generics/src/com/arunav/kotlin/generics/_5ReifiedTypeParam.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance/Generics.kt" beforeDir="false" afterPath="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance/Generics.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5-generics/src/com/arunav/kotlin/generics/_2Covariance.kt" beforeDir="false" afterPath="$PROJECT_DIR$/5-generics/src/com/arunav/kotlin/generics/_2CovarianceAndContravariance.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5-generics/src/com/arunav/kotlin/generics/_3Contravariance.kt" beforeDir="false" afterPath="$PROJECT_DIR$/5-generics/src/com/arunav/kotlin/generics/_4StarProjection.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +90,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -107,7 +104,7 @@
       <recent name="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.GenericsKt">
+  <component name="RunManager" selected="Kotlin._5ReifiedTypeParamKt">
     <configuration name="GenericsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="4-inheritance" />
       <option name="VM_PARAMETERS" />
@@ -121,72 +118,72 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_1AnyNNothingKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="4-type-safety" />
+    <configuration name="_2CovarianceAndContravarianceKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="5-generics" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.typesafety._1AnyNNothingKt" />
+      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.generics._2CovarianceAndContravarianceKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_2NullabilityKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="4-type-safety" />
+    <configuration name="_3GenericConstraintsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="5-generics" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.typesafety._2NullabilityKt" />
+      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.generics._3GenericConstraintsKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_3TypeCheckNCastKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="4-type-safety" />
+    <configuration name="_4StarProjectionKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="5-generics" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.typesafety._3TypeCheckNCastKt" />
+      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.generics._4StarProjectionKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_4MapsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="3-collections" />
+    <configuration name="_5ReifiedTypeParamKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="5-generics" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.collections._4MapsKt" />
+      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.generics._5ReifiedTypeParamKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Kotlin._4MapsKt" />
-      <item itemvalue="Kotlin._1AnyNNothingKt" />
-      <item itemvalue="Kotlin._2NullabilityKt" />
-      <item itemvalue="Kotlin._3TypeCheckNCastKt" />
       <item itemvalue="Kotlin.GenericsKt" />
+      <item itemvalue="Kotlin._2CovarianceAndContravarianceKt" />
+      <item itemvalue="Kotlin._3GenericConstraintsKt" />
+      <item itemvalue="Kotlin._4StarProjectionKt" />
+      <item itemvalue="Kotlin._5ReifiedTypeParamKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin._5ReifiedTypeParamKt" />
+        <item itemvalue="Kotlin._4StarProjectionKt" />
+        <item itemvalue="Kotlin._3GenericConstraintsKt" />
+        <item itemvalue="Kotlin._2CovarianceAndContravarianceKt" />
         <item itemvalue="Kotlin.GenericsKt" />
-        <item itemvalue="Kotlin._3TypeCheckNCastKt" />
-        <item itemvalue="Kotlin._2NullabilityKt" />
-        <item itemvalue="Kotlin._1AnyNNothingKt" />
-        <item itemvalue="Kotlin._4MapsKt" />
       </list>
     </recent_temporary>
   </component>
@@ -544,7 +541,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604904122623</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Generics">
+      <created>1605404776783</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1605404776783</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,70 +593,75 @@
     <MESSAGE value="Type Safety" />
     <MESSAGE value="Collections &amp; Type Safety" />
     <MESSAGE value="Type Check &amp; Cast" />
-    <option name="LAST_COMMIT_MESSAGE" value="Type Check &amp; Cast" />
+    <MESSAGE value="Generics" />
+    <option name="LAST_COMMIT_MESSAGE" value="Generics" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="198" y="224" key="#Plugins" timestamp="1605480201083">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="198" y="224" key="#Plugins/0.0.2048.1152@0.0.2048.1152" timestamp="1605480201083" />
     <state x="512" y="157" key="#Project_Structure" timestamp="1604774628833">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="512" y="157" key="#Project_Structure/0.0.2048.1152@0.0.2048.1152" timestamp="1604774628833" />
-    <state x="544" y="152" key="CommitChangelistDialog2" timestamp="1604904122488">
+    <state x="544" y="152" key="CommitChangelistDialog2" timestamp="1605404776622">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="-1504" y="88" key="CommitChangelistDialog2/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285182086" />
     <state x="-1880" y="158" key="CommitChangelistDialog2/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604301157676" />
-    <state x="544" y="152" key="CommitChangelistDialog2/0.0.2048.1152@0.0.2048.1152" timestamp="1604904122488" />
+    <state x="544" y="152" key="CommitChangelistDialog2/0.0.2048.1152@0.0.2048.1152" timestamp="1605404776622" />
     <state x="782" y="331" key="FileChooserDialogImpl" timestamp="1604704883289">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="684" y="322" key="FileChooserDialogImpl/0.0.1792.1120@0.0.1792.1120" timestamp="1604329608964" />
     <state x="782" y="331" key="FileChooserDialogImpl/0.0.2048.1152@0.0.2048.1152" timestamp="1604704883289" />
-    <state width="1750" height="294" key="GridCell.Tab.0.bottom" timestamp="1605156302694">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="1158" height="294" key="GridCell.Tab.0.bottom" timestamp="1605486400404">
+      <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="2006" height="335" key="GridCell.Tab.0.bottom/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285131862" />
     <state width="1486" height="536" key="GridCell.Tab.0.bottom/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604382463047" />
     <state width="1486" height="284" key="GridCell.Tab.0.bottom/0.0.1536.960@0.0.1536.960" timestamp="1604602670836" />
     <state width="1750" height="294" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1605156302694" />
-    <state width="2006" height="313" key="GridCell.Tab.0.bottom/0.0.2048.1152@0.0.2048.1152" timestamp="1604904324840" />
-    <state width="1750" height="294" key="GridCell.Tab.0.center" timestamp="1605156302693">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="1158" height="294" key="GridCell.Tab.0.bottom/0.0.2048.1152@0.0.2048.1152" timestamp="1605486400404" />
+    <state width="1158" height="294" key="GridCell.Tab.0.center" timestamp="1605486400403">
+      <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="2006" height="335" key="GridCell.Tab.0.center/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285131861" />
     <state width="1486" height="536" key="GridCell.Tab.0.center/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604382463046" />
     <state width="1486" height="284" key="GridCell.Tab.0.center/0.0.1536.960@0.0.1536.960" timestamp="1604602670836" />
     <state width="1750" height="294" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1605156302693" />
-    <state width="2006" height="313" key="GridCell.Tab.0.center/0.0.2048.1152@0.0.2048.1152" timestamp="1604904324839" />
-    <state width="1750" height="294" key="GridCell.Tab.0.left" timestamp="1605156302693">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="1158" height="294" key="GridCell.Tab.0.center/0.0.2048.1152@0.0.2048.1152" timestamp="1605486400403" />
+    <state width="1158" height="294" key="GridCell.Tab.0.left" timestamp="1605486400403">
+      <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="2006" height="335" key="GridCell.Tab.0.left/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285131860" />
     <state width="1486" height="536" key="GridCell.Tab.0.left/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604382463046" />
     <state width="1486" height="284" key="GridCell.Tab.0.left/0.0.1536.960@0.0.1536.960" timestamp="1604602670836" />
     <state width="1750" height="294" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1605156302693" />
-    <state width="2006" height="313" key="GridCell.Tab.0.left/0.0.2048.1152@0.0.2048.1152" timestamp="1604904324839" />
-    <state width="1750" height="294" key="GridCell.Tab.0.right" timestamp="1605156302693">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="1158" height="294" key="GridCell.Tab.0.left/0.0.2048.1152@0.0.2048.1152" timestamp="1605486400403" />
+    <state width="1158" height="294" key="GridCell.Tab.0.right" timestamp="1605486400404">
+      <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="2006" height="335" key="GridCell.Tab.0.right/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285131861" />
     <state width="1486" height="536" key="GridCell.Tab.0.right/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604382463047" />
     <state width="1486" height="284" key="GridCell.Tab.0.right/0.0.1536.960@0.0.1536.960" timestamp="1604602670836" />
     <state width="1750" height="294" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1605156302693" />
-    <state width="2006" height="313" key="GridCell.Tab.0.right/0.0.2048.1152@0.0.2048.1152" timestamp="1604904324839" />
-    <state x="459" y="209" key="SettingsEditor" timestamp="1605144868655">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state width="1158" height="294" key="GridCell.Tab.0.right/0.0.2048.1152@0.0.2048.1152" timestamp="1605486400404" />
+    <state x="525" y="215" key="SettingsEditor" timestamp="1605480341866">
+      <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="-1523" y="151" key="SettingsEditor/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604282761199" />
     <state x="-1904" y="237" key="SettingsEditor/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604296452944" />
     <state x="459" y="209" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1605144868655" />
-    <state x="525" y="215" key="SettingsEditor/0.0.2048.1152@0.0.2048.1152" timestamp="1604897769225" />
-    <state x="546" y="307" key="Vcs.Push.Dialog.v2" timestamp="1605158751417">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state x="525" y="215" key="SettingsEditor/0.0.2048.1152@0.0.2048.1152" timestamp="1605480341866" />
+    <state x="624" y="316" key="Vcs.Push.Dialog.v2" timestamp="1605404778801">
+      <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="-1424" y="252" key="Vcs.Push.Dialog.v2/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285186494" />
     <state x="-1780" y="363" key="Vcs.Push.Dialog.v2/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604301159366" />
     <state x="546" y="307" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1605158751417" />
-    <state x="624" y="316" key="Vcs.Push.Dialog.v2/0.0.2048.1152@0.0.2048.1152" timestamp="1604904123933" />
+    <state x="624" y="316" key="Vcs.Push.Dialog.v2/0.0.2048.1152@0.0.2048.1152" timestamp="1605404778801" />
     <state x="715" y="483" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605144885377">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>

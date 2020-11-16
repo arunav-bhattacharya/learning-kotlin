@@ -467,9 +467,138 @@
 
 - The `out` modifier tells the Kotlin compiler that items can only be read out of the Generic class, and hence it allows derived classes to be passed as parameter by still maintaining type safety.
 
+    ```kotlin
+        fun copyFromTo(from: Array<out Fruit>, to: Array<Fruit>) {
+          for (i in 0 until from.size) {
+            to[i] = from[i]
+          }
+        }
+    ```
+
+- The `Array<T>` class has methods to both read out and set in an object of type `T`. Any function that uses `Array<T>` may call either of those two types of methods. But using covariance, we’re promising to the Kotlin compiler that we’ll not call any method that sends in any value with the given parametric type on `Array<T>`. This act of using covariance at the point of using a generic class is called **use-site variance** or **type projection**.
+
+- Use-site variance is useful for the user of a generic class to convey the intent of covariance. But, on a broader level, the author of a generic class can make the intent of covariance — for all users of that class — that any user can only read out and not write into the generic class. Specifying covariance in the declaration of a generic type, rather than at the time of its use, is called **declaration-site variance**. A good example of declaration-site variance can be found in the declaration of the List interface — which is declared as `List<out T>`. 
+
 ### Contravariance
 
-- Other times you want to tell the compiler to allow _contravariance_ — that is, **permit a super class** of a parametric type T where type T is expected. Once again, Java permits _contravariance_, with the syntax `<? super T>` but only at use-site and not declaration-site. Kotlin permits contravariance both at declaration-site and use-site.
+- Other times you want to tell the compiler to allow _contravariance_ — that is, **permit a super class** of a parametric type `T` where type `T` is expected. Once again, Java permits _contravariance_, with the syntax `<? super T>` but only at use-site and not declaration-site. Kotlin permits contravariance both at declaration-site and use-site.
+
+- In the above example, if we want to pass a `Fruit` or one of the derived classes of `Fruit` into a collection of `Fruit`, or any class that is collection of a base of `Fruit` in the `to` parameter, we can’t simply pass an instance of `Array<Any>` as an argument to the `to` parameter. We have to explicitly ask the compiler to permit contravariance, i.e., to accept a parametric type of base where an instance of a parametric type is expected.
+
+    ```kotlin
+        fun copyFromTo(from: Array<out Fruit>, to: Array<in Fruit>) { 
+          for (i in 0 until from.size) {
+            to[i] = from[i]
+          }
+        }
+    ```
+
+- The only change was to the second parameter, what was to: `Array<Fruit>` is now to: `Array<in Fruit>`. The `in` specification tells Kotlin to permit method calls that set in values on that parameter and not permit methods that read out.
+
+- This again is a _use-site variance_, but this time for contravariance (`in`) instead of covariance (`out`). Just like declaration-site variance for covariance, classes may be defined with parametric type `<in T>` to universally specify contravariance, i.e., that type can only receive parametric types and can’t return or pass out parametric types.
+
+
+### Generic Functions
+
+- Not only classes can have type parameters. Functions can, too. Type parameters are placed before the name of the function:
+
+    ```kotlin
+        fun <T> singletonList(item: T): List<T> {
+            // ...
+        }
+    ```
+
+### Generic Constraints using `where`
+
+
+- We can tell Kotlin to allow a particular type of parameter in a generic type `T`, by specifying it during the declaration, as shown in the below example - 
+
+    ```kotlin
+        fun <T: AutoCloseable> useAndClose(input: T) { 
+            input.close()
+        }
+    ```
+  
+- The function `useAndClose()` expects a parameteric type `T` as parameter, but only one that conforms to being `AutoCloseable`. For a single constraint this approach is fine, but if there are multiple constraints, this approach won't work and we need to use `where` in that case. In the above example, in addition to `AutoCloseable` if we want the parameter `T` to conform to `Appendable`, then we would need to use `where` as shown below -
+
+    ```kotlin
+        fun <T> useAndClose(input: T) 
+           where T: AutoCloseable,
+                 T: Appendable {
+           input.append("there")
+           input.close() 
+        }
+    ``` 
+
+### Star Projection 
+
+- In Java we may use the `?` to specify that a function may receive a generic object of any type, but with a read-only constraint. We can also define raw types in Java, like `ArrayList`. The equivalent in Kotlin is **Star projection**, defined as the parametric type with `<*>` specifies both generic read-only type and raw type.
+
+    ```kotlin
+        fun printValues(values: Array<*>) {
+           for (value in values) {
+            println(value)
+          }
+          //values[0] = values[1] //ERROR
+        }
+        printValues(arrayOf(1, 2))
+    ```
+
+- In the above example, `Array<*>` prohibits making any changes to the values array. Had it been declared as `Array<T>`, then modification to the array would have been possible.
+
+- The star projection `<*>` here, is equivalent to `out T`, but is more concise to write.
+
+
+- **Star Projection Types**
+
+    - For `Foo<out T : TUpper>`, where `T` is a covariant type parameter with the upper bound `TUpper`, `Foo<*>` is equivalent to `Foo<out TUpper>`. It means that when the `T` is unknown you can safely _read values_ of `TUpper` from `Foo<*>`.
+    - For `Foo<in T>`, where `T` is a contravariant type parameter, `Foo<*>` is equivalent to `Foo<in Nothing>`. It means there is nothing you can write to `Foo<*>` in a safe way when `T` is unknown.
+    - For `Foo<T : TUpper>`, where `T` is an invariant type parameter with the upper bound `TUpper`, `Foo<*>` is equivalent to `Foo<out TUpper>` for reading values and to `Foo<in Nothing>` for writing values.
+    
+
+- Some examples of Star Projection
+    - `Function<*, String>` means `Function<in Nothing, String>`
+    - `Function<Int, *>` means `Function<Int, out Any?>`
+    - `Function<*, *>` means `Function<in Nothing, out Any?>`
+
+- Star projections are very much like Java's raw types, but safe. It comes in handy when we don't know much about the type parameter, but still want it to be type-safe.
+
+
+### Reified Type Parameters
+
+- Similar to Java, at runtime, the instances of generic types do not hold any information about their actual type arguments. The type information is said to be erased. For example, the instances of `Foo<Bar>` and `Foo<Baz?>` are erased to just `Foo<*>`.
+
+- These unchecked casts can be used when type safety is implied by the high-level program logic but cannot be inferred directly by the compiler. The compiler issues a warning on unchecked casts, and at runtime, only the non-generic part is checked (equivalent to `foo as List<*>`).
+
+- The type arguments of generic function calls are also only checked at compile time. However, **reified type parameters** of _inline functions_ (functions that are expanded at compile time removing additional function call overhead) are substituted by the actual type arguments in the inlined function body at the call sites and thus can be used for type checks and casts, with the same restrictions for instances of generic types. 
+
+- In the below examples, we'll see how reified type parameters will help reduce verbosity and clutter in the code. 
+
+- Without reified type parameters
+
+    ```kotlin
+        fun <T> findFirst(books: List<Book>, ofClass: Class<T>): T {
+            val selected = books.filter { book -> ofClass.isInstance(book) }
+  
+            if(selected.size == 0) throw RuntimeException("Not found")
+          
+            return ofClass.cast(selected[0]) 
+        }
+    ```
+
+- With reified type parameters
+
+    ```kotlin
+        inline fun <reified T> findFirst(books: List<Book>): T {
+            val selected = books.filter { book -> book is T }
+  
+            if(selected.size == 0) throw RuntimeException("Not found")
+          
+            return selected[0] as T
+        }
+    ```
+
+- Reified type parameters are useful to reduce clutter and also to alleviate potential errors in code. Reified type parameters eliminate the need to pass extra class information to functions, help to write code with safe casts, and customize the return type of functions with compile-time safety.
 
 
 <br/>
