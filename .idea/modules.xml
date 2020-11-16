@@ -2,24 +2,21 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/1-basics/1-basics.iml" filepath="$PROJECT_DIR$/1-basics/1-basics.iml" />
-      <module fileurl="file://$PROJECT_DIR$/10-adv-functions/10-adv-functions.iml" filepath="$PROJECT_DIR$/10-adv-functions/10-adv-functions.iml" />
-      <module fileurl="file://$PROJECT_DIR$/11-adv-classes/11-adv-classes.iml" filepath="$PROJECT_DIR$/11-adv-classes/11-adv-classes.iml" />
-      <module fileurl="file://$PROJECT_DIR$/12-delegates/12-delegates.iml" filepath="$PROJECT_DIR$/12-delegates/12-delegates.iml" />
-      <module fileurl="file://$PROJECT_DIR$/13-generics/13-generics.iml" filepath="$PROJECT_DIR$/13-generics/13-generics.iml" />
-      <module fileurl="file://$PROJECT_DIR$/14-metaprogramming/14-metaprogramming.iml" filepath="$PROJECT_DIR$/14-metaprogramming/14-metaprogramming.iml" />
-      <module fileurl="file://$PROJECT_DIR$/15-async-programming/15-async-programming.iml" filepath="$PROJECT_DIR$/15-async-programming/15-async-programming.iml" />
-      <module fileurl="file://$PROJECT_DIR$/2-functions/2-functions.iml" filepath="$PROJECT_DIR$/2-functions/2-functions.iml" />
-      <module fileurl="file://$PROJECT_DIR$/3-classes/3-classes.iml" filepath="$PROJECT_DIR$/3-classes/3-classes.iml" />
-      <module fileurl="file://$PROJECT_DIR$/3-collections/3-collections.iml" filepath="$PROJECT_DIR$/3-collections/3-collections.iml" />
-      <module fileurl="file://$PROJECT_DIR$/4-inheritance/4-inheritance.iml" filepath="$PROJECT_DIR$/4-inheritance/4-inheritance.iml" />
-      <module fileurl="file://$PROJECT_DIR$/4-type-safety/4-type-safety.iml" filepath="$PROJECT_DIR$/4-type-safety/4-type-safety.iml" />
-      <module fileurl="file://$PROJECT_DIR$/5-generics/5-generics.iml" filepath="$PROJECT_DIR$/5-generics/5-generics.iml" />
-      <module fileurl="file://$PROJECT_DIR$/5-nulls/5-nulls.iml" filepath="$PROJECT_DIR$/5-nulls/5-nulls.iml" />
-      <module fileurl="file://$PROJECT_DIR$/6-useful-constructs/6-useful-constructs.iml" filepath="$PROJECT_DIR$/6-useful-constructs/6-useful-constructs.iml" />
-      <module fileurl="file://$PROJECT_DIR$/7-functional/7-functional.iml" filepath="$PROJECT_DIR$/7-functional/7-functional.iml" />
-      <module fileurl="file://$PROJECT_DIR$/8-interoperability/8-interoperability.iml" filepath="$PROJECT_DIR$/8-interoperability/8-interoperability.iml" />
-      <module fileurl="file://$PROJECT_DIR$/9-collections/9-collections.iml" filepath="$PROJECT_DIR$/9-collections/9-collections.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_P1_1-basics/_P1_1-basics.iml" filepath="$PROJECT_DIR$/_P1_1-basics/_P1_1-basics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_P1_2-functions/_P1_2-functions.iml" filepath="$PROJECT_DIR$/_P1_2-functions/_P1_2-functions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_P1_3-collections/_P1_3-collections.iml" filepath="$PROJECT_DIR$/_P1_3-collections/_P1_3-collections.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_P1_4-type-safety/_P1_4-type-safety.iml" filepath="$PROJECT_DIR$/_P1_4-type-safety/_P1_4-type-safety.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_P1_5-generics/_P1_5-generics.iml" filepath="$PROJECT_DIR$/_P1_5-generics/_P1_5-generics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_P2_6-classes/_P2_6-classes.iml" filepath="$PROJECT_DIR$/_P2_6-classes/_P2_6-classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_P2_7-inheritance/_P2_7-inheritance.iml" filepath="$PROJECT_DIR$/_P2_7-inheritance/_P2_7-inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_P2_8-delegates/_P2_8-delegates.iml" filepath="$PROJECT_DIR$/_P2_8-delegates/_P2_8-delegates.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_P3_10-sequences/_P3_10-sequences.iml" filepath="$PROJECT_DIR$/_P3_10-sequences/_P3_10-sequences.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_P3_9-functional/_P3_9-functional.iml" filepath="$PROJECT_DIR$/_P3_9-functional/_P3_9-functional.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_P4_11-adv-functions/_P4_11-adv-functions.iml" filepath="$PROJECT_DIR$/_P4_11-adv-functions/_P4_11-adv-functions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_P4_12-adv-classes/_P4_12-adv-classes.iml" filepath="$PROJECT_DIR$/_P4_12-adv-classes/_P4_12-adv-classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_P5_13-async-programming/_P5_13-async-programming.iml" filepath="$PROJECT_DIR$/_P5_13-async-programming/_P5_13-async-programming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_P6_14-interoperability/_P6_14-interoperability.iml" filepath="$PROJECT_DIR$/_P6_14-interoperability/_P6_14-interoperability.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_P6_15-useful-constructs/_P6_15-useful-constructs.iml" filepath="$PROJECT_DIR$/_P6_15-useful-constructs/_P6_15-useful-constructs.iml" />
       <module fileurl="file://$PROJECT_DIR$/kotlin.iml" filepath="$PROJECT_DIR$/kotlin.iml" />
     </modules>
   </component>

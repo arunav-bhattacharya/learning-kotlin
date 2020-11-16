@@ -9,7 +9,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="3-collections" target="1.5" />
+      <module name="_P1_3-collections" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

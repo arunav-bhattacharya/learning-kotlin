@@ -1,8 +1,6 @@
 package com.arunav.kotlin.constructs
 
-open class Person{
-
-}
+open class Person
 
 class Employee : Person(){
     fun vacationDays() : Int{
@@ -10,9 +8,7 @@ class Employee : Person(){
     }
 }
 
-class Contractor : Person(){
-
-}
+class Contractor : Person()
 
 // Doing the smart cast
 fun hasVacations(obj : Person){

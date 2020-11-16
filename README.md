@@ -342,6 +342,19 @@
 > - Set
 > - Map
 
+- Kotlin does not have its own collections. What it has is some interfaces on top of Java collections - 
+    - Mutable 
+    - Immutable
+- Collections are 
+    - List
+    - Array (including equivalent primitive type)
+    - Set
+    - Map
+    - HashMap
+    - HashSet, etc...
+    
+- Use Kotlin helper functions when working with Collections. It automatically determines which class to call. For example when defining an empty list using `emptyList<>()`, it uses `kotlin.collections.EmptyList`, whereas when defining using `Arrays.asList()` it uses `java.util.Arrays$ArrayList`
+
 ### 3.a Tuples - `Pair` & `Triple`
 
 - Tuples are sequences of objects of small, finite size.
@@ -370,8 +383,36 @@
 - The key-value pairs are created using the `to()` extension function, available on any object in Kotlin. 
 - Using `mapOf()`, that takes a vararg of `Pair<K, V>`, we can create a map of key-values of different objects.
 
-
 [Maps](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0047.xhtml)
+
+
+[Additional Reading](https://kotlinlang.org/docs/reference/collections-overview.html)
+    
+### 3.f. Collection Common Operations
+
+- Common operations are available for both read-only and mutable collections. Common operations fall into these groups:
+    - [Transformations](https://kotlinlang.org/docs/reference/collection-transformations.html)
+    - [Filtering](https://kotlinlang.org/docs/reference/collection-filtering.html)
+    - [plus and minus operators](https://kotlinlang.org/docs/reference/collection-plus-minus.html)
+    - [Grouping](https://kotlinlang.org/docs/reference/collection-grouping.html)
+    - [Retrieving collection parts](https://kotlinlang.org/docs/reference/collection-parts.html)
+    - [Retrieving single elements](https://kotlinlang.org/docs/reference/collection-elements.html)
+    - [Ordering](https://kotlinlang.org/docs/reference/collection-ordering.html)
+    - [Aggregate operations](https://kotlinlang.org/docs/reference/collection-aggregate.html)
+    - [Write Operations](https://kotlinlang.org/docs/reference/collection-write.html)
+    - [List Operations](https://kotlinlang.org/docs/reference/list-operations.html)
+    - [Set Operations](https://kotlinlang.org/docs/reference/set-operations.html)
+    - [Map Operations](https://kotlinlang.org/docs/reference/map-operations.html)
+    
+- Some of the more frequently used operations are - 
+    - `forEach`
+    - `map`
+    - `filter`
+    - `reduce`
+    - `flatMap`
+    - `take`, etc...
+
+[Additional Reading](https://kotlinlang.org/docs/reference/collection-operations.html)
 
 <br/>
 
@@ -433,22 +474,61 @@
 
 ### Type Checking & Casting
 
-- Using the `is` operator we can do type-checking in Kotlin.
-- Once Kotlin determines the type during compile-time, Kotlin does a smart cast wherever possible.
-- Similarly, once an object reference is not `null`, it can apply smart casts to automatically cast a nullable type to a non-nullable type, saving an explicit cast. 
+- **Smart Casts:**
 
-    ```kotlin
-    fun whatToDo(dayOfWeek: Any) = when (dayOfWeek) {
-      "Saturday", "Sunday" -> "Relax"
-      in listOf("Monday", "Tuesday", "Wednesday", "Thursday") -> "Work hard" 
-      in 2..4 -> "Work hard"
-      "Friday" -> "Party"
-      is String -> "What?"
-      else -> "No clue"
-    }
-    ```
-- Using the `as` and `as?` operator we can do explicit type-casting in Kotlin. This might be required when Kotlin compiler is unable to do a smart cast.
-- In Kotlin there is nothing as implicit casting. It either has to be a smart cast or an explicit cast.
+    - Using the `is` operator we can do type-checking in Kotlin.
+    - We can check whether an object conforms to a given type at runtime by using the `is` operator or its negated form `!is`
+    - Once Kotlin determines the type during compile-time, Kotlin does a smart cast wherever possible.
+    - The Kotlin compiler tracks `is`-checks and explicit casts for immuatable values and automatically inserts safe-casts
+
+        ```kotlin
+            fun demo(x: Any) {
+                if (x is String) {
+                    print(x.length) // x is automatically cast to String
+                }
+            }
+        ```
+    
+    - The compiler is smart enough to know a cast to be safe if a negative check leads to a return
+
+        ```kotlin
+            if (x !is String) return            
+            print(x.length) // x is automatically cast to String
+        ```
+              
+    - or in the right-hand side of `&&` and `||`
+
+        ```kotlin
+            // x is automatically cast to string on the right-hand side of `||`
+            if (x !is String || x.length == 0) return
+        ```
+      
+    - Such smart casts work for when-expressions and while-loops as well
+    
+        ```kotlin
+            when (x) {
+                is Int -> print(x + 1)
+                is String -> print(x.length + 1)
+                is IntArray -> print(x.sum())
+            }
+        ```  
+
+- **Explicit Casts:**
+
+    - Similarly, once an object reference is not `null`, it can apply smart casts to automatically cast a nullable type to a non-nullable type, saving an explicit cast. 
+    
+        ```kotlin
+        fun whatToDo(dayOfWeek: Any) = when (dayOfWeek) {
+          "Saturday", "Sunday" -> "Relax"
+          in listOf("Monday", "Tuesday", "Wednesday", "Thursday") -> "Work hard" 
+          in 2..4 -> "Work hard"
+          "Friday" -> "Party"
+          is String -> "What?"
+          else -> "No clue"
+        }
+        ```
+    - Using the `as` and `as?` operator we can do explicit type-casting in Kotlin. This might be required when Kotlin compiler is unable to do a smart cast.
+    - In Kotlin there is nothing as implicit casting. It either has to be a smart cast or an explicit cast.
 
 <br/>
 
@@ -602,12 +682,16 @@
 
 
 <br/>
+<br/>
 
-## 4. Classes
+# Part II - Object Oriented Kotlin 
+
+
+## 6. Classes
 
 > Kotlin is an object oriented language and it supports all the different features of object-oriented programming. In this section, we'll get started with the OO concepts in Kotlin.
 
-### 3.a. `class` & `construtor`
+### 6.a. `class` & `construtor`
 
 - `class`:  
     - Classes can be defined with or without any {}.
@@ -644,7 +728,7 @@
 
 [Additional Reading](https://kotlinlang.org/docs/reference/classes.html)
 
-### 3.b. Custom Getters & Setters
+### 6.b. Custom Getters & Setters
 
 - The full syntax for declaring a property is 
  
@@ -671,13 +755,13 @@
 
 [Additional Reading](https://kotlinlang.org/docs/reference/properties.html)
 
-### 3.c. Visibility Modifiers
+### 6.c. Visibility Modifiers
 
 <img src="./images/visibility.png"> 
 
 [Additional Reading](https://kotlinlang.org/docs/reference/visibility-modifiers.html)
 
-### 3.d. `data` Classes
+### 6.d. `data` Classes
 
 - In order to reduce verbose code, Kotlin has `data` classes which automatically derives -
     - `equals()` / `hashCode()`
@@ -706,7 +790,7 @@
       }    
     ```
 
-### 3.e. `enum` Classes
+### 6.e. `enum` Classes
 
 - Enum classes are used for creating a bunch of enumerated values. 
 - We can customize and iterate over them as well.
@@ -727,7 +811,7 @@
         }
     ```
     
-### 3.f. Objects
+### 6.f. Objects
 
 - In Kotlin we can directly create an object without creating a class.
 - Provides an easy way to create singletons.
@@ -749,7 +833,7 @@
 
 <br/> 
 
-## 4. Inheritance 
+## 7. Inheritance 
 
 > We'll extend the OO concepts in Kotlin by looking into Inheritance, Interfaces, Abstract classes & Generics.
 
@@ -775,7 +859,7 @@
         data class SpecialCustomer(var id: Int) : Customer()
     ```
   
-### 4.a. Abstract Classes
+### 7.a. Abstract Classes
 
 - Similar to Java
 
@@ -800,7 +884,7 @@
         }
     ```
 
-### 4.b. Interfaces
+### 7.b. Interfaces
 
 - Similar to Java 8 onwards. 
 - Can have default implementations.
@@ -858,9 +942,9 @@
 
 [Additional Reading](https://kotlinlang.org/docs/reference/interfaces.html)
 
-### 4.c. Generics
+### 7.c. Generics
 
-- Similar to Java. Will revisit later in details.
+- Similar to Java
 
     ```kotlin
         interface Repository<T> {
@@ -895,156 +979,57 @@
 
 <br/> 
 
-## 5. Nulls
+## 8. Delegation
 
-- Kotlin is a null-safe language.
-- We cannot return `null` from a function nor pass `null` as an argument in Kotlin.
-- Every non-nullable type has a nullable counterpart suffixed by `?`
-- In order to return a `null` from a function the return type can be changed to its nullable counterpart by suffixing with `?`.
+> In delegation, two objects are involved in handling a request: a receiving object delegates operations to its delegate. Kotlin inherently provides support for Delegation. In this section we'll take a look at it.
 
-    ```kotlin
-      fun nickName(name: String?) : String? {}
-    ```
-  
-- Kotlin requires method calls on nullable references to be prefixed with either the safe-call operator or the non-null assertion operator.
-    - **Safe-call operator (?):** The null-check and call to a method or a property can be done using the Safe call operator in one step. If the reference is null, then the safe-call operator will return null. But when using the **Elvis Operator (?:)**, we can return a default value in case of null.
-  
-        ```kotlin
-          return name?.reversed()?.toUpperCase()?:"Joker"
-        ```
-      
-    - **Non-Null operator (!!) : DO NOT USE THIS OPERATOR.** This operator can be used when we don't want Kotlin to do a null check. 
+### 8.a Delegating Methods/Functions 
 
-[Kotlin Docs - Null Safety](https://kotlinlang.org/docs/reference/null-safety.html)    
-[Additional Reading](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0051.xhtml)
-    
-<br/> 
+-  Kotlin requires the left side of the `by` to be an `interface`. The right side is an implementor of that interface.
+-  The delegating class implements the delegating interface, so a reference to the delegating class may be assigned to a reference of the delegating interface. Likewise, a reference to a delegating class may be passed to methods that expect a delegate interface.
 
-## 6. Some useful language constructs
+> **Some Useful Tips** 
+>
+> - Use **inheritance** if you want an object of a class to be _used in place of an object of another class_.
+> - Use **delegation** if you want an object of a class to simply _make use of an object of another class_.
 
-> In this section we will take a look at some of the useful language constructs that Kotlin provides, which will help us deepen our understanding of the further sections
+### 8.b. Delegating properties
 
-### 6.a. Type casting
+- When delegating properties, the delegated class needs to implement two functions `getValue()` and `setValue()`.
+- For knowing more about the property type passed in the get and set methods, visit this part after learning reflection in Kotlin.  
 
-- We can check whether an object conforms to a given type at runtime by using the `is` operator or its negated form `!is`
-- **Smart Casts:**
-    - The Kotlin compiler tracks `is`-checks and explicit casts for immuatable values and automatically inserts safe-casts
+[Additional Reading](https://kotlinlang.org/docs/reference/delegated-properties.html)
 
-        ```kotlin
-            fun demo(x: Any) {
-                if (x is String) {
-                    print(x.length) // x is automatically cast to String
-                }
-            }
-        ```
-    
-    - The compiler is smart enough to know a cast to be safe if a negative check leads to a return
+### 8.c. Built-in Delegates in Kotlin
 
-        ```kotlin
-            if (x !is String) return            
-            print(x.length) // x is automatically cast to String
-        ```
-              
-    - or in the right-hand side of `&&` and `||`
-
-        ```kotlin
-            // x is automatically cast to string on the right-hand side of `||`
-            if (x !is String || x.length == 0) return
-        ```
-      
-    - Such smart casts work for when-expressions and while-loops as well
-    
-        ```kotlin
-            when (x) {
-                is Int -> print(x + 1)
-                is String -> print(x.length + 1)
-                is IntArray -> print(x.sum())
-            }
-        ```  
-      
-- **Safe (nullable) cast operator:**
-    - Illegal casting throws an exception. Such casting is called unsafe cast. Unsafe cast is done in Kotlin using the **infix operator `as`**.
-    - To avoid unsafe cast we can use safe cast using **as?** that returns `null` on failure
-
-        ```kotlin
-          val x: String? = y as String?
-        ```
-      
-[Additional Reading](https://kotlinlang.org/docs/reference/typecasts.html)
-
-### 6.b. Tuples - `Pair` & `Triple`
-
-- Kotlin provides two specific types: `Pair` for a tuple of size two and `Triple` for a size of three to quickly create two or three objects as a collection
-
-    ```kotlin
-          println(Pair("Tom", "Jerry"))
-    ```
-- Both `Pair` and `Triple` are immutable and are useful to create a grouping of two and three values, respectively.
-- For creating more than three immutable values, then `data` class is the option.
-
-[Additional Reading](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0043.xhtml#sec.pair)
-
-### 6.c. Destructuring
-
-- Destructuring is to extract values into variables from an existing object.
-- The destructuring in Kotlin is based on the position of properties. In JavaScript object destructuring is based on name of properties. 
-- We can skip properties while destructuring by putting underscores`(_)`
-
-    ```kotlin
-        fun getFullName() = Triple("John", "Quincy", "Adams")
-        val (first, middle, last) = getFullName()
-        val (f,_, l) = getFullName()    
-    ```
-
-[Additional Reading](https://kotlinlang.org/docs/reference/multi-declarations.html)
-
-### 6.d. Exceptions 
-
-- All exception classes in Kotlin are descendants of the class `Throwable`.
-- Kotlin does not have checked exceptions.
-- Every exception has a message, stack trace and an optional cause.
-- Sample exception block
-
-    ```kotlin
-        try {
-            // some code
-        }
-        catch (e: SomeException) {
-            // handler
-        }
-        finally {
-            // optional finally block
-        }
-    ```
-  
-- `try` is an expression, i.e., it can return a value
-- The returned value of a try-expression is either the last expression in the `try` block or the last expression in the `catch` block (or blocks). Contents of the `finally` block do not affect the result of the expression.
-- `throw` is an expression in Kotlin that returns a special type `Nothing`.
-
-    ```kotlin
-        fun fail(message: String): Nothing {
-            throw IllegalArgumentException(message)
-        }
-        val s = person.name ?: fail("Name required")
-        println(s)     // 's' is known to be initialized at this point
-    ```
-  
-[Additional Reading](https://kotlinlang.org/docs/reference/exceptions.html)
+- **`lazy`** : 
+    - Deferring creation of objects or executing computations until the time the result is truly needed.  The lazy function takes as argument a lambda expression that will perform the computation, but only on demand and not eagerly or immediately.
+- **`observable`** : 
+    - This is useful to observe or monitor changes to the value of a property. 
+    - The singleton object `kotlin.properties.Delegates` has an `observable()` convenience function to create a `ReadWriteProperty` delegate that will intercept any change to the variable or property it’s associated with. When a change occurs, the delegate will call an event handler you register with the `observable()` function. 
+    - The event handler receives three parameters of type KProperty which hold the metadata about the property, the old value, and the new value. It doesn’t return anything—that is, it’s a Unit or void function.
+- **`vetoable`** : 
+    - Is used to reject changes to properties based on some rules or business logic.
+    - Unlike the handler registered with observable, whose return type is `Unit`, the handler we register with vetoable returns a `Boolean` result. 
+    - A return value of `true` means a favorable nod to accept the change; `false` means reject. The change is discarded if we reject. 
 
 <br/> 
+<br/> 
 
-## 7. Functional Style
+# Part III - Functional Kotlin
+
+## 9. Functional Style
 
 > We'll get functional in this section. Learn about some key concepts how Kotlin supports functional programming.
 
-### 7.a. Higher Order Functions
+### 9.a. Higher Order Functions
 
 - A higher order function is a function that can takes a function as an argument, or return a function.  
 - In Kotlin, method references are denoted as `::` and lambda expressions are expressed with "->", similar to Java.
 - We can pass a method reference or a lambda expression to a function that accepts a function as an argument.
 
 
-### 7.b. Lambda Expressions
+### 9.b. Lambda Expressions
 
 - For single parameter in a lambda expression, we don't have to explicitly define the parameter in the lambda expression. Instead we can refer to the parameter as `it` in the body of the expression. Let's see an example -
 
@@ -1062,7 +1047,7 @@
 
 - In lambdas as well we can use object destructuring
 
-### 7.c. Closures
+### 9.c. Closures
 
 - A lambda expression or anonymous function (as well as a local function and an object expression) can access its closure, i.e. the variables declared in the outer scope, also known as *lexical scoping*. 
 - The variables captured in the closure can be modified in the lambda. Such a lambda is called closure.
@@ -1073,7 +1058,7 @@
 
 [Additional Reading](https://kotlinlang.org/docs/reference/lambdas.html)
 
-### 7.d. Extension Functions
+### 9.d. Extension Functions
 
 - Extension function allows extending functionality of class without inheriting from it.
 - Scope of exception functions is packages. In order to use outside the package, we need to import the package with the extension function.
@@ -1087,45 +1072,7 @@
 
 <br/> 
 
-## 8. Interoperability
 
-> Kotlin is 100% interoperable with Java. Its 2 way - Java to Kotlin and Kotlin to Java as well.
-
-### 8.a. Java in Kotlin
-
-[Additional Reading](https://kotlinlang.org/docs/reference/java-interop.html)
-
-### 8.b. Working with nulls from Java
-
-- Java nullable types become Platform types in Kotlin
-
-### 8.c. Kotlin in Java
-
-- Properties in Kotlin will automatically be converted to corresponding get() and set() methods when the same is used inside a Java class.
-- **`@JvmField`**: For properties defined inside Kotlin code to be accessible from Java, this annotation in Kotlin code will help discover the property in Java code
-- **`@JvmOverloads`**: For default parameters defined in Kotlin methods, Java won't have direct access to the overloaded method without specifying value for the default parameter. With `@JvmOverloads` annotation on the Kotlin method, Java class will now have access to the overloaded method without that particular default parameter. 
-- **`@JvmName`**: Kotlin provides us with a feature of having a different name to a particular method when a method is referenced inside a Java code by using the `@JvmName` annotation.
-- **`@Throws`**: When an exception is thrown from a method in Kotlin, the same needs to be annotated with `@Throws` in order for the Java class to handle it.
-
-[Additional Reading](https://kotlinlang.org/docs/reference/java-to-kotlin-interop.html)
-
-
-### 8.d. Top-level functions & properties in Kotlin
-
-- Top level functions when compiled by default generates a bytecode file with name <filename>Kt.class. 
-- In order to reference these functions inside Java we can simply call the function as <filename>Kt.functionName().
-- In order to change the name of the default class name we can use the annotation at the top of the Kotlin file -
-
-    ```kotlin
-      @file:JvmName("MyKotlinClass")
-    ```
-  
-- Top level properties can again be accessed by default using get() and set() methods inside Java.
-- In case we want to access the property as a field name in Java class, then the same needs to be prefixed using `const` in the Kotlin file.
-
-### 8.e. Extension functions from Java
-
-- Extension functions can be accessed from Java using the Kotlin-className.functionName() similar to accessing a static method in Java.
 
 <br/> 
 
@@ -1136,46 +1083,7 @@
 <img src="./images/collections.png"/>
 
 - Kotlin has a very small standard library (~800Kb).
-- Kotlin does not have its own collections. What it has is some interfaces on top of Java collections - 
-    - Mutable 
-    - Immutable
-- Collections are 
-    - List
-    - Array (including equivalent primitive type)
-    - Set
-    - Map
-    - HashMap
-    - HashSet, etc...
-    
-- Use Kotlin helper functions when working with Collections. It automatically determines which class to call. For example when defining an empty list using `emptyList<>()`, it uses `kotlin.collections.EmptyList`, whereas when defining using `Arrays.asList()` it uses `java.util.Arrays$ArrayList`
 
-[Additional Reading](https://kotlinlang.org/docs/reference/collections-overview.html)
-    
-### 9.b. Collection Common Operations
-
-- Common operations are available for both read-only and mutable collections. Common operations fall into these groups:
-    - [Transformations](https://kotlinlang.org/docs/reference/collection-transformations.html)
-    - [Filtering](https://kotlinlang.org/docs/reference/collection-filtering.html)
-    - [plus and minus operators](https://kotlinlang.org/docs/reference/collection-plus-minus.html)
-    - [Grouping](https://kotlinlang.org/docs/reference/collection-grouping.html)
-    - [Retrieving collection parts](https://kotlinlang.org/docs/reference/collection-parts.html)
-    - [Retrieving single elements](https://kotlinlang.org/docs/reference/collection-elements.html)
-    - [Ordering](https://kotlinlang.org/docs/reference/collection-ordering.html)
-    - [Aggregate operations](https://kotlinlang.org/docs/reference/collection-aggregate.html)
-    - [Write Operations](https://kotlinlang.org/docs/reference/collection-write.html)
-    - [List Operations](https://kotlinlang.org/docs/reference/list-operations.html)
-    - [Set Operations](https://kotlinlang.org/docs/reference/set-operations.html)
-    - [Map Operations](https://kotlinlang.org/docs/reference/map-operations.html)
-    
-- Some of the more frequently used operations are - 
-    - `forEach`
-    - `map`
-    - `filter`
-    - `reduce`
-    - `flatMap`
-    - `take`, etc...
-
-[Additional Reading](https://kotlinlang.org/docs/reference/collection-operations.html)
 
 ### Sequences - Lazy Evaluation
 
@@ -1214,7 +1122,7 @@
 <br/> 
 
 
-# **Part II - Some Advanced Concepts**
+# Part IV - DSLs
 
 ## 10. Functions - A Deeper look
 > In this section we'll take a deeper look at functions
@@ -1367,68 +1275,7 @@
 
 <br/>    
 
-## 12. Delegation
 
-> In delegation, two objects are involved in handling a request: a receiving object delegates operations to its delegate. Kotlin inherently provides support for Delegation. In this section we'll take a look at it.
-
-### 12.a Delegating Methods/Functions 
-
--  Kotlin requires the left side of the `by` to be an `interface`. The right side is an implementor of that interface.
--  The delegating class implements the delegating interface, so a reference to the delegating class may be assigned to a reference of the delegating interface. Likewise, a reference to a delegating class may be passed to methods that expect a delegate interface.
-
-> **Some Useful Tips** 
->
-> - Use **inheritance** if you want an object of a class to be _used in place of an object of another class_.
-> - Use **delegation** if you want an object of a class to simply _make use of an object of another class_.
-
-### 12.b. Delegating properties
-
-- When delegating properties, the delegated class needs to implement two functions `getValue()` and `setValue()`.
-- For knowing more about the property type passed in the get and set methods, visit this part after learning reflection in Kotlin.  
-
-[Additional Reading](https://kotlinlang.org/docs/reference/delegated-properties.html)
-
-### 12.c. Built-in Delegates in Kotlin
-
-- **`lazy`** : 
-    - Deferring creation of objects or executing computations until the time the result is truly needed.  The lazy function takes as argument a lambda expression that will perform the computation, but only on demand and not eagerly or immediately.
-- **`observable`** : 
-    - This is useful to observe or monitor changes to the value of a property. 
-    - The singleton object `kotlin.properties.Delegates` has an `observable()` convenience function to create a `ReadWriteProperty` delegate that will intercept any change to the variable or property it’s associated with. When a change occurs, the delegate will call an event handler you register with the `observable()` function. 
-    - The event handler receives three parameters of type KProperty which hold the metadata about the property, the old value, and the new value. It doesn’t return anything—that is, it’s a Unit or void function.
-- **`vetoable`** : 
-    - Is used to reject changes to properties based on some rules or business logic.
-    - Unlike the handler registered with observable, whose return type is `Unit`, the handler we register with vetoable returns a `Boolean` result. 
-    - A return value of `true` means a favorable nod to accept the change; `false` means reject. The change is discarded if we reject. 
-
-<br/> 
-
-## 13. Generics
-
-### 13.a. Variance 
-
-- Invariance 
-- Covariance
-- Contravariance
-
-### 13.b. Type Projections
-
-### 13.c. Generic functions & constraints
-
-### 13.d. Type Erasure
-
-[Additional Reading](https://kotlinlang.org/docs/reference/generics.html)
-
-> **Highlights**
->
-> - Can impose conditions on type parameters using -
->    - `T : Super` syntax
->    - `where T: Super1, T: Super2`
-> - **Covariance** is indicated on the declaration using `out` modifier
-> - **Contravariance** is indicated on the declaration using `in` modifier
-> - Use-site declaration (like Java) is available when required 
-
-<br/> 
 
 ## 14. Metaprogramming
 
@@ -1451,6 +1298,9 @@
 >   - Limitations - applicable to `inline` only, cannot create instances of T
 > 
 <br/> 
+<br/> 
+
+# Part V - Async Programming using Coroutines 
 
 ## 15. Asynchronous Programming - Coroutines
 
@@ -1550,3 +1400,102 @@
 - If the coroutine started using `async()` throws an exception, then that exception will be propagated to the caller through the call to `await()`.
 
 <br/> 
+<br/>
+
+# Part VI - Interoperability with Java 
+
+## 14. Interoperability
+
+> Kotlin is 100% interoperable with Java. Its 2 way - Java to Kotlin and Kotlin to Java as well.
+
+### 14.a. Java in Kotlin
+
+[Additional Reading](https://kotlinlang.org/docs/reference/java-interop.html)
+
+### 14.b. Working with nulls from Java
+
+- Java nullable types become Platform types in Kotlin
+
+### 14.c. Kotlin in Java
+
+- Properties in Kotlin will automatically be converted to corresponding get() and set() methods when the same is used inside a Java class.
+- **`@JvmField`**: For properties defined inside Kotlin code to be accessible from Java, this annotation in Kotlin code will help discover the property in Java code
+- **`@JvmOverloads`**: For default parameters defined in Kotlin methods, Java won't have direct access to the overloaded method without specifying value for the default parameter. With `@JvmOverloads` annotation on the Kotlin method, Java class will now have access to the overloaded method without that particular default parameter. 
+- **`@JvmName`**: Kotlin provides us with a feature of having a different name to a particular method when a method is referenced inside a Java code by using the `@JvmName` annotation.
+- **`@Throws`**: When an exception is thrown from a method in Kotlin, the same needs to be annotated with `@Throws` in order for the Java class to handle it.
+
+[Additional Reading](https://kotlinlang.org/docs/reference/java-to-kotlin-interop.html)
+
+
+### 14.d. Top-level functions & properties in Kotlin
+
+- Top level functions when compiled by default generates a bytecode file with name <filename>Kt.class. 
+- In order to reference these functions inside Java we can simply call the function as <filename>Kt.functionName().
+- In order to change the name of the default class name we can use the annotation at the top of the Kotlin file -
+
+    ```kotlin
+      @file:JvmName("MyKotlinClass")
+    ```
+  
+- Top level properties can again be accessed by default using get() and set() methods inside Java.
+- In case we want to access the property as a field name in Java class, then the same needs to be prefixed using `const` in the Kotlin file.
+
+### 14.e. Extension functions from Java
+
+- Extension functions can be accessed from Java using the Kotlin-className.functionName() similar to accessing a static method in Java.
+
+<br/>
+
+## 15. Some useful language constructs
+
+> In this section we will take a look at some of the useful language constructs that Kotlin provides, which will help us deepen our understanding of the further sections
+
+### 15.a. Destructuring
+
+- Destructuring is to extract values into variables from an existing object.
+- The destructuring in Kotlin is based on the position of properties. In JavaScript object destructuring is based on name of properties. 
+- We can skip properties while destructuring by putting underscores`(_)`
+
+    ```kotlin
+        fun getFullName() = Triple("John", "Quincy", "Adams")
+        val (first, middle, last) = getFullName()
+        val (f,_, l) = getFullName()    
+    ```
+
+[Additional Reading](https://kotlinlang.org/docs/reference/multi-declarations.html)
+
+### 15.b. Exceptions 
+
+- All exception classes in Kotlin are descendants of the class `Throwable`.
+- Kotlin does not have checked exceptions.
+- Every exception has a message, stack trace and an optional cause.
+- Sample exception block
+
+    ```kotlin
+        try {
+            // some code
+        }
+        catch (e: SomeException) {
+            // handler
+        }
+        finally {
+            // optional finally block
+        }
+    ```
+  
+- `try` is an expression, i.e., it can return a value
+- The returned value of a try-expression is either the last expression in the `try` block or the last expression in the `catch` block (or blocks). Contents of the `finally` block do not affect the result of the expression.
+- `throw` is an expression in Kotlin that returns a special type `Nothing`.
+
+    ```kotlin
+        fun fail(message: String): Nothing {
+            throw IllegalArgumentException(message)
+        }
+        val s = person.name ?: fail("Name required")
+        println(s)     // 's' is known to be initialized at this point
+    ```
+  
+[Additional Reading](https://kotlinlang.org/docs/reference/exceptions.html)
+
+<br/> 
+
