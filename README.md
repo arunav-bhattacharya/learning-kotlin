@@ -812,10 +812,10 @@
                 
 ### 6.c. Constructors
     
-    - Constructor properties can have **default** or **named** parameters similar to functions.
-    - Secondary constructors can be created by using the `constructor` keyword. 
-    - If the class has a primary constructor, each secondary constructor needs to **delegate to the primary constructor**, either directly or indirectly through another secondary constructor(s) using the `this` keyword.
-    - Properties cannot be defined in secondary constructors. Hence `var` or `val` is not allowed inside secondary constructors.
+- Constructor properties can have **default** or **named** parameters similar to functions.
+- Secondary constructors can be created by using the `constructor` keyword. 
+- If the class has a primary constructor, each secondary constructor needs to **delegate to the primary constructor**, either directly or indirectly through another secondary constructor(s) using the `this` keyword.
+- Properties cannot be defined in secondary constructors. Hence `var` or `val` is not allowed inside secondary constructors.
 
     ```kotlin
           class Person(val first: String, val last: String) { 
