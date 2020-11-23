@@ -740,15 +740,15 @@
 ### 6.b. Classes
 
 - `class`:  
-    - Classes can be defined with or without any {}.
-    - By default, access to a `class` and its members is public, and the `constructor` is public as well.
+    - Classes can be defined with or without any `{}`.
+    - By default, access to a `class`, its members and its `constructor` is `public`.
     - To create instances of classes, we can simply call the Class using the className. There is no `new` keyword in Kotlin.
     - Classes have _properties and not fields_. 
     - Properties can be defined as `val` or `var`.
     - **All properties needs to be _initialized_ if they are not passed using constructor**.
     - If a parameter passed inside constructor is _not defined as_ `val` or `var`, _it can still be a parameter, but not a property_ of the class.
     - We can define member functions inside classes similar to how we defined functions. It will have access to all the properties inside the class.
-    - We can create custom getters and setters inside kotlin classes by using the `get()` and `set()` methods with each properties.
+    - We can create custom getters and setters inside Kotlin classes by using the `get()` and `set()` methods with each properties.
     - `field` is a special keyword in Kotlin that is used to set a value to a property.    
     - The full syntax for declaring a property is 
  
@@ -770,6 +770,13 @@
                 }
         }
     ```
+
+> **Backing Field** 
+>
+> - In Kotlin we never define fields — **_backing fields_** are synthesized automatically, but only when necessary. _If you define a field with both a custom getter and custom setter and don’t use the backing field using the_ `field` _keyword, then no backing field is created._ If you write only a getter or a setter for a property, then a backing field is synthesized.
+>
+> - Since Kotlin synthesizes fields internally, it doesn’t give access to that name in code. We may refer to it using the keyword `field` only within getters and setters for that `field`.
+
     
 - `init`:
     - We can initialize properties inside an `init{}` block of code inside the class. 
@@ -798,11 +805,6 @@
         }          
     ```
 
-> **Backing Field** 
->
-> - In Kotlin we never define fields — **_backing fields_** are synthesized automatically, but only when necessary. _If you define a field with both a custom getter and custom setter and don’t use the backing field using the_ `field` _keyword, then no backing field is created._ If you write only a getter or a setter for a property, then a backing field is synthesized.
->
-> - Since Kotlin synthesizes fields internally, it doesn’t give access to that name in code. We may refer to it using the keyword `field` only within getters and setters for that `field`.
 
 [Additional Reading on Classes](https://kotlinlang.org/docs/reference/classes.html)
     
