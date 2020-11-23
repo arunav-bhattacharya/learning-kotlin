@@ -733,9 +733,10 @@
 
 > **Top-level functions vs Singletons**  
 >
-> - If a group of functions are high level, general, and widely useful, then placing them directly within a package as top-level functions make sense. 
-> - If on the other hand, a few functions are more closely related to each other than the other functions, like f2c() and c2f() are more closely related to each other than to milesToKm(), then place them within a singleton. Also, if a group of functions needs to rely on state, you can place that state along with those related functions in a singleton, although a class may be a better option for this purpose. 
-> - Use caution: placing mutable state in a singleton may cause issues in multithreaded applications.
+> - If a group of functions are _high level, general, and widely useful_, then placing them directly within a package as _top-level functions_ make sense. 
+> - If on the other hand, a few functions are more _closely related_ to each other than the other functions, then place them within a _singleton_. 
+> - If a group of functions needs to rely on state, you can place that state along with those related functions in a singleton, although a class may be a better option for this purpose. 
+> - **Caution**: Placing _mutable state in a singleton_ may cause issues in multithreaded applications.
 
 ### 6.b. Classes
 
