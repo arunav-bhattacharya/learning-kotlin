@@ -23,82 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_P2_6-classes/src/com/arunav/kotlin/classes/_1ObjectsAndSingletons.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1-basics/1-basics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_1-basics/_P1_1-basics.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1-basics/BasicsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_1-basics/BasicsKt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1-basics/META-INF/main.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_1-basics/META-INF/main.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1-basics/src/com/arunav/kotlin/basics/_1Basics.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_1-basics/src/com/arunav/kotlin/basics/_1Basics.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1-basics/src/com/arunav/kotlin/basics/_2Conditionals.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_1-basics/src/com/arunav/kotlin/basics/_2Conditionals.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1-basics/src/com/arunav/kotlin/basics/_3LoopsNRanges.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_1-basics/src/com/arunav/kotlin/basics/_3LoopsNRanges.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/10-adv-functions/10-adv-functions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_P4_11-adv-functions/_P4_11-adv-functions.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/10-adv-functions/src/com/arunav/kotlin/advanced/functions/Anonymous.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P4_11-adv-functions/src/com/arunav/kotlin/advanced/functions/Anonymous.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/10-adv-functions/src/com/arunav/kotlin/advanced/functions/DSLs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P4_11-adv-functions/src/com/arunav/kotlin/advanced/functions/DSLs.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/10-adv-functions/src/com/arunav/kotlin/advanced/functions/InfixNotation.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P4_11-adv-functions/src/com/arunav/kotlin/advanced/functions/InfixNotation.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/10-adv-functions/src/com/arunav/kotlin/advanced/functions/Inline.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P4_11-adv-functions/src/com/arunav/kotlin/advanced/functions/Inline.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/10-adv-functions/src/com/arunav/kotlin/advanced/functions/LambdaExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P4_11-adv-functions/src/com/arunav/kotlin/advanced/functions/LambdaExtensions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/10-adv-functions/src/com/arunav/kotlin/advanced/functions/LocalFunctions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P4_11-adv-functions/src/com/arunav/kotlin/advanced/functions/LocalFunctions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/10-adv-functions/src/com/arunav/kotlin/advanced/functions/ReturnsNLocalReturns.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P4_11-adv-functions/src/com/arunav/kotlin/advanced/functions/ReturnsNLocalReturns.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/11-adv-classes/11-adv-classes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_P4_12-adv-classes/_P4_12-adv-classes.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/11-adv-classes/src/com/arunav/kotlin/advanced/classes/CompanionObjects.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P4_12-adv-classes/src/com/arunav/kotlin/advanced/classes/CompanionObjects.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/11-adv-classes/src/com/arunav/kotlin/advanced/classes/LateInit.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P4_12-adv-classes/src/com/arunav/kotlin/advanced/classes/LateInit.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/11-adv-classes/src/com/arunav/kotlin/advanced/classes/NestedClasses.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P4_12-adv-classes/src/com/arunav/kotlin/advanced/classes/NestedClasses.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/12-delegates/12-delegates.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_P2_8-delegates/_P2_8-delegates.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/12-delegates/src/com.arunav.kotlin.delegates/Delegates.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P2_8-delegates/src/com.arunav.kotlin.delegates/Delegates.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/13-generics/13-generics.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/14-metaprogramming/14-metaprogramming.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/15-async-programming/15-async-programming.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_P5_13-async-programming/_P5_13-async-programming.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15-async-programming/src/com/arunav/kotlin/async/AsyncNAwait.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P5_13-async-programming/src/com/arunav/kotlin/async/AsyncNAwait.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15-async-programming/src/com/arunav/kotlin/async/Coroutines.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P5_13-async-programming/src/com/arunav/kotlin/async/Coroutines.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15-async-programming/src/com/arunav/kotlin/async/CoroutinesContext.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P5_13-async-programming/src/com/arunav/kotlin/async/CoroutinesContext.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15-async-programming/src/com/arunav/kotlin/async/example/Airport.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P5_13-async-programming/src/com/arunav/kotlin/async/example/Airport.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15-async-programming/src/com/arunav/kotlin/async/example/AirportInfo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P5_13-async-programming/src/com/arunav/kotlin/async/example/AirportInfo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2-functions/2-functions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_2-functions/_P1_2-functions.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2-functions/src/com/arunav/kotlin/functions/_1Functions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_2-functions/src/com/arunav/kotlin/functions/_1Functions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3-classes/3-classes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_P2_6-classes/_P2_6-classes.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3-classes/src/com/arunav/kotlin/classes/_1Classes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P2_6-classes/src/com/arunav/kotlin/classes/_1Classes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3-classes/src/com/arunav/kotlin/classes/_2EmployeeData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P2_6-classes/src/com/arunav/kotlin/classes/_2EmployeeData.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3-classes/src/com/arunav/kotlin/classes/_3GettersNSetters.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P2_6-classes/src/com/arunav/kotlin/classes/_3GettersNSetters.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3-classes/src/com/arunav/kotlin/classes/_4Objects.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P2_6-classes/src/com/arunav/kotlin/classes/_4Objects.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3-classes/src/com/arunav/kotlin/classes/_5PriorityEnum.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P2_6-classes/src/com/arunav/kotlin/classes/_5PriorityEnum.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3-collections/3-collections.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_3-collections/_P1_3-collections.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3-collections/src/com/arunav/kotlin/collections/_1Tuples.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_3-collections/src/com/arunav/kotlin/collections/_1Tuples.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3-collections/src/com/arunav/kotlin/collections/_2Arrays.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_3-collections/src/com/arunav/kotlin/collections/_2Arrays.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3-collections/src/com/arunav/kotlin/collections/_3ListsNSets.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_3-collections/src/com/arunav/kotlin/collections/_3ListsNSets.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3-collections/src/com/arunav/kotlin/collections/_4Maps.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_3-collections/src/com/arunav/kotlin/collections/_4Maps.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4-inheritance/4-inheritance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_P2_7-inheritance/_P2_7-inheritance.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance/AbstractClasses.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P2_7-inheritance/src/com/arunav/kotlin/inheritance/AbstractClasses.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance/Generics.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P2_7-inheritance/src/com/arunav/kotlin/inheritance/Generics.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance/Inheritance.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P2_7-inheritance/src/com/arunav/kotlin/inheritance/Inheritance.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance/Interfaces.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P2_7-inheritance/src/com/arunav/kotlin/inheritance/Interfaces.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4-type-safety/4-type-safety.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_4-type-safety/_P1_4-type-safety.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4-type-safety/src/com/arunav/kotlin/typesafety/_1AnyNNothing.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_4-type-safety/src/com/arunav/kotlin/typesafety/_1AnyNNothing.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4-type-safety/src/com/arunav/kotlin/typesafety/_2Nullability.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_4-type-safety/src/com/arunav/kotlin/typesafety/_2Nullability.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4-type-safety/src/com/arunav/kotlin/typesafety/_3TypeCheckNCast.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_4-type-safety/src/com/arunav/kotlin/typesafety/_3TypeCheckNCast.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5-generics/5-generics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_5-generics/_P1_5-generics.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5-generics/src/com/arunav/kotlin/generics/_1Invariance.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_5-generics/src/com/arunav/kotlin/generics/_1Invariance.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5-generics/src/com/arunav/kotlin/generics/_2CovarianceAndContravariance.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_5-generics/src/com/arunav/kotlin/generics/_2CovarianceAndContravariance.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5-generics/src/com/arunav/kotlin/generics/_3GenericConstraints.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_5-generics/src/com/arunav/kotlin/generics/_3GenericConstraints.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5-generics/src/com/arunav/kotlin/generics/_4StarProjection.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_5-generics/src/com/arunav/kotlin/generics/_4StarProjection.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5-generics/src/com/arunav/kotlin/generics/_5ReifiedTypeParam.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P1_5-generics/src/com/arunav/kotlin/generics/_5ReifiedTypeParam.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5-nulls/5-nulls.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/5-nulls/src/com/arunav/kotlin/nulls/Nulls.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/6-useful-constructs/6-useful-constructs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_P6_15-useful-constructs/_P6_15-useful-constructs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/6-useful-constructs/src/com/arunav/kotlin/constructs/Tuples.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P6_15-useful-constructs/src/com/arunav/kotlin/constructs/Tuples.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/6-useful-constructs/src/com/arunav/kotlin/constructs/TypeCasting.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P6_15-useful-constructs/src/com/arunav/kotlin/constructs/TypeCasting.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/7-functional/7-functional.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_P3_9-functional/_P3_9-functional.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/7-functional/src/com/arunav/kotlin/functional/ExtensionFunctions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P3_9-functional/src/com/arunav/kotlin/functional/ExtensionFunctions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/7-functional/src/com/arunav/kotlin/functional/Functional.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P3_9-functional/src/com/arunav/kotlin/functional/Functional.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/8-interoperability/8-interoperability.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_P6_14-interoperability/_P6_14-interoperability.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/8-interoperability/src/com/arunav/java/interop/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/_P6_14-interoperability/src/com/arunav/java/interop/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/8-interoperability/src/com/arunav/kotlin/interop/Employee.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P6_14-interoperability/src/com/arunav/kotlin/interop/Employee.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/9-collections/9-collections.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_P3_10-sequences/_P3_10-sequences.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/9-collections/src/com.arunav.kotlin.stdlib/Collections.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P3_10-sequences/src/com.arunav.kotlin.stdlib/Collections.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/9-collections/src/com.arunav.kotlin.stdlib/OperationsOnCollections.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P3_10-sequences/src/com.arunav.kotlin.stdlib/OperationsOnCollections.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/9-collections/src/com.arunav.kotlin.stdlib/Sequences.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P3_10-sequences/src/com.arunav.kotlin.stdlib/Sequences.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/9-collections/src/com.arunav.kotlin.stdlib/StringExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P3_10-sequences/src/com.arunav.kotlin.stdlib/StringExtensions.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_P2_6-classes/src/com/arunav/kotlin/classes/_1Classes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P2_6-classes/src/com/arunav/kotlin/classes/_2Classes.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_P2_6-classes/src/com/arunav/kotlin/classes/_2EmployeeData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P2_6-classes/src/com/arunav/kotlin/classes/EmployeeData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_P2_6-classes/src/com/arunav/kotlin/classes/_4Objects.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +90,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -174,28 +104,28 @@
       <recent name="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin._5ReifiedTypeParamKt">
-    <configuration name="GenericsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="_P2_7-inheritance" />
+  <component name="RunManager" selected="Kotlin._2ClassesKt">
+    <configuration name="_1ObjectsAndSingletonsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="_P2_6-classes" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.inheritance.GenericsKt" />
+      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.classes._1ObjectsAndSingletonsKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_2CovarianceAndContravarianceKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="_P1_5-generics" />
+    <configuration name="_2ClassesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="_P2_6-classes" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.generics._2CovarianceAndContravarianceKt" />
+      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.classes._2ClassesKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -240,67 +170,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="_P1_1-basics" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="_P1_1-basics" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Kotlin.GenericsKt" />
-      <item itemvalue="Kotlin._2CovarianceAndContravarianceKt" />
       <item itemvalue="Kotlin._3GenericConstraintsKt" />
       <item itemvalue="Kotlin._4StarProjectionKt" />
       <item itemvalue="Kotlin._5ReifiedTypeParamKt" />
+      <item itemvalue="Kotlin._1ObjectsAndSingletonsKt" />
+      <item itemvalue="Kotlin._2ClassesKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin._2ClassesKt" />
+        <item itemvalue="Kotlin._1ObjectsAndSingletonsKt" />
         <item itemvalue="Kotlin._5ReifiedTypeParamKt" />
         <item itemvalue="Kotlin._4StarProjectionKt" />
         <item itemvalue="Kotlin._3GenericConstraintsKt" />
-        <item itemvalue="Kotlin._2CovarianceAndContravarianceKt" />
-        <item itemvalue="Kotlin.GenericsKt" />
       </list>
     </recent_temporary>
   </component>
@@ -722,6 +605,10 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="512" y="157" key="#Project_Structure/0.0.2048.1152@0.0.2048.1152" timestamp="1605487544478" />
+    <state x="659" y="315" key="#com.intellij.ide.util.MemberChooser" timestamp="1605556007531">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="659" y="315" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1152@0.0.2048.1152" timestamp="1605556007531" />
     <state x="544" y="152" key="CommitChangelistDialog2" timestamp="1605486504916">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -733,45 +620,45 @@
     </state>
     <state x="684" y="322" key="FileChooserDialogImpl/0.0.1792.1120@0.0.1792.1120" timestamp="1604329608964" />
     <state x="782" y="331" key="FileChooserDialogImpl/0.0.2048.1152@0.0.2048.1152" timestamp="1604704883289" />
-    <state width="1158" height="294" key="GridCell.Tab.0.bottom" timestamp="1605486474522">
+    <state width="2006" height="294" key="GridCell.Tab.0.bottom" timestamp="1606116846279">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="2006" height="335" key="GridCell.Tab.0.bottom/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285131862" />
     <state width="1486" height="536" key="GridCell.Tab.0.bottom/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604382463047" />
     <state width="1486" height="284" key="GridCell.Tab.0.bottom/0.0.1536.960@0.0.1536.960" timestamp="1604602670836" />
-    <state width="1750" height="294" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1605156302694" />
-    <state width="1158" height="294" key="GridCell.Tab.0.bottom/0.0.2048.1152@0.0.2048.1152" timestamp="1605486474522" />
-    <state width="1158" height="294" key="GridCell.Tab.0.center" timestamp="1605486474521">
+    <state width="1750" height="284" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1606099718650" />
+    <state width="2006" height="294" key="GridCell.Tab.0.bottom/0.0.2048.1152@0.0.2048.1152" timestamp="1606116846279" />
+    <state width="2006" height="294" key="GridCell.Tab.0.center" timestamp="1606116846279">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="2006" height="335" key="GridCell.Tab.0.center/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285131861" />
     <state width="1486" height="536" key="GridCell.Tab.0.center/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604382463046" />
     <state width="1486" height="284" key="GridCell.Tab.0.center/0.0.1536.960@0.0.1536.960" timestamp="1604602670836" />
-    <state width="1750" height="294" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1605156302693" />
-    <state width="1158" height="294" key="GridCell.Tab.0.center/0.0.2048.1152@0.0.2048.1152" timestamp="1605486474521" />
-    <state width="1158" height="294" key="GridCell.Tab.0.left" timestamp="1605486474521">
+    <state width="1750" height="284" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1606099718650" />
+    <state width="2006" height="294" key="GridCell.Tab.0.center/0.0.2048.1152@0.0.2048.1152" timestamp="1606116846279" />
+    <state width="2006" height="294" key="GridCell.Tab.0.left" timestamp="1606116846278">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="2006" height="335" key="GridCell.Tab.0.left/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285131860" />
     <state width="1486" height="536" key="GridCell.Tab.0.left/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604382463046" />
     <state width="1486" height="284" key="GridCell.Tab.0.left/0.0.1536.960@0.0.1536.960" timestamp="1604602670836" />
-    <state width="1750" height="294" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1605156302693" />
-    <state width="1158" height="294" key="GridCell.Tab.0.left/0.0.2048.1152@0.0.2048.1152" timestamp="1605486474521" />
-    <state width="1158" height="294" key="GridCell.Tab.0.right" timestamp="1605486474522">
+    <state width="1750" height="284" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1606099718650" />
+    <state width="2006" height="294" key="GridCell.Tab.0.left/0.0.2048.1152@0.0.2048.1152" timestamp="1606116846278" />
+    <state width="2006" height="294" key="GridCell.Tab.0.right" timestamp="1606116846279">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state width="2006" height="335" key="GridCell.Tab.0.right/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285131861" />
     <state width="1486" height="536" key="GridCell.Tab.0.right/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604382463047" />
     <state width="1486" height="284" key="GridCell.Tab.0.right/0.0.1536.960@0.0.1536.960" timestamp="1604602670836" />
-    <state width="1750" height="294" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1605156302693" />
-    <state width="1158" height="294" key="GridCell.Tab.0.right/0.0.2048.1152@0.0.2048.1152" timestamp="1605486474522" />
-    <state x="525" y="215" key="SettingsEditor" timestamp="1605480341866">
+    <state width="1750" height="284" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1606099718650" />
+    <state width="2006" height="294" key="GridCell.Tab.0.right/0.0.2048.1152@0.0.2048.1152" timestamp="1606116846279" />
+    <state x="525" y="215" key="SettingsEditor" timestamp="1606088119017">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="-1523" y="151" key="SettingsEditor/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604282761199" />
     <state x="-1904" y="237" key="SettingsEditor/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604296452944" />
     <state x="459" y="209" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1605144868655" />
-    <state x="525" y="215" key="SettingsEditor/0.0.2048.1152@0.0.2048.1152" timestamp="1605480341866" />
+    <state x="525" y="215" key="SettingsEditor/0.0.2048.1152@0.0.2048.1152" timestamp="1606088119017" />
     <state x="624" y="316" key="Vcs.Push.Dialog.v2" timestamp="1605486515667">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>

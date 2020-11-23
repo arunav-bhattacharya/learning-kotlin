@@ -687,60 +687,78 @@
 # Part II - Object Oriented Kotlin 
 
 
-## 6. Classes
+## 6. Classes & Objects
 
 > Kotlin is an object oriented language and it supports all the different features of object-oriented programming. In this section, we'll get started with the OO concepts in Kotlin.
 
-### 6.a. `class` & `construtor`
+### 6.a. Objects & Singletons
 
-- `class`:  
-    - Classes can be defined with or without any {}.
-    - Classes has properties and not fields. Properties can be defined as `val` or `var`.
-    - To create instances of classes, we can simply call the Class using the className. There is no `new` keyword in Kotlin.
-    - **All properties needs to be initialized if they are not passed using constructor**.
-    - We can define member functions inside classes similar to how we defined functions. It will have access to all the properties inside the class.
-    
-- `constructor`:    
-    - Constructor properties can have **default** or **named** parameters similar to functions.
-    - We can initialize properties inside an `init{}` block of code inside the class.
-    - Secondary constructors can be created by using the `constructor` keyword. 
-    - If the class has a primary constructor, each secondary constructor needs to **delegate to the primary constructor**, either directly or indirectly through another secondary constructor(s) using the `this` keyword.
-    - `var` is not allowed inside secondary constructors.
-    - If parameter passed inside constructor is not defined as `val` or `var`, it can still be a parameter, but not a property of the class.
+- In Kotlin we can directly create an object without creating a class.
+- Provides an easy way to create singletons.
+- Objects in an expression are initialized immediately, whereas object declarations are lazily instantiated.
+- We can add methods to objects as well, but in most of the scenarios we'll use a class to do this.  
 
     ```kotlin
-        class Customer(var id: Int = -1, var name: String) {
-            var email: String = ""
-            init {
-                name = name.toUpperCase()
+        object Circle {  // This is treated as an object declaration or singleton
+            var radius = 2
+        }
+  
+        fun draw(){
+            var rectangle = object { // This is treated as object expression
+                val length = 10
+                val breadth = 7 
             }
-            constructor(id: Int = -1, name: String, email: String) : this(id, name) {
-                if (email == "")
-                    this.email = "$name@example.com"
-                else
-                    this.email = email
-            }
-           fun printCustomer() {
-                println("id=${id}, name=${name}, email=${email}")
-            }            
+            println("Drawing Rectangle of length ${rectangle.length} and breadth ${rectangle.breadth}")
+            println("Drawing Circle of radius ${Circle.radius}")
         }
     ```
 
-[Additional Reading](https://kotlinlang.org/docs/reference/classes.html)
+- With a slight change, anonymous objects can be useful as implementors of interfaces, i.e., as anonymous inner classes like in Java. Between the `object` keyword and the block `{}`, we can mention the names of the interfaces we’d like to implement, comma separated.
 
-### 6.b. Custom Getters & Setters
+- In this below example, the anonymous inner class (object) is implementing more than one interfaces - `Runnable` and `AutoCloseable`, but returns `Runnable` as the return type. 
 
-- The full syntax for declaring a property is 
+    ```kotlin
+        fun createRunnable(): Runnable = object: Runnable, AutoCloseable {
+            override fun run() { println("I m running...") }
+  
+            override fun close() { println("I m closing...") }  
+        }             
+    ``` 
+  
+- If the interface implemented by the anonymous inner class is a single abstract method interface (what Java 8 calls a functional interface), then we can directly provide the implementation without the need to specify the method name, like so:
+
+    ```kotlin
+        fun createRunnable(): Runnable = Runnable { println("You called...") }
+    ```
+
+> **Top-level functions vs Singletons**  
+>
+> - If a group of functions are high level, general, and widely useful, then placing them directly within a package as top-level functions make sense. 
+> - If on the other hand, a few functions are more closely related to each other than the other functions, like f2c() and c2f() are more closely related to each other than to milesToKm(), then place them within a singleton. Also, if a group of functions needs to rely on state, you can place that state along with those related functions in a singleton, although a class may be a better option for this purpose. 
+> - Use caution: placing mutable state in a singleton may cause issues in multithreaded applications.
+
+### 6.b. Classes
+
+- `class`:  
+    - Classes can be defined with or without any {}.
+    - By default, access to a `class` and its members is public, and the `constructor` is public as well.
+    - To create instances of classes, we can simply call the Class using the className. There is no `new` keyword in Kotlin.
+    - Classes have _properties and not fields_. 
+    - Properties can be defined as `val` or `var`.
+    - **All properties needs to be _initialized_ if they are not passed using constructor**.
+    - If a parameter passed inside constructor is _not defined as_ `val` or `var`, _it can still be a parameter, but not a property_ of the class.
+    - We can define member functions inside classes similar to how we defined functions. It will have access to all the properties inside the class.
+    - We can create custom getters and setters inside kotlin classes by using the `get()` and `set()` methods with each properties.
+    - `field` is a special keyword in Kotlin that is used to set a value to a property.    
+    - The full syntax for declaring a property is 
  
     ```kotlin
       var <propertyName>[: <PropertyType>] [= <property_initializer>]
           [<getter>]
           [<setter>]
-    ```      
-  
-- We can create custom getters and setters inside kotlin classes by using the `get()` and `set()` methods with each properties.
-- `field` is a special keyword in Kotlin that is used to set a value to a property.
-
+    ``` 
+    
+    - Example of a Kotlin class 
 
     ```kotlin
         class Employee(val id: Int = Random.nextInt().absoluteValue, val name: String, val yearOfBirth: Int) {
@@ -752,16 +770,74 @@
                 }
         }
     ```
+    
+- `init`:
+    - We can initialize properties inside an `init{}` block of code inside the class. 
+    - A class may have zero or more `init` blocks. 
+    - These blocks are executed as part of the primary constructor execution. The order of execution of the `init` blocks is top-down. 
+    - Within an `init` block we may access only properties that are already defined above the block. 
+    - Since the properties and parameters declared in the primary constructor are visible throughout the class, any `init` block within the class can use them. But to use a property defined within the class, we’ll have to write the `init` block after the said property’s definition.
+    - An ideal practise will be to first declare the properties at the top, then write one `init` block, but only if needed, and then implement the secondary constructors (again only if needed), and finally create any methods that may be needed.
+         
+    ```kotlin
+        class Car(val year: Int, var theColor: String) {
+            var mileage: Int = 100
+            var color = theColor
+                // Custom Setter for color property. We can give any name to the parameter of the setter (value)
+                set(value) {
+                    if (value == "")
+                        throw Exception("ERROR: Color cannot be blank")
+                    field = value
+                }
+            init {
+                  if (year > 2020) { 
+                      mileage = 0 
+                  }
+            }
+            override fun toString() = "year=$year, color=$color, mileage=$mileage "
+        }          
+    ```
 
-[Additional Reading](https://kotlinlang.org/docs/reference/properties.html)
+> **Backing Field** 
+>
+> - In Kotlin we never define fields — **_backing fields_** are synthesized automatically, but only when necessary. _If you define a field with both a custom getter and custom setter and don’t use the backing field using the_ `field` _keyword, then no backing field is created._ If you write only a getter or a setter for a property, then a backing field is synthesized.
+>
+> - Since Kotlin synthesizes fields internally, it doesn’t give access to that name in code. We may refer to it using the keyword `field` only within getters and setters for that `field`.
 
-### 6.c. Visibility Modifiers
+[Additional Reading on Classes](https://kotlinlang.org/docs/reference/classes.html)
+    
+[Additional Reading on Properties](https://kotlinlang.org/docs/reference/properties.html)
 
-<img src="./images/visibility.png"> 
+[Additional Reading on Access Modifiers](https://kotlinlang.org/docs/reference/visibility-modifiers.html)
+                
+### 6.c. Constructors
+    
+    - Constructor properties can have **default** or **named** parameters similar to functions.
+    - Secondary constructors can be created by using the `constructor` keyword. 
+    - If the class has a primary constructor, each secondary constructor needs to **delegate to the primary constructor**, either directly or indirectly through another secondary constructor(s) using the `this` keyword.
+    - Properties cannot be defined in secondary constructors. Hence `var` or `val` is not allowed inside secondary constructors.
 
-[Additional Reading](https://kotlinlang.org/docs/reference/visibility-modifiers.html)
+    ```kotlin
+          class Person(val first: String, val last: String) { 
+              var fulltime = true
+              var location: String = "-"
+              constructor(first: String, last: String, fte: Boolean): this(first, last) { 
+                  fulltime = fte
+              }
+              constructor(first: String, last: String, loc: String): this(first, last, false) { 
+                  location = loc
+              }
+              override fun toString() = "$first $last $fulltime $location" 
+          }
+    ```
+    
+### 6.d. `inline` classes
 
-### 6.d. `data` Classes
+### 6.e. `companion` objects
+
+### 6.f. Generic classes    
+
+### 6.g. `data` Classes
 
 - In order to reduce verbose code, Kotlin has `data` classes which automatically derives -
     - `equals()` / `hashCode()`
@@ -773,7 +849,6 @@
     - Data classes cannot be abstract, open, sealed or inner
 - We can `override` and provide explicit implementations of `equals()`, `hashCode()` or `toString()` in the `data` class body. These functions are not generated then and the explicit implementations are used;
 - `copy()` function can be used to copy an object altering some of its properties, but keeping the rest unchanged. 
-
 
     ```kotlin
       data class EmployeeData(var id: Int, var name: String, var email: String) {
@@ -790,14 +865,13 @@
       }    
     ```
 
-### 6.e. `enum` Classes
+### 6.h. `enum` Classes
 
 - Enum classes are used for creating a bunch of enumerated values. 
 - We can customize and iterate over them as well.
 - Each `enum` constant is an object. Enum constants are separated with commas.
 - Enum constants can override base methods.
 - **When enum class has any members, the enum constants must be separated from the member definitions with a semicolon.**
-
 
     ```kotlin
         enum class ProtocolState {
@@ -811,26 +885,6 @@
         }
     ```
     
-### 6.f. Objects
-
-- In Kotlin we can directly create an object without creating a class.
-- Provides an easy way to create singletons.
-- Objects in an expression are initialized immediately, whereas object declarations are lazily instantiated.  
-
-    ```kotlin
-        object Circle{
-            var radius = 2
-        }
-        fun draw(){
-            var rectangle = object {
-                val length = 10
-                val breadth = 7 
-            }
-            println("Drawing Rectangle of length ${rectangle.length} and breadth ${rectangle.breadth}")
-            println("Drawing Circle of radius ${Circle.radius}")
-        }
-    ```
-
 <br/> 
 
 ## 7. Inheritance 
