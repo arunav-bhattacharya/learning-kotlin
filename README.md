@@ -836,22 +836,77 @@
     
 ### 6.d. `inline` classes
 
+- `inline` classes provides the benefit of classes at compile time, but we can also get the benefits of using a primitive at runtime — the `inline` class is transformed into a primitive in the bytecode.
+- `inline` classes may have properties and methods and may implement interfaces as well. 
+- Under the hood, methods will be rewritten as static methods that receive the primitive types that are being wrapped by the inline class. 
+- `inline` classes are required to be final and aren't allowed to extend from other classes.
+
+    ```kotlin
+        inline class SSN(val id: String) {
+            fun receiveSSN(ssn: SSN) {
+                println("Received $ssn")
+            }
+        }
+    ```
+
 ### 6.e. `companion` objects
 
-### 6.f. Generic classes    
+- `companion` objects are singletons defined within a class — they’re singleton companions of classes.  
+- They may implement interfaces and may extend from base classes, and thus are useful for code re-usability.
+- The members of the companion object of a class can be accessed using the class name as reference.
+- We can access the companion of a class using `.Companion` on the class. The name `Companion` is used only if the companion object doesn’t have an explicit name.
 
-### 6.g. `data` Classes
+    ```kotlin
+        companion object {
+            var tires = 4
+        }
+        val ref = Car.Companion // Referenced as .Companion
+         
+        companion object Wheels { 
+            var tires = 0
+            //...
+        }
+        val wheels = Car.Wheels
+    ```
+
+- We can use companion object as a factory by providing a private constructor to the class. We can then provide one or more methods in the companion object that creates the instance and carries out the desired steps on the object before returning to the caller.
+
+    ```kotlin
+        class MachineOperator private constructor(val name: String) {
+  
+            fun checkin() = checkedIn++
+            fun checkout() = checkedIn-- 
+        
+            companion object { 
+                var checkedIn = 0
+                fun minimumBreak() = "15 minutes every 2 hours"
+    
+                fun create(name: String): MachineOperator { 
+                    val instance = MachineOperator(name) instance.checkin()
+                    return instance
+                } 
+            }
+        }
+    ```
+
+- **Caution**: Placing _mutable properties within companion objects_ may lead to thread-safety issues in multithreaded scenarios.  
+
+
+### 6.f. `data` Classes
 
 - In order to reduce verbose code, Kotlin has `data` classes which automatically derives -
     - `equals()` / `hashCode()`
     - `toString()`
     - `copy()`
+- We can `override` and provide explicit implementations of `equals()`, `hashCode()` or `toString()` in the `data` class body.    
 - Data classes must fulfill the following requirements -
     - The primary constructor needs to have at least one parameter
     - All primary constructor parameters need to be marked as `val` or `var`
     - Data classes cannot be abstract, open, sealed or inner
-- We can `override` and provide explicit implementations of `equals()`, `hashCode()` or `toString()` in the `data` class body. These functions are not generated then and the explicit implementations are used;
-- `copy()` function can be used to copy an object altering some of its properties, but keeping the rest unchanged. 
+- Data classes have `copy()` function, which can be used to copy an object altering some of its properties, but keeping the rest unchanged.
+-  It also creates special methods that start with the word `component` — `component1()`, `component2()`, and so on, to access each property defined through the primary constructor, generally referred to as `componentN()` method.
+- Any property defined within the class body `{}`, if present, will not be used in the generated `equals()`, `hashCode()`, and `toString()` methods. Also, no `componentN()` method will be generated for those.
+- Unlike the other methods, the `copy()` method includes any property defined within the class, not just those presented in the primary constructor
 
     ```kotlin
       data class EmployeeData(var id: Int, var name: String, var email: String) {
@@ -859,16 +914,27 @@
               return super.toString()
           }
       }
+  
       fun main() {
-      
           val e1 = EmployeeData(1, "Ram", "ram@gmail.com")
           val e2 = EmployeeData(2, "Shyam", "shyam@gmail.com")
-    
           val e3 = e1.copy(email = "ram2@gmail.com")
       }    
     ```
 
-### 6.h. `enum` Classes
+> Destructuring in Data Classes
+>
+> - The main purpose of the `componentN()` methods is for destructuring. Any class, including Java classes, that has `componentN()` methods can participate in destructuring.
+> - To destructure, we have to extract the properties in the same order as they appear in the primary constructor.
+> 
+>    ```kotlin
+>        val (id, _, name) = employee
+>        println("Employee Id=${id}, Employee Name=${name}")    
+>    ```
+>
+> - The destructuring of data classes in Kotlin comes with a significant limitation. In JavaScript, object destructuring is based on property names, but, sadly, Kotlin relies on the order of properties passed to the primary constructor. If a developer inserts a new parameter in between current parameters, then the result may be catastrophic.
+
+### 6.g. `enum` Classes
 
 - Enum classes are used for creating a bunch of enumerated values. 
 - We can customize and iterate over them as well.

@@ -26,6 +26,10 @@ fun main() {
     val car2 = Car1(2021, "Black")
     println("Car2=${car2}")
 
+    val ssn = SSN("789854545")
+    ssn.receiveSSN(ssn)
+
+
     // Using the Customer class
     val c1 = Customer(name = "Younis")
     val c2 = Customer(id = 2, name = "Souvik")
@@ -86,4 +90,11 @@ class Customer(var id: Int = Random.nextInt().absoluteValue, var name: String) {
 
 fun printCustomer(customer: Customer) {
     println("{Id=${customer.id}, Name=${customer.name}, Email=${customer.email}}")
+}
+
+
+inline class SSN(val id: String) {
+    fun receiveSSN(ssn: SSN) {
+        println("Received $ssn")
+    }
 }
