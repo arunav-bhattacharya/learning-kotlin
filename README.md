@@ -368,13 +368,44 @@
 
 ### 3.b. Arrays
 
+- Example of Array
+
+    ```kotlin
+        // Array of Strings
+        val friends = arrayOf("Sanjoy", "Kaushik", "Ayon", "Debanjan")
+        println(friends::class)
+        println(friends.javaClass)
+        println("${friends[0]}, ${friends[1]}, ${friends[2]}, ${friends[3]}")
+    ```
+
 [Arrays](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0044.xhtml)
 
 ### 3.c. Lists
 
+- Example of List
+
+    ```kotlin
+        val fruits: List<String> = listOf("Apple", "Banana", "Grape")
+        println(fruits) //[Apple, Banana, Grape]
+    
+        // Using the `index` operator to fetch from list
+        println("${fruits[0]} == ${fruits.get(0)}")
+    
+        // Using the `in` operator to check if a value exists in list
+        println("Apple" in fruits)
+        println(fruits.contains("Apple")) // Same as the line above
+    ```
+
 [Lists](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0045.xhtml)
 
 ### 3.d. Sets
+
+- Example of Set
+
+    ```kotlin
+        val fruits: Set<String> = setOf("Apple", "Banana", "Apple")
+        println(fruits) //[Apple, Banana]
+    ```
 
 [Sets](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0046.xhtml)
 
@@ -382,6 +413,31 @@
 
 - The key-value pairs are created using the `to()` extension function, available on any object in Kotlin. 
 - Using `mapOf()`, that takes a vararg of `Pair<K, V>`, we can create a map of key-values of different objects.
+
+    ```kotlin
+        val products = mapOf("PID1" to "Phone", "PID2" to "Watch", "PID3" to "Laptop")
+        println(products)
+        println(products.size)
+    
+        println(products.containsKey("PID1")) //true
+        println(products.containsValue("Tablet")) //false
+        println(products.containsValue("Watch")) //true
+        println(products.contains("PID2")) //true - Checks if the key is present in the map
+        println("PID3" in products) //true - Checks if the key is present in the map
+    
+        val unknownProduct: String? = products.get("PID4")  // Using the get() method to fetch a value from map
+        println("unknownProduct=$unknownProduct")
+    
+        val someProduct: String? = products["PID1"]  // Using the index operator [] to fetch a value from map
+    
+        // Iterating over products
+        for (product in products)
+            println("${product.key} --> ${product.value}")
+    
+        // Iterating over the destructed map of products
+        for ((pid, product) in products)
+            println("$pid --> $product")  
+    ```
 
 [Maps](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0047.xhtml)
 
@@ -538,7 +594,7 @@
 
 ### Invariance
 
-- Let's say the class `Dog` is inherited from the class `Animal`. Any method that is expecting an `Animal` will be happy if we pass `Dog`, but if we try to pass `MutableList<Dog>` where `MutableList<Animal>` is expected, Kotlin compiler will throw an error. This is true in case of Java `List<>` as well. The reason for this compilation error is because the list being a mutable one, we can add an instance of another animal, lets say `Cat` in the `MutableList<Animal>`. If a MutableList<Dog> is passed to MutableList<Animal> , then whenever a `Cat` is added to the list it will throw a ClassCastException at runtime, instead it is throwing the error at compile time itself. This is called type invariance, i.e., we cannot vary on the type, i.e., `List<Dog>` is not a subtype of `List<Animal>`.  
+- Let's say the class `Dog` is inherited from the class `Animal`. Any method that is expecting an `Animal` will be happy if we pass `Dog`, but if we try to pass `MutableList<Dog>` where `MutableList<Animal>` is expected, Kotlin compiler will throw an error. This is true in case of Java `List<>` as well. The reason for this compilation error is because the list being a mutable one, we can add an instance of another animal, lets say `Cat` in the `MutableList<Animal>`. If a `MutableList<Dog>` is passed to `MutableList<Animal>` , then whenever a `Cat` is added to the list it will throw a `ClassCastException` at runtime, instead it is throwing the error at compile time itself. This is called type invariance, i.e., we cannot vary on the type, i.e., `List<Dog>` is not a subtype of `List<Animal>`.  
 
 
 ### Covariance
@@ -873,19 +929,22 @@
 
     ```kotlin
         class MachineOperator private constructor(val name: String) {
-  
-            fun checkin() = checkedIn++
-            fun checkout() = checkedIn-- 
         
-            companion object { 
+            fun checkin() = checkedIn++
+            fun checkout() = checkedIn--
+        
+            companion object {
                 var checkedIn = 0
                 fun minimumBreak() = "15 minutes every 2 hours"
-    
-                fun create(name: String): MachineOperator { 
-                    val instance = MachineOperator(name) instance.checkin()
+        
+                fun create(name: String): MachineOperator {
+                    val instance = MachineOperator(name)
+                    instance.checkin()
                     return instance
-                } 
+                }
             }
+        
+            override fun toString() = "${checkedIn}"
         }
     ```
 

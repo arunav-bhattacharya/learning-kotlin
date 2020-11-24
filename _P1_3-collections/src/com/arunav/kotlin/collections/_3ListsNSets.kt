@@ -1,5 +1,10 @@
 package com.arunav.kotlin.collections
 
+fun main() {
+    listExamples()
+    setExamples()
+}
+
 fun listExamples() {
     val fruits: List<String> = listOf("Apple", "Banana", "Grape")
     println(fruits) //[Apple, Banana, Grape]
@@ -36,9 +41,4 @@ fun setExamples() {
 
     val fruits: Set<String> = setOf("Apple", "Banana", "Apple")
     println(fruits) //[Apple, Banana]
-}
-
-fun main() {
-    listExamples()
-    setExamples()
 }
