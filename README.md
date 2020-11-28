@@ -7,9 +7,13 @@
 > - [Idioms](https://kotlinlang.org/docs/reference/idioms.html)
 > - [Coding Conventions](https://kotlinlang.org/docs/reference/coding-conventions.html)
 >
-> This document is split into 2 parts - 
+> This document is split into 6 parts - 
 >   A. Introduction to Kotlin
->   B. Some advanced concepts 
+>   B. Object Oriented Kotlin
+>   C. Functional Kotlin
+>   D. DSLs using Kotlin
+>   E. Async Programming using Kotlin
+>   F. Interoperability & Testing 
 > 
 > My takeaways from Kotlin till now when compared to Java -
 >
