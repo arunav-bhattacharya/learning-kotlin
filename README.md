@@ -1019,9 +1019,9 @@
 
 > We'll extend the OO concepts in Kotlin by looking into Inheritance, Interfaces, Abstract classes & Generics.
 
-- Base class in Kotlin is `Any`, similar to `Object` is Java. All classes are inherits from `Any`. 
+- Base class in Kotlin is `Any`, similar to `Object` is Java. All classes inherits from `Any`. 
 - By default all classes are `final`. In order to make a class non-final we need to make it `open`.
-- Similarly members are also by default final. In order to override in the child class, we need to make the method `open` in the parent class.
+- Similarly members are also by default `final`. In order to override in the child class, we need to make the method `open` in the parent class.
 - `data` classes can also be inherited in Kotlin.
 
     ```kotlin
@@ -1040,8 +1040,60 @@
         }
         data class SpecialCustomer(var id: Int) : Customer()
     ```
+
+### 7.a. `interface`
+
+- Similar to Java 8 onwards. 
+- Can have default implementations.
+- Can define abstract properties but cannot have a state for it.
+- However, we can define custom getters and setters on interface properties. But properties inside interfaces doesn't have a backing `field`.
+- We can use `companion` objects to create `static` methods in interfaces.
+
+    ```kotlin
+        interface CustomerRepo {
+            // Interfaces cannot maintain state, but can have custom getters & setters
+            var isEmpty : Boolean
+                get() = true
+                set(value){
+                    println("Doing something with the value $value")
+                }
   
-### 7.a. Abstract Classes
+            // This is a default implementation
+            fun load(obj: Customer){
+                println("Loading Customer Data")
+            }
+        
+            // Implementing class needs to override this method
+            fun getById(id: Int) : Customer
+        }
+    ```
+
+- When a class implements multiple interfaces, say `A` and `B`, and both have a method with the same name, say `foo()`, then Kotlin provides a way for the implementing class to resolve the conflict by specifying the interfaces in Angular brackets <>.
+
+    ```kotlin
+        interface A {
+            fun foo() { print("A") }
+            fun bar()
+        }
+        interface B {
+            fun foo() { print("B") }
+            fun bar() { print("bar") }
+        }
+        class C : A {
+            override fun bar() { print("bar") }
+        }
+        class D : A, B {
+            override fun foo() {
+                super<A>.foo()
+                super<B>.foo()
+            }
+            override fun bar() {
+                super<B>.bar() // We don't have to specify super<B> in this case as there is no implementation inside A for bar()
+            }
+        }
+    ```
+
+### 7.b. `abstract` Classes
 
 - Similar to Java
 
@@ -1066,61 +1118,13 @@
         }
     ```
 
-### 7.b. Interfaces
-
-- Similar to Java 8 onwards. 
-- Can have default implementations.
-- Can define abstract properties but cannot have a state for it.
-- However, we can define custom getters and setters on interface properties. But properties inside interfaces doesn't have a backing `field`.
-
-    ```kotlin
-        interface CustomerRepo {
-            // Interfaces cannot maintain state, but can have custom getters & setters
-            var isEmpty : Boolean
-                get() = true
-                set(value){
-                    println("Doing something with the value $value")
-                }
-            // This is a default implementation
-            fun load(obj: Customer){
-                println("Loading Customer Data")
-            }
-        
-            fun getById(id: Int) : Customer
-        }
-    ```
-
-- When a class implements multiple interfaces, say A and B, and both have a method with the same name, say foo(), then Kotlin provides a way for the implementing class to resolve the conflict by specifying the interfaces in Angular brackets <>.
-
-    ```kotlin
-        interface A {
-            fun foo() { print("A") }
-            fun bar()
-        }
-        interface B {
-            fun foo() { print("B") }
-            fun bar() { print("bar") }
-        }
-        class C : A {
-            override fun bar() { print("bar") }
-        }
-        class D : A, B {
-            override fun foo() {
-                super<A>.foo()
-                super<B>.foo()
-            }
-            override fun bar() {
-                super<B>.bar()
-            }
-        }
-    ```
-
 > **Difference between Abstract Classes and Interfaces**:
 >   
 > In both abstract classes and interfaces, we can define abstract methods as well as provide default implementation of some methods. But below are the major differences between them - 
 >   - In abstract classes we can maintain state, but in interfaces we cannot. We can define properties inside an interface, but we cannot maintain value or state inside it.
 >   - Secondly we can have a class that implements multiple interfaces, but it can extend only one class. 
 >   
+> In short, when we want to _reuse state between multiple classes_, then _abstract class_ is a good choice, and on the other hand, if we want classes to _choose their own implementations_, _interfaces_ is a better option. 
 
 [Additional Reading](https://kotlinlang.org/docs/reference/interfaces.html)
 
@@ -1156,6 +1160,80 @@
             customerRepo.getById(10)
             employeeRepo.getAll()
             employeeRepo.getAddDataById<EmployeeAddData>(22)
+        }
+    ```
+
+### 7.d. Nested and `inner` Classes
+
+- In Kotlin a class may be nested, i.e., placed inside another class. Unlike in Java, Kotlin nested classes can’t access the private members of the nesting outer class. But if we mark the nested class with the `inner` keyword, then they turn into inner classes and the restriction goes away.
+
+    ```kotlin
+        class _TV {
+            private var volume = 0
+        
+            val remote: Remote
+                get() = _TVRemote()
+        
+            override fun toString() = "Volume : ${volume}"
+        
+            inner class _TVRemote : Remote {
+                override fun up() {
+                    volume++
+                }
+        
+                override fun down() {
+                    volume--;
+                }
+        
+                // Inner class overriding the outer class method.
+                override fun toString() = "Remote: ${this@_TV.toString()}"
+            }
+        }
+    ```
+
+- A user of a `_TV` instance can obtain a reference to a `Remote` for the `_TV` instance using the `remote` property.
+- If a property or method in the inner class shadows a corresponding member in the outer class, we can access the member of the outer class from within a method of the inner using a special `this` expression (`this@_TV` can be read as "`this` of `_TV`", i.e., `this` will refer to the `_TVRemote`, while `this@_TV` will refer to the instance of the outer class `_TV`).
+- Similar to `this@_TV`, we can refer to a method in the base class of the outer class using `super@OuterClass`, but we should try to avoid this because it is a _design smell_, by by-passing the outer class to get from base class.
+- The `inner` keyword is not required for anonymous inner classes. We can use the `companion` objects in this case. 
+
+### 7.e. Inheritance
+
+- Only classes marked `open` may be inherited from. Only `open` methods of an `open` class may be overridden in a derived class and have to be marked with `override` in the derived. 
+- A method that isn’t marked `open` or `override` can’t be overridden. An overriding method may be marked `final override` to prevent a subclass from further overriding that method.
+- We can override a property, either defined within a class or within the parameter list of a constructor. 
+- A `val` property in the base may be overridden with a `val` or `var` in the derived. But a `var` property in the base may be overridden only using `var` in the derived.
+- We can make a `private` or `protected` member `public` in the derived, but we can’t make a `public` member of base `protected` in the derived.
+
+### 7.f. `sealed` Class
+
+- Kotlin’s `sealed` classes are **open for extension** by other classes defined **in the same file** but closed — that is, `final` or not `open` for any other classes.
+- The constructors of `sealed` classes aren’t marked `private`, but they’re considered `private`.
+- We may also derive singleton `objects` from `sealed` classes.
+- We can't instantiate an object of a sealed class, but we can create objects of classes that inherit from `sealed` classes. 
+
+    ```kotlin
+        sealed class Card(val suit: String)
+        
+        class Ace(suit: String) : Card(suit)
+        
+        class King(suit: String) : Card(suit) {
+            override fun toString() = "King of $suit"
+        }
+        
+        class Queen(suit: String) : Card(suit) {
+            override fun toString() = "Queen of $suit"
+        }
+        
+        class Jack(suit: String) : Card(suit) {
+            override fun toString() = "Jack of $suit"
+        }
+        
+        class Pip(suit: String, val number: Int) : Card(suit) {
+            init {
+                if (number < 2 || number > 10) {
+                    throw RuntimeException("Pip has to be between 2 and 10")
+                }
+            }
         }
     ```
 

@@ -18,8 +18,7 @@ open class Customer : Person {
     }
 }
 
-data class SpecialCustomer(var id: Int) : Customer() {
-}
+data class SpecialCustomer(var id: Int) : Customer()
 
 fun main() {
     val customer = Customer()

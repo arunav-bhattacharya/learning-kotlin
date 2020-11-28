@@ -1,5 +1,7 @@
 package com.arunav.kotlin.inheritance
 
+import java.lang.Exception
+
 interface Repository<T> {
     fun getById(id: Int): T
     fun getAll(): List<T>
@@ -26,7 +28,21 @@ class GenericRepo<T> : Repository<T> {
 fun main() {
     val customerRepo = GenericRepo<Customer>()
     val employeeRepo = GenericRepo<EmployeeEntity>()
-    customerRepo.getById(10)
-    employeeRepo.getAll()
-    employeeRepo.getAddDataById<EmployeeEntity>(22)
+    try {
+        customerRepo.getById(10)
+    } catch (ex : Exception){
+        println(ex.message)
+    }
+
+    try {
+        employeeRepo.getAll()
+    } catch (ex : Exception){
+        println(ex.message)
+    }
+
+    try {
+        employeeRepo.getAddDataById<EmployeeEntity>(22)
+    } catch (ex : Exception){
+        println(ex.message)
+    }
 }
