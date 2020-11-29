@@ -1245,26 +1245,55 @@
 
 ## 8. Delegation
 
-> In delegation, two objects are involved in handling a request: a receiving object delegates operations to its delegate. Kotlin inherently provides support for Delegation. In this section we'll take a look at it.
-
-### 8.a Delegating Methods/Functions 
-
--  Kotlin requires the left side of the `by` to be an `interface`. The right side is an implementor of that interface.
--  The delegating class implements the delegating interface, so a reference to the delegating class may be assigned to a reference of the delegating interface. Likewise, a reference to a delegating class may be passed to methods that expect a delegate interface.
-
-> **Some Useful Tips** 
+> In delegation, two objects are involved in handling a request: a receiving object delegates operations to a delegate object. Kotlin inherently provides support for Delegation. In this section we'll take a look at it.
 >
-> - Use **inheritance** if you want an object of a class to be _used in place of an object of another class_.
-> - Use **delegation** if you want an object of a class to simply _make use of an object of another class_.
+> **Inheritance vs Delegation:**
+>
+> - We should be using **_inheritance_** if we want an object of a class to be used in place of an object of another class.
+> - We should be using **_delegation_** if we want an object of a class to simply make use of an object of another class.
+>
 
-### 8.b. Delegating properties
+### 8.a Delegation in Kotlin using `by`
+
+-  Kotlin requires the left side of the `by` to be an `interface`. The right side is an implementor of that `interface`.
+
+    ```kotlin
+        interface Worker{
+            fun work()
+            fun takeVacation()
+        }
+        
+        class JavaProgrammer : Worker {
+            override fun work(){
+                println("Writing Java Code..")
+            }
+            override fun takeVacation(){
+               println("Writing Java Code in vacation..")
+            }
+        }
+        
+        class Manager() : Worker by JavaProgrammer()
+    ```
+
+### 8.b. Delegating to a Parameter
+
+### 8.c. Dealing with Method Collisions
+
+> - The delegating `class` implements the delegating `interface`, so a reference to the delegating `class` may be assigned to a reference of the delegating `interface`. 
+> - Likewise, a reference to a delegating `class` may be passed to methods that expect a delegate `interface`.
+
+
+### 8.d. Caveats of Kotlin Delegation
+
+### 8.e. Delegating variables & properties
 
 - When delegating properties, the delegated class needs to implement two functions `getValue()` and `setValue()`.
-- For knowing more about the property type passed in the get and set methods, visit this part after learning reflection in Kotlin.  
+
+> For knowing more about the property type passed in the `getValue()` and `setValue()` methods, visit this part after learning reflection in Kotlin.  
 
 [Additional Reading](https://kotlinlang.org/docs/reference/delegated-properties.html)
 
-### 8.c. Built-in Delegates in Kotlin
+### 8.f. Built-in Standard Delegates in Kotlin
 
 - **`lazy`** : 
     - Deferring creation of objects or executing computations until the time the result is truly needed.  The lazy function takes as argument a lambda expression that will perform the computation, but only on demand and not eagerly or immediately.
