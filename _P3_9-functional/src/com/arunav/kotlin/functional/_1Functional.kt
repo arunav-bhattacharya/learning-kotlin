@@ -1,12 +1,12 @@
 package com.arunav.kotlin.functional
 
-fun operation(x: Int, y: Int, op: (Int, Int) -> Int): Int {
-    return op(x, y)
+fun operate(x: Int, y: Int, operation: (Int, Int) -> Int): Int {
+    return operation(x, y)
 }
 
 // Overloaded function
-fun operation(x: Int, op: (Int) -> Int) {
-    println("Input is $x and output is ${op(x)}")
+fun operate(x: Int, operation: (Int) -> Int) {
+    println("Input is $x and output is ${operation(x)}")
 }
 
 // Passing vararg as function parameters
@@ -28,18 +28,29 @@ fun transaction(db: Database, code: () -> Unit) {
 }
 
 fun main() {
-    // Using method references for passing a function as a parameter
-    println(operation(2, 7, ::sum))
-
     // No need to specify the type when using a lambda expression
-    println(operation(5, 10, { x, y -> x * y }))
+    println(operate(5, 10, { x, y -> x * y }))
+
+    // Calling the overloaded function
+    operate(2, { x -> x * x })
+
+    // If the last parameter is a lambda expression we can move the lambda expression out of the parentheses().
+    operate(7) { x -> x * 2 }
+
+    // When there is only one parameter in the lambda expression, we can ignore the parameter specification and `->`
+    // and instead refer the parameter inside the method body as `it`.
+    operate(3, { it * it })
+
+    // Just one another and simpler way to invoke the method
+    operate(5) { it * it }
 
     // When lambda function is extracted to a variable then the type needs to be specified
     val minusLambda: (Int, Int) -> Int = { x, y -> x - y }
-    println(operation(5, 10, minusLambda))
+    println(operate(5, 10, minusLambda))
 
-    // Calling the overloaded function
-    operation(2, { x -> x * x })
+    // Using method references for passing a function as a parameter
+    println(operate(2, 7, ::sum))
+
 
     // Vararg as a functional parameter
     route(
@@ -47,13 +58,6 @@ fun main() {
         "E",
         { src, dest -> "$src -> temp, temp -> $dest" },
         { src, dest -> "$src -> $dest" })
-
-    // Using `it` for single functional parameter. No need to explicitly specify the parameter
-    operation(3, { it * it })
-
-    // When the last parameter of a function is a function, then when calling the higher-order function
-    // the function parameter can be passed outside the parentheses of the function call
-    operation(5) { it * it }
 
     // Another example of calling a higher-order function by dropping the brackets
     val db = Database()
@@ -64,7 +68,7 @@ fun main() {
 
     // Anonymous functions - has multiple return points
     val input = -1
-    operation(input, fun(x): Int {
+    operate(input, fun(x): Int {
         if (x < 0)
             return 0
         else
@@ -73,9 +77,9 @@ fun main() {
 
     // Closure
     var factor = 2
-    val mutateIt:(Int) -> Int = { x ->
+    val mutateIt: (Int) -> Int = { x ->
         factor = 3
-         x * factor
+        x * factor
     }
     //operation(5, mutateIt)
     println("Initial Factor=$factor, mutated output=${mutateIt.invoke(5)}, final factor=$factor")

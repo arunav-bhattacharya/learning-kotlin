@@ -9,7 +9,6 @@ interface Worker {
 }
 
 interface Assistant {
-
     fun doChores()
     fun timesheets()
 }

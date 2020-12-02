@@ -40,7 +40,8 @@
 
 > In this section we will learn about some basic constructs about Kotlin. IntelliJ or Eclipse already have the Kotlin compiler so don't need to download it separately if we are using any of these IDEs.
 
-<img src="./images/JVM.png"> 
+![JVM](./.images/JVM.png "JVM")
+ 
 
 ### 1.a. Kotlin Compiler - `kotlinc` 
 
@@ -1282,10 +1283,10 @@
 > - The delegating `class` implements the delegating `interface`, so a reference to the delegating `class` may be assigned to a reference of the delegating `interface`. 
 > - Likewise, a reference to a delegating `class` may be passed to methods that expect a delegate `interface`.
 
-
 ### 8.d. Caveats of Kotlin Delegation
 
 ### 8.e. Delegating variables & properties
+
 
 - When delegating properties, the delegated class needs to implement two functions `getValue()` and `setValue()`.
 
@@ -1297,10 +1298,12 @@
 
 - **`lazy`** : 
     - Deferring creation of objects or executing computations until the time the result is truly needed.  The lazy function takes as argument a lambda expression that will perform the computation, but only on demand and not eagerly or immediately.
+    
 - **`observable`** : 
     - This is useful to observe or monitor changes to the value of a property. 
     - The singleton object `kotlin.properties.Delegates` has an `observable()` convenience function to create a `ReadWriteProperty` delegate that will intercept any change to the variable or property it’s associated with. When a change occurs, the delegate will call an event handler you register with the `observable()` function. 
     - The event handler receives three parameters of type KProperty which hold the metadata about the property, the old value, and the new value. It doesn’t return anything—that is, it’s a Unit or void function.
+    
 - **`vetoable`** : 
     - Is used to reject changes to properties based on some rules or business logic.
     - Unlike the handler registered with observable, whose return type is `Unit`, the handler we register with vetoable returns a `Boolean` result. 
@@ -1317,7 +1320,7 @@
 
 ### 9.a. Higher Order Functions
 
-- A higher order function is a function that can takes a function as an argument, or return a function.  
+- A higher order function is a function that takes a function as an argument, or return a function.  
 - In Kotlin, method references are denoted as `::` and lambda expressions are expressed with "->", similar to Java.
 - We can pass a method reference or a lambda expression to a function that accepts a function as an argument.
 
