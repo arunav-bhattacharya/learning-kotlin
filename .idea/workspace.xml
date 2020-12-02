@@ -25,8 +25,6 @@
     <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P2_8-delegates/src/com.arunav.kotlin.delegates/Delegates.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P2_8-delegates/src/com.arunav.kotlin.delegates/Delegates.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P3_9-functional/src/com/arunav/kotlin/functional/Functional.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P3_9-functional/src/com/arunav/kotlin/functional/_1Functional.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,13 +200,6 @@
       <workItem from="1594342626469" duration="1453000" />
       <workItem from="1594392602882" duration="5347000" />
       <workItem from="1594625604341" duration="606000" />
-    </task>
-    <task id="LOCAL-00011" summary="Classes">
-      <created>1593985633526</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1593985633526</updated>
     </task>
     <task id="LOCAL-00012" summary="README.md">
       <created>1593990154939</created>
@@ -546,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606623037398</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Delegates &amp; Functional">
+      <created>1606935772536</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1606935772536</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,7 +567,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="/.idea files" />
     <MESSAGE value="Basics.kt" />
     <MESSAGE value="Kotlin Basics - Variables, Conditionals, Loops &amp; Ranges, Packages" />
     <MESSAGE value="Functions" />
@@ -594,7 +591,8 @@
     <MESSAGE value="Collections" />
     <MESSAGE value="Inheritance" />
     <MESSAGE value="Readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Readme" />
+    <MESSAGE value="Delegates &amp; Functional" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delegates &amp; Functional" />
   </component>
   <component name="WindowStateProjectService">
     <state x="198" y="224" key="#Plugins" timestamp="1605480201083">
@@ -621,11 +619,12 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="295" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1606795405498" />
-    <state x="544" y="152" key="CommitChangelistDialog2" timestamp="1606623037221">
-      <screen x="0" y="0" width="2048" height="1152" />
+    <state x="476" y="148" key="CommitChangelistDialog2" timestamp="1606935771960">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="-1504" y="88" key="CommitChangelistDialog2/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285182086" />
     <state x="-1880" y="158" key="CommitChangelistDialog2/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604301157676" />
+    <state x="476" y="148" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1606935771960" />
     <state x="544" y="152" key="CommitChangelistDialog2/0.0.2048.1152@0.0.2048.1152" timestamp="1606623037221" />
     <state x="587" y="276" key="FileChooserDialogImpl" timestamp="1606549290215">
       <screen x="0" y="0" width="1536" height="960" />
@@ -672,12 +671,12 @@
     <state x="-1904" y="237" key="SettingsEditor/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604296452944" />
     <state x="459" y="209" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1606795320039" />
     <state x="459" y="241" key="SettingsEditor/0.0.2048.1152@0.0.2048.1152" timestamp="1606868220544" />
-    <state x="624" y="316" key="Vcs.Push.Dialog.v2" timestamp="1606623039528">
-      <screen x="0" y="0" width="2048" height="1152" />
+    <state x="546" y="307" key="Vcs.Push.Dialog.v2" timestamp="1606935774924">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="-1424" y="252" key="Vcs.Push.Dialog.v2/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285186494" />
     <state x="-1780" y="363" key="Vcs.Push.Dialog.v2/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604301159366" />
-    <state x="546" y="307" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1605158751417" />
+    <state x="546" y="307" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1606935774924" />
     <state x="624" y="316" key="Vcs.Push.Dialog.v2/0.0.2048.1152@0.0.2048.1152" timestamp="1606623039528" />
     <state x="715" y="483" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605144885377">
       <screen x="0" y="0" width="1792" height="1120" />

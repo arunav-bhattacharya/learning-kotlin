@@ -40,8 +40,7 @@
 
 > In this section we will learn about some basic constructs about Kotlin. IntelliJ or Eclipse already have the Kotlin compiler so don't need to download it separately if we are using any of these IDEs.
 
-![JVM](./.images/JVM.png "JVM")
- 
+![JVM](./images/JVM.png "JVM") 
 
 ### 1.a. Kotlin Compiler - `kotlinc` 
 
@@ -1376,7 +1375,7 @@
 
 ### 9.a. Kotlin Std Library & Collections
 
-<img src="./images/collections.png"/>
+![collections](./images/collections.png "collections") 
 
 - Kotlin has a very small standard library (~800Kb).
 
@@ -1500,7 +1499,7 @@
 
 [Additional Reading](https://kotlinlang.org/docs/reference/operator-overloading.html)
 
-<img src="./images/operator-overloading.png" />
+![operator-overloading](./images/operator-overloading.png "operator-overloading")
 
 ### 10.h. Lambda Extensions - Creating DSLs
 
@@ -1607,7 +1606,8 @@
 - Unlike subroutines, which have a single point of entry, coroutines have multiple points of entry. Additionally, coroutines may remember state between calls.  
 - A call to a coroutine can jump right into the middle of the coroutine, where it left off in a previous call. Because of all this, we can implement cooperating functions—that is, functions that work in tandem—where two functions can run concurrently, with the flow of execution switching between them.
 
-<img src="images/coroutines.png"/>
+
+![coroutines](./images/coroutines.png "coroutines")
 
 ### 15.b. Creating Coroutines - `launch` & `runBlocking`
 
