@@ -1462,7 +1462,7 @@
     ```
   
   - The delegate at the far right in `Manager` class declaration is a parameter and not a property. It is taking a parameter `staff` and assigning it to a member named `staff` (like, `this.staff=staff`). So there are two references to the given object - _**one held inside the class as backing field**_ and _**one held for the purpose of delegation**_. When we changed the property `staff` to an instance of `KotlinProgrammer`, though, we only modified the field, but not the reference to the delegate.
-  - When we replaced the property `staff` with `KotlinProgrammer`, the originally assigned `JavaProgrammer` is no longer attached to the object as its property. But it can be garbage collected as well because the delegate holds on it. _Thus a delegate's lifetime is same as object's lifetime_, though properties may come and go.
+  - When we replaced the property `staff` with `KotlinProgrammer`, the originally assigned `JavaProgrammer` is no longer attached to the object as its property. But it can't be garbage collected as well because the delegate holds on it. _Thus a delegate's lifetime is same as object's lifetime_, though properties may come and go.
 
 ### 8.e. Delegating variables & properties
 
