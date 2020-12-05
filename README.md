@@ -1256,6 +1256,7 @@
 ### 8.a Delegation in Kotlin using `by`
 
 -  Kotlin requires the left side of the `by` to be an `interface`. The right side is an implementor of that `interface`.
+- In the below example, `Manager` class routes all calls to `work()` and `takeVacation()` methods to `JavaProgrammer` which was specified when defining the `Manager` class.
 
     ```kotlin
         interface Worker{
@@ -1277,12 +1278,30 @@
 
 ### 8.b. Delegating to a Parameter
 
+- In the previous example, the `JavaProgrammer` is tightly coupled with the `Manager` class. Kotlin delegates also provides the flexibility to pass a parameter or property to which the called class can delegate to. Let's take a look at the below example -
+  
+    ```kotlin
+        class Manager(val staff: Worker) : Worker by staff { 
+            fun meeting() = println("organizing meeting with ${staff.javaClass.simpleName}") 
+        }
+    ```
+
+- The constructor of the `Manager` class receives a parameter named `staff` which also serves as a property, due to `val` in the declaration.
+- If the `val` is removed, `staff` will still be a parameter, but not a property of the class.
+- Irrespective of whether or not `val` is used, the `class` can delegate to the parameter `staff`.
+
 ### 8.c. Dealing with Method Collisions
 
-> - The delegating `class` implements the delegating `interface`, so a reference to the delegating `class` may be assigned to a reference of the delegating `interface`. 
-> - Likewise, a reference to a delegating `class` may be passed to methods that expect a delegate `interface`.
+- A delegating class if it decides to implement one of the methods from the delegate class, it can do so. So when that particular method is called on the delegating class, then the method on the delegating class will be called.
+
+- In case a delegating class is implementing multiple interfaces, and if there is a method collision in the two interfaces, then the delegating class must override that particular colliding method inside the class. If the method is not overridden inside the delegating class then we'll get a compilation error.
 
 ### 8.d. Caveats of Kotlin Delegation
+
+> - The delegating `class` implements the delegating `interface`, so a reference to the delegating `class` may be assigned to a reference of the delegating `interface`.
+> - Likewise, a reference to a delegating `class` may be passed to methods that expect a delegate `interface`.
+
+
 
 ### 8.e. Delegating variables & properties
 
@@ -1342,7 +1361,11 @@
 
 - In lambdas as well we can use object destructuring
 
-### 9.c. Closures
+
+### 9.c. Function References
+
+
+### 9.d. Closures & Lexical Scoping
 
 - A lambda expression or anonymous function (as well as a local function and an object expression) can access its closure, i.e. the variables declared in the outer scope, also known as *lexical scoping*. 
 - The variables captured in the closure can be modified in the lambda. Such a lambda is called closure.
@@ -1350,6 +1373,14 @@
 > **Note**
 >
 > Keep closure as pure functions to avoid confusion and to minimize errors
+
+### 9.e. Non-local and labeled `return`
+
+### 9.f. `inline` optimization
+
+- Selective `noinline`
+- Non-local return permitted in inlined lambdas
+- `crossinline` parameters
 
 [Additional Reading](https://kotlinlang.org/docs/reference/lambdas.html)
 

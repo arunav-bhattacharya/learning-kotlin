@@ -23,8 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/_P2_8-delegates/src/com.arunav.kotlin.delegates/_2DelegateExample.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_P2_8-delegates/src/com.arunav.kotlin.delegates/_3DelegatingVariables.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_P2_8-delegates/src/com.arunav.kotlin.delegates/_4DelegatingProperties.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_P2_8-delegates/src/com.arunav.kotlin.delegates/_5BuiltInStdDelegates.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_P2_8-delegates/src/com.arunav.kotlin.delegates/Delegates.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P2_8-delegates/src/com.arunav.kotlin.delegates/_1Delegates.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,13 +51,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="MavenRunner">
     <option name="jreName" value="14" />
   </component>
@@ -60,6 +59,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -86,7 +86,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -101,6 +101,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Application._6SealedClassKt">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="_1InterfacesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="_P2_7-inheritance" />
       <option name="VM_PARAMETERS" />
@@ -200,13 +213,9 @@
       <workItem from="1594342626469" duration="1453000" />
       <workItem from="1594392602882" duration="5347000" />
       <workItem from="1594625604341" duration="606000" />
-    </task>
-    <task id="LOCAL-00012" summary="README.md">
-      <created>1593990154939</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1593990154939</updated>
+      <workItem from="1607138147801" duration="1598000" />
+      <workItem from="1607152210437" duration="1598000" />
+      <workItem from="1607153821031" duration="1079000" />
     </task>
     <task id="LOCAL-00013" summary="README.md">
       <created>1593999871001</created>
@@ -544,7 +553,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606935772536</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="readme">
+      <created>1606936004367</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1606936004367</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,7 +594,6 @@
     <MESSAGE value="Kotlin Advanced" />
     <MESSAGE value="Delegates" />
     <MESSAGE value="Coroutines" />
-    <MESSAGE value="readme" />
     <MESSAGE value="async &amp; await" />
     <MESSAGE value="Basics revisions" />
     <MESSAGE value="Functions, Loops, Ranges, When" />
@@ -592,113 +607,12 @@
     <MESSAGE value="Inheritance" />
     <MESSAGE value="Readme" />
     <MESSAGE value="Delegates &amp; Functional" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delegates &amp; Functional" />
+    <MESSAGE value="readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="198" y="224" key="#Plugins" timestamp="1605480201083">
-      <screen x="0" y="0" width="2048" height="1152" />
-    </state>
-    <state x="198" y="224" key="#Plugins/0.0.2048.1152@0.0.2048.1152" timestamp="1605480201083" />
-    <state x="512" y="157" key="#Project_Structure" timestamp="1605487544478">
-      <screen x="0" y="0" width="2048" height="1152" />
-    </state>
-    <state x="512" y="157" key="#Project_Structure/0.0.2048.1152@0.0.2048.1152" timestamp="1605487544478" />
-    <state x="659" y="315" key="#com.intellij.ide.util.MemberChooser" timestamp="1606289085421">
-      <screen x="0" y="0" width="2048" height="1152" />
-    </state>
-    <state x="659" y="315" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1152@0.0.2048.1152" timestamp="1606289085421" />
-    <state x="805" y="263" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1606152284709">
-      <screen x="0" y="0" width="2048" height="1152" />
-    </state>
-    <state x="805" y="263" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.2048.1152@0.0.2048.1152" timestamp="1606152284709" />
-    <state x="712" y="319" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1606152334996">
-      <screen x="0" y="0" width="2048" height="1152" />
-    </state>
-    <state x="712" y="319" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2048.1152@0.0.2048.1152" timestamp="1606152334996" />
-    <state x="295" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606795405498">
-      <screen x="0" y="0" width="1792" height="1120" />
-    </state>
-    <state x="295" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1606795405498" />
-    <state x="476" y="148" key="CommitChangelistDialog2" timestamp="1606935771960">
-      <screen x="0" y="0" width="1792" height="1120" />
-    </state>
-    <state x="-1504" y="88" key="CommitChangelistDialog2/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285182086" />
-    <state x="-1880" y="158" key="CommitChangelistDialog2/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604301157676" />
-    <state x="476" y="148" key="CommitChangelistDialog2/0.0.1792.1120@0.0.1792.1120" timestamp="1606935771960" />
-    <state x="544" y="152" key="CommitChangelistDialog2/0.0.2048.1152@0.0.2048.1152" timestamp="1606623037221" />
-    <state x="587" y="276" key="FileChooserDialogImpl" timestamp="1606549290215">
-      <screen x="0" y="0" width="1536" height="960" />
-    </state>
-    <state x="587" y="276" key="FileChooserDialogImpl/0.0.1536.960@0.0.1536.960" timestamp="1606549290215" />
-    <state x="684" y="322" key="FileChooserDialogImpl/0.0.1792.1120@0.0.1792.1120" timestamp="1604329608964" />
-    <state x="782" y="331" key="FileChooserDialogImpl/0.0.2048.1152@0.0.2048.1152" timestamp="1604704883289" />
-    <state width="2006" height="196" key="GridCell.Tab.0.bottom" timestamp="1606761987669">
-      <screen x="0" y="0" width="2048" height="1152" />
-    </state>
-    <state width="2006" height="335" key="GridCell.Tab.0.bottom/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285131862" />
-    <state width="1486" height="536" key="GridCell.Tab.0.bottom/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604382463047" />
-    <state width="1486" height="284" key="GridCell.Tab.0.bottom/0.0.1536.960@0.0.1536.960" timestamp="1604602670836" />
-    <state width="1750" height="294" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1606176403826" />
-    <state width="2006" height="196" key="GridCell.Tab.0.bottom/0.0.2048.1152@0.0.2048.1152" timestamp="1606761987669" />
-    <state width="2006" height="196" key="GridCell.Tab.0.center" timestamp="1606761987669">
-      <screen x="0" y="0" width="2048" height="1152" />
-    </state>
-    <state width="2006" height="335" key="GridCell.Tab.0.center/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285131861" />
-    <state width="1486" height="536" key="GridCell.Tab.0.center/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604382463046" />
-    <state width="1486" height="284" key="GridCell.Tab.0.center/0.0.1536.960@0.0.1536.960" timestamp="1604602670836" />
-    <state width="1750" height="294" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1606176403825" />
-    <state width="2006" height="196" key="GridCell.Tab.0.center/0.0.2048.1152@0.0.2048.1152" timestamp="1606761987669" />
-    <state width="2006" height="196" key="GridCell.Tab.0.left" timestamp="1606761987668">
-      <screen x="0" y="0" width="2048" height="1152" />
-    </state>
-    <state width="2006" height="335" key="GridCell.Tab.0.left/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285131860" />
-    <state width="1486" height="536" key="GridCell.Tab.0.left/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604382463046" />
-    <state width="1486" height="284" key="GridCell.Tab.0.left/0.0.1536.960@0.0.1536.960" timestamp="1604602670836" />
-    <state width="1750" height="294" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1606176403825" />
-    <state width="2006" height="196" key="GridCell.Tab.0.left/0.0.2048.1152@0.0.2048.1152" timestamp="1606761987668" />
-    <state width="2006" height="196" key="GridCell.Tab.0.right" timestamp="1606761987669">
-      <screen x="0" y="0" width="2048" height="1152" />
-    </state>
-    <state width="2006" height="335" key="GridCell.Tab.0.right/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285131861" />
-    <state width="1486" height="536" key="GridCell.Tab.0.right/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604382463047" />
-    <state width="1486" height="284" key="GridCell.Tab.0.right/0.0.1536.960@0.0.1536.960" timestamp="1604602670836" />
-    <state width="1750" height="294" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1606176403826" />
-    <state width="2006" height="196" key="GridCell.Tab.0.right/0.0.2048.1152@0.0.2048.1152" timestamp="1606761987669" />
-    <state x="459" y="241" key="SettingsEditor" timestamp="1606868220544">
-      <screen x="0" y="0" width="2048" height="1152" />
-    </state>
-    <state x="-1523" y="151" key="SettingsEditor/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604282761199" />
-    <state x="-1904" y="237" key="SettingsEditor/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604296452944" />
-    <state x="459" y="209" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1606795320039" />
-    <state x="459" y="241" key="SettingsEditor/0.0.2048.1152@0.0.2048.1152" timestamp="1606868220544" />
-    <state x="546" y="307" key="Vcs.Push.Dialog.v2" timestamp="1606935774924">
-      <screen x="0" y="0" width="1792" height="1120" />
-    </state>
-    <state x="-1424" y="252" key="Vcs.Push.Dialog.v2/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604285186494" />
-    <state x="-1780" y="363" key="Vcs.Push.Dialog.v2/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604301159366" />
-    <state x="546" y="307" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1606935774924" />
-    <state x="624" y="316" key="Vcs.Push.Dialog.v2/0.0.2048.1152@0.0.2048.1152" timestamp="1606623039528" />
-    <state x="715" y="483" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605144885377">
-      <screen x="0" y="0" width="1792" height="1120" />
-    </state>
-    <state x="715" y="483" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1792.1120@0.0.1792.1120" timestamp="1605144885377" />
-    <state x="817" y="497" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1152@0.0.2048.1152" timestamp="1604282526337" />
-    <state x="-1665" y="174" width="769" height="1028" key="find.popup" timestamp="1604291512850">
-      <screen x="-2560" y="-32" width="2560" height="1440" />
-    </state>
-    <state x="-1332" y="101" width="615" height="822" key="find.popup/-2048.-64.2048.1152/0.0.1792.1120@-2048.-64.2048.1152" timestamp="1604283366400" />
-    <state x="-1665" y="174" width="769" height="1028" key="find.popup/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604291512850" />
-    <state x="716" y="165" width="615" height="822" key="find.popup/0.0.2048.1152@0.0.2048.1152" timestamp="1604282556063" />
-    <state x="277" y="298" key="new project wizard" timestamp="1605158725186">
-      <screen x="0" y="0" width="1792" height="1120" />
-    </state>
-    <state x="-2165" y="351" key="new project wizard/-2560.-32.2560.1440/0.0.1792.1120@-2560.-32.2560.1440" timestamp="1604369992700" />
-    <state x="277" y="298" key="new project wizard/0.0.1792.1120@0.0.1792.1120" timestamp="1605158725186" />
-    <state x="316" y="306" key="new project wizard/0.0.2048.1152@0.0.2048.1152" timestamp="1604770981390" />
-    <state x="689" y="259" width="670" height="676" key="search.everywhere.popup" timestamp="1606179358603">
-      <screen x="0" y="0" width="2048" height="1152" />
-    </state>
-    <state x="689" y="259" width="670" height="676" key="search.everywhere.popup/0.0.2048.1152@0.0.2048.1152" timestamp="1606179358603" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/kotlin$FunctionalKt.ic" NAME="FunctionalKt Coverage Results" MODIFIED="1594079015288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
