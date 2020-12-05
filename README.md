@@ -1477,24 +1477,18 @@
 ### 8.f. Built-in Standard Delegates in Kotlin
 
 - **`lazy`** :
-    - Deferring creation of objects or executing computations until the time the result is truly needed. The `lazy`
-      function takes as argument a lambda expression that will perform the computation, but only on demand and not
-      eagerly or immediately.
+    - Deferring creation of objects or executing computations until the time the result is truly needed. The `lazy` function takes as argument a lambda expression that will perform the computation, but only on demand and not eagerly or immediately.
+    - The `lazy` function by default synchronizes the execution of the lambda expression so that at most one thread can execute it.
 
 - **`observable`** :
     - This is useful to observe or monitor changes to the value of a property.
-    - The singleton object `kotlin.properties.Delegates` has an `observable()` convenience function to create
-      a `ReadWriteProperty` delegate that will intercept any change to the variable or property it’s associated with.
-      When a change occurs, the delegate will call an event handler you register with the `observable()` function.
-    - The event handler receives three parameters of type `KProperty` which hold the metadata about the property, the old
-      value, and the new value. It doesn’t return anything, i.e., it’s a `Unit` or `void` function.
+    - The singleton object `kotlin.properties.Delegates` has an `observable()` convenience function to create a `ReadWriteProperty` delegate that will intercept any change to the variable or property it’s associated with. When a change occurs, the delegate will call an event handler you register with the `observable()` function.
+    - The event handler receives three parameters - type `KProperty` which hold the metadata about the property, the old value, and the new value. It doesn’t return anything, i.e., it’s a `Unit` or `void` function.
 
 - **`vetoable`** :
+    - Unlike the handler registered with `observable`, whose return type is `Unit`, the handler we register with `vetoable` returns a `Boolean` result.
+    - A return value of `true` means a favorable nod to accept the change; `false` means reject. The change is discarded if we reject.
     - Is used to reject changes to properties based on some rules or business logic.
-    - Unlike the handler registered with observable, whose return type is `Unit`, the handler we register with `vetoable`
-      returns a `Boolean` result.
-    - A return value of `true` means a favorable nod to accept the change; `false` means reject. The change is discarded
-      if we reject.
 
 <br/> 
 <br/> 
