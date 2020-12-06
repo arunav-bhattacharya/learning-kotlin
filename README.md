@@ -363,6 +363,7 @@
 - Kotlin does not have its own collections. What it has is some interfaces on top of Java collections -
     - Mutable
     - Immutable
+
 - Collections are
     - List
     - Array (including equivalent primitive type)
@@ -374,6 +375,8 @@
 - Use Kotlin helper functions when working with Collections. It automatically determines which class to call. For
   example when defining an empty list using `emptyList<>()`, it uses `kotlin.collections.EmptyList`, whereas when
   defining using `Arrays.asList()` it uses `java.util.Arrays$ArrayList`
+
+![collections](./images/collections.png "collections")
 
 ### 3.a Tuples - `Pair` & `Triple`
 
@@ -1001,10 +1004,13 @@
 ### 6.e. `companion` objects
 
 - `companion` objects are singletons defined within a class — they’re singleton companions of classes.
+- Allows creating equivalent of static members in Java.
+- An `object` inside a class can be prefixed with `companion`. This makes the functions inside the object accessible outside the class by without referencing using the object name.
+- Each class can have only one single `companion` object, inside which we can multiple functions.
+- By prefixing the functions inside the object with the annotation `@JvmStatic`, it becomes accessible to Java as static methods accessible by the classname.
 - They may implement interfaces and may extend from base classes, and thus are useful for code re-usability.
 - The members of the companion object of a class can be accessed using the class name as reference.
-- We can access the companion of a class using `.Companion` on the class. The name `Companion` is used only if the
-  companion object doesn’t have an explicit name.
+- We can access the companion of a class using `.Companion` on the class. The name `Companion` is used only if the companion object doesn’t have an explicit name.
 
     ```kotlin
         companion object {
@@ -1019,9 +1025,7 @@
         val wheels = Car.Wheels
     ```
 
-- We can use companion object as a factory by providing a private constructor to the class. We can then provide one or
-  more methods in the companion object that creates the instance and carries out the desired steps on the object before
-  returning to the caller.
+- We can use companion object as a factory by providing a `private constructor` to the class. We can then provide one or more methods in the companion object that creates the instance and carries out the desired steps on the object before returning to the caller.
 
     ```kotlin
         class MachineOperator private constructor(val name: String) {
@@ -1086,12 +1090,11 @@
 >
 > - The main purpose of the `componentN()` methods is for destructuring. Any class, including Java classes, that has `componentN()` methods can participate in destructuring.
 > - To destructure, we have to extract the properties in the same order as they appear in the primary constructor.
-    >
-    >    ```kotlin
->        val (id, _, name) = employee
->        println("Employee Id=${id}, Employee Name=${name}")    
->    ```
 >
+>    ```kotlin
+>       val (id, _, name) = employee
+>       println("Employee Id=${id}, Employee Name=${name}")
+>    ```
 > - The destructuring of data classes in Kotlin comes with a significant limitation. In JavaScript, object destructuring is based on property names, but, sadly, Kotlin relies on the order of properties passed to the primary constructor. If a developer inserts a new parameter in between current parameters, then the result may be catastrophic.
 
 ### 6.g. `enum` Classes
@@ -1114,6 +1117,10 @@
             abstract fun signal(): ProtocolState
         }
     ```
+
+### 6.h. Late Initialization using `lateinit`
+
+- Kotlin provides a way to define properties by not initializing them. This can be done by prefixing the property with the keyword `lateinit`.
 
 <br/> 
 
@@ -1271,7 +1278,9 @@
 
 ### 7.d. Nested and `inner` Classes
 
-- In Kotlin a class may be nested, i.e., placed inside another class. Unlike in Java, Kotlin nested classes can’t access
+- Kotlin supports nested class.
+- Nested classes can be accessed outer class by using the OuterClass.InnerClass notation both in Java and Kotlin.
+- Unlike in Java, Kotlin nested classes can’t access
   the private members of the nesting outer class. But if we mark the nested class with the `inner` keyword, then they
   turn into inner classes and the restriction goes away.
 
@@ -1322,12 +1331,14 @@
 
 ### 7.f. `sealed` Class
 
-- Kotlin’s `sealed` classes are **open for extension** by other classes defined **in the same file** but closed — that
-  is, `final` or not `open` for any other classes.
+- `sealed` classes are used for representing restricted class hierarchies, where a value can have one of the types from a limited set, but cannot have any other type.
+- A class can be made `sealed` by prefixing it with the `sealed` keyword.
+- A `sealed` class is abstract by itself. It cannot be instantiated directly and can have abstract members.
+- We can't instantiate an object of a sealed class, but we can create objects of classes that inherit from `sealed` classes.  
+- `sealed` classes are **open for extension** by other classes defined **in the same file** but closed — that is, `final` or not `open` for any other classes.
 - The constructors of `sealed` classes aren’t marked `private`, but they’re considered `private`.
+- `sealed` classes are not allowed to have non-private constructors (their constructors are private by default).  
 - We may also derive singleton `objects` from `sealed` classes.
-- We can't instantiate an object of a sealed class, but we can create objects of classes that inherit from `sealed`
-  classes.
 
     ```kotlin
         sealed class Card(val suit: String)
@@ -1354,6 +1365,12 @@
             }
         }
     ```
+
+> **Some Tips**
+>
+> - The key benefit of using `sealed` classes comes into play when we use them in a `when` expression. If it's possible to verify that the statement covers all cases, we don't need to add an `else` clause to the statement. However, this works only if `when` is used as an expression (using the result) and not a statement.
+> - Kotlin provides an auto-backing field for cases where we want to "store" information.
+> - We can use `typealias` for providing better semantics to other data types.
 
 <br/> 
 
@@ -1422,14 +1439,16 @@
 - The delegating `class` implements the delegating `interface`, so a reference of the delegating `class` may be assigned
   to a reference of the delegating `interface`. Likewise, a reference of a delegating `class` may be passed to methods
   that expect a delegate `interface`.
-  
+
     ```kotlin
         val manager = Manager(JavaProgrammer())
         val coder : JavaProgrammer = manager // ERROR: type mismatch
         val employee : Worker = manager // This is OK    
     ```
-  
-- Kotlin doesn't delegate to a property of an object but to the parameter passed to the primary constructor. If we change the property that's used as delegate from `val` to `var`, the behavior is going to be different. Let's look at the following example -
+
+- Kotlin doesn't delegate to a property of an object but to the parameter passed to the primary constructor. If we
+  change the property that's used as delegate from `val` to `var`, the behavior is going to be different. Let's look at
+  the following example -
 
     ```kotlin
         interface Worker {
@@ -1460,9 +1479,15 @@
         println("Staff is ${manager.staff.javaClass.simpleName}") // Staff is KotlinProgrammer 
         manager.work() // Write Java      
     ```
-  
-  - The delegate at the far right in `Manager` class declaration is a parameter and not a property. It is taking a parameter `staff` and assigning it to a member named `staff` (like, `this.staff=staff`). So there are two references to the given object - _**one held inside the class as backing field**_ and _**one held for the purpose of delegation**_. When we changed the property `staff` to an instance of `KotlinProgrammer`, though, we only modified the field, but not the reference to the delegate.
-  - When we replaced the property `staff` with `KotlinProgrammer`, the originally assigned `JavaProgrammer` is no longer attached to the object as its property. But it can't be garbage collected as well because the delegate holds on it. _Thus a delegate's lifetime is same as object's lifetime_, though properties may come and go.
+
+    - The delegate at the far right in `Manager` class declaration is a parameter and not a property. It is taking a
+      parameter `staff` and assigning it to a member named `staff` (like, `this.staff=staff`). So there are two
+      references to the given object - _**one held inside the class as backing field**_ and _**one held for the purpose
+      of delegation**_. When we changed the property `staff` to an instance of `KotlinProgrammer`, though, we only
+      modified the field, but not the reference to the delegate.
+    - When we replaced the property `staff` with `KotlinProgrammer`, the originally assigned `JavaProgrammer` is no
+      longer attached to the object as its property. But it can't be garbage collected as well because the delegate
+      holds on it. _Thus a delegate's lifetime is same as object's lifetime_, though properties may come and go.
 
 ### 8.e. Delegating variables & properties
 
@@ -1477,17 +1502,25 @@
 ### 8.f. Built-in Standard Delegates in Kotlin
 
 - **`lazy`** :
-    - Deferring creation of objects or executing computations until the time the result is truly needed. The `lazy` function takes as argument a lambda expression that will perform the computation, but only on demand and not eagerly or immediately.
-    - The `lazy` function by default synchronizes the execution of the lambda expression so that at most one thread can execute it.
+    - Deferring creation of objects or executing computations until the time the result is truly needed. The `lazy`
+      function takes as argument a lambda expression that will perform the computation, but only on demand and not
+      eagerly or immediately.
+    - The `lazy` function by default synchronizes the execution of the lambda expression so that at most one thread can
+      execute it.
 
 - **`observable`** :
     - This is useful to observe or monitor changes to the value of a property.
-    - The singleton object `kotlin.properties.Delegates` has an `observable()` convenience function to create a `ReadWriteProperty` delegate that will intercept any change to the variable or property it’s associated with. When a change occurs, the delegate will call an event handler you register with the `observable()` function.
-    - The event handler receives three parameters - type `KProperty` which hold the metadata about the property, the old value, and the new value. It doesn’t return anything, i.e., it’s a `Unit` or `void` function.
+    - The singleton object `kotlin.properties.Delegates` has an `observable()` convenience function to create
+      a `ReadWriteProperty` delegate that will intercept any change to the variable or property it’s associated with.
+      When a change occurs, the delegate will call an event handler you register with the `observable()` function.
+    - The event handler receives three parameters - type `KProperty` which hold the metadata about the property, the old
+      value, and the new value. It doesn’t return anything, i.e., it’s a `Unit` or `void` function.
 
 - **`vetoable`** :
-    - Unlike the handler registered with `observable`, whose return type is `Unit`, the handler we register with `vetoable` returns a `Boolean` result.
-    - A return value of `true` means a favorable nod to accept the change; `false` means reject. The change is discarded if we reject.
+    - Unlike the handler registered with `observable`, whose return type is `Unit`, the handler we register
+      with `vetoable` returns a `Boolean` result.
+    - A return value of `true` means a favorable nod to accept the change; `false` means reject. The change is discarded
+      if we reject.
     - Is used to reject changes to properties based on some rules or business logic.
 
 <br/> 
@@ -1495,18 +1528,17 @@
 
 # Part III - Functional Kotlin
 
-## 9. Functional Style
+## 9. Functional Programming with Lambdas
 
 > We'll get functional in this section. Learn about some key concepts how Kotlin supports functional programming.
 
 ### 9.a. Higher Order Functions
 
 - A higher order function is a function that takes a function as an argument, or return a function.
-- In Kotlin, method references are denoted as `::` and lambda expressions are expressed with "->", similar to Java.
-- We can pass a method reference or a lambda expression to a function that accepts a function as an argument.
 
 ### 9.b. Lambda Expressions
 
+- In Kotlin, lambda expressions are expressed with "->", similar to Java.
 - For single parameter in a lambda expression, we don't have to explicitly define the parameter in the lambda
   expression. Instead we can refer to the parameter as `it` in the body of the expression. Let's see an example -
 
@@ -1527,7 +1559,15 @@
 
 ### 9.c. Function References
 
-### 9.d. Closures & Lexical Scoping
+- In Kotlin, method references are denoted as `::`, similar to Java.
+- We can pass a method reference or a lambda expression to a function that accepts a function as an argument.
+
+
+### 9.d. Function returning functions
+
+### 9.e. Lambdas & Anonymous functions
+
+### 9.f. Closures & Lexical Scoping
 
 - A lambda expression or anonymous function (as well as a local function and an object expression) can access its
   closure, i.e. the variables declared in the outer scope, also known as *lexical scoping*.
@@ -1537,9 +1577,44 @@
 >
 > Keep closure as pure functions to avoid confusion and to minimize errors
 
-### 9.e. Non-local and labeled `return`
+### 9.g. Non-local and labeled `return`
 
-### 9.f. `inline` optimization
+- When we do a `return` from a lambda function, it returns from the enclosing function inside which it is defined. For
+  example -
+
+    ```kotlin
+        fun containingFunction(){
+            val numbers = 1..100
+            numbers.forEach{
+                if(it % 5 == 0)
+                    return
+            }
+            println("After forEach")
+        }
+    ```
+
+  In this case the `println` statement is not executed because the `return` statement, which is defined inside a lambda
+  function, returns from the `containingFunction()`.
+- Non-local returns, i.e., `return` from a lambda function is allowed only when the function in which lambda expression
+  is invoked is an `inline` function. In our example `forEach()` is an `inline` function.
+- In order to make lambda to return to forEach we can use labels. For example in the below case the code will return
+  to `forEach` -
+
+    ```kotlin
+        fun containingFunction(){
+            val numbers = 1..100
+            numbers.forEach @myLabel{
+                if(it % 5 == 0)
+                    return@myLabel
+            }
+            println("After forEach")
+        }
+    ```
+
+- On the other hand, when a local `return` is called from an anonymous function it returns to the enclosing function and
+  not to the outer function.
+  
+### 9.h. `inline` optimization
 
 - Selective `noinline`
 - Non-local return permitted in inlined lambdas
@@ -1547,7 +1622,7 @@
 
 [Additional Reading](https://kotlinlang.org/docs/reference/lambdas.html)
 
-### 9.d. Extension Functions
+### 9.i. Extension Functions
 
 - Extension function allows extending functionality of class without inheriting from it.
 - Scope of exception functions is packages. In order to use outside the package, we need to import the package with the
@@ -1563,19 +1638,17 @@
 
 <br/> 
 
+## 10. Internal Iterator & Sequences
 
+### 10.a. External vs. Internal Iterators
 
-<br/> 
+### 10.b. `map`, `filter` & `reduce`
 
-## 9. Standard Library
+### 10.c. `flatten` and `flatMap`
 
-### 9.a. Kotlin Std Library & Collections
+### 10.d. Sorting & Grouping
 
-![collections](./images/collections.png "collections")
-
-- Kotlin has a very small standard library (~800Kb).
-
-### Sequences - Lazy Evaluation
+### 10.e. Sequences - Lazy Evaluation
 
 - Sequences are equivalent to Java Streams
 - Parallel sequences is not available on Kotlin
@@ -1585,6 +1658,10 @@
     - `lazy()`, etc...
 
 [Additional Reading](https://kotlinlang.org/docs/reference/sequences.html)
+
+
+<br/>
+<br/>
 
 ### String Extensions
 
@@ -1603,15 +1680,23 @@
 [Additional Reading](https://kotlinlang.org/docs/tutorials/kotlin-for-py/functional-programming.html#nice-utility-functions)
 
 <br/> 
+<br/>
 
-> Note
->
-> - We can use standard build tools like Ant, Maven, Gradle, etc to build Kotlin projects.
+# Part IV - Fluent, Elegant & Efficient Kotlin
 
-<br/> 
-<br/> 
+## 11. Fluency in Kotlin
 
-# Part IV - DSLs
+<br/>
+
+## 12. Creating DSLs
+
+<br/>
+
+## 13. Recursion & Memoization
+
+<br/>
+<br/>
+
 
 ## 10. Functions - A Deeper look
 
@@ -1657,43 +1742,6 @@
   is declared as `noinline` then this is possible.
 - When an exception is thrown from an inline function the stack trace doesn't show the function separately.
 
-### 10.e. Returns and Local Returns in Kotlin
-
-- When we do a `return` from a lambda function, it returns from the enclosing function inside which it is defined. For
-  example -
-
-    ```kotlin
-        fun containingFunction(){
-            val numbers = 1..100
-            numbers.forEach{
-                if(it % 5 == 0)
-                    return
-            }
-            println("After forEach")
-        }
-    ```
-
-  In this case the `println` statement is not executed because the `return` statement, which is defined inside a lambda
-  function, returns from the `containingFunction()`.
-- Non-local returns, i.e., `return` from a lambda function is allowed only when the function in which lambda expression
-  is invoked is an `inline` function. In our example `forEach()` is an `inline` function.
-- In order to make lambda to return to forEach we can use labels. For example in the below case the code will return
-  to `forEach` -
-
-    ```kotlin
-        fun containingFunction(){
-            val numbers = 1..100
-            numbers.forEach @myLabel{
-                if(it % 5 == 0)
-                    return@myLabel
-            }
-            println("After forEach")
-        }
-    ```
-
-- On the other hand, when a local `return` is called from an anonymous function it returns to the enclosing function and
-  not to the outer function.
-
 ### 10.f. Tail Recursion using `tailrec`
 
 - When a function is tail recursive, Kotlin provides us a way to optimize the execution of it by prefixing the function
@@ -1722,93 +1770,23 @@
 ### 10.i. Functional Constructs
 
 **Open Source Library** - [funKTionale](https://github.com/MarioAriasC/funKTionale/wiki)
+
 - Supports composition, currying, memoization, etc...
 
 <br/>
-
-## 11. More about Classes
-
-> In this section we will take a look some more features around classes
-
-### 11.a. Late Initialization using `lateinit`
-
-- Kotlin provides a way to define properties by not initializing them. This can be done by prefixing the property with
-  the keyword `lateinit`.
-
-### 11.b. Nested Classes
-
-- Kotlin supports nested class.
-- Nested classes can be accessed outer class by using the OuterClass.InnerClass notation both in Java and Kotlin.
-- In order for the Nested class to access properties of the outer class, we need to define the nested class prefixed
-  with `inner` keyword
-
-### 11.c. `companion` Objects & hiding constructors
-
-- Allows creating equivalent of static members in Java
-- An `object` inside a class can be prefixed with `companion`. This makes the functions inside the object accessible
-  outside the class by without referencing using the object name.
-- Each class can have only one single `companion` object, inside which we can multiple functions.
-- By prefixing the functions inside the object with the annotation `@JvmStatic`, it becomes accessible to Java as static
-  methods accessible by the classname.
-- We can make the constructor private by saying `private constructor` during class definition. That way it wont be
-  accessible outside the object.
-
-    ```kotlin
-        class Log private constructor() {
-            companion object Factory {
-                fun createFileLog(fileName: String): Log = Log(fileName)
-            }
-            constructor(fileName: String) : this() {}
-        }
-        
-        fun main() {
-            Log.createFileLog("file.txt")
-        }
-    ``` 
-
-### 11.d. Sealed classes
-
-- Sealed classes are used for representing restricted class hierarchies, where a value can have one of the types from a
-  limited set, but cannot have any other type.
-- A class can be made `sealed` by prefixing it with the `sealed` keyword.
-- A `sealed` class is abstract by itself. It cannot be instantiated directly and can have abstract members.
-- Sealed classes are not allowed to have non-private constructors (their constructors are private by default).
-
-> **Some Tips**
->
-> - The key benefit of using sealed classes comes into play when you use them in a when expression. If it's possible to verify that the statement covers all cases, you don't need to add an else clause to the statement. However, this works only if you use when as an expression (using the result) and not as a statement.
-> - Kotlin provides an auto-backing field for cases where you want to "store" information
-> - We can use `typealias` for providing better semantics to other data types
-
-
 <br/>    
 
-## 14. Metaprogramming
 
-### 14.a. Reflection
+# Part V - Async Programming in Kotlin Coroutines
 
-[Additional Reading](https://kotlinlang.org/docs/reference/reflection.html)
+## 14. Exploring Coroutines
 
-### 14.b. Creating custom Annotations
+<br/>
 
-[Additional Reading](https://kotlinlang.org/docs/reference/annotations.html)
+## 15. Async Programming
 
-> **Highlights**
->
-> - Allow for introspection of code at runtime
-> - Kotlin can use -
-    >
-- Java Reflections API
->   - Kotlin Reflection API
-> - Reified type parameters
-    >
-- Avoid type erasure
->   - Limitations - applicable to `inline` only, cannot create instances of T
->
-<br/> 
-<br/> 
-
-# Part V - Async Programming using Coroutines
+<br/>
+<br/>
 
 ## 15. Asynchronous Programming - Coroutines
 
@@ -1935,19 +1913,19 @@
 
 # Part VI - Interoperability with Java
 
-## 14. Interoperability
+## 16. Interoperability
 
 > Kotlin is 100% interoperable with Java. Its 2 way - Java to Kotlin and Kotlin to Java as well.
 
-### 14.a. Java in Kotlin
+### 16.a. Java in Kotlin
 
 [Additional Reading](https://kotlinlang.org/docs/reference/java-interop.html)
 
-### 14.b. Working with nulls from Java
+### 16.b. Working with nulls from Java
 
 - Java nullable types become Platform types in Kotlin
 
-### 14.c. Kotlin in Java
+### 16.c. Kotlin in Java
 
 - Properties in Kotlin will automatically be converted to corresponding get() and set() methods when the same is used
   inside a Java class.
@@ -1963,7 +1941,7 @@
 
 [Additional Reading](https://kotlinlang.org/docs/reference/java-to-kotlin-interop.html)
 
-### 14.d. Top-level functions & properties in Kotlin
+### 16.d. Top-level functions & properties in Kotlin
 
 - Top level functions when compiled by default generates a bytecode file with name <filename>Kt.class.
 - In order to reference these functions inside Java we can simply call the function as <filename>Kt.functionName().
@@ -1977,18 +1955,51 @@
 - In case we want to access the property as a field name in Java class, then the same needs to be prefixed using `const`
   in the Kotlin file.
 
-### 14.e. Extension functions from Java
+### 16.e. Extension functions from Java
 
 - Extension functions can be accessed from Java using the Kotlin-className.functionName() similar to accessing a static
   method in Java.
 
 <br/>
+<br/>
 
-## 15. Some useful language constructs
+# Part VII - Metaprogramming & Useful Constructs
+
+## 17. Metaprogramming
+
+### 17.a. Reflection
+
+[Additional Reading](https://kotlinlang.org/docs/reference/reflection.html)
+
+### 17.b. Creating custom Annotations
+
+[Additional Reading](https://kotlinlang.org/docs/reference/annotations.html)
+
+> **Highlights**
+>
+> - Allow for introspection of code at runtime
+> - Kotlin can use -
+    >
+
+- Java Reflections API
+
+> - Kotlin Reflection API
+> - Reified type parameters
+    >
+
+- Avoid type erasure
+
+> - Limitations - applicable to `inline` only, cannot create instances of T
+>
+<br/> 
+<br/> 
+
+
+## 18. Some useful language constructs
 
 > In this section we will take a look at some of the useful language constructs that Kotlin provides, which will help us deepen our understanding of the further sections
 
-### 15.a. Destructuring
+### 18.a. Destructuring
 
 - Destructuring is to extract values into variables from an existing object.
 - The destructuring in Kotlin is based on the position of properties. In JavaScript object destructuring is based on
@@ -2003,7 +2014,7 @@
 
 [Additional Reading](https://kotlinlang.org/docs/reference/multi-declarations.html)
 
-### 15.b. Exceptions
+### 18.b. Exceptions
 
 - All exception classes in Kotlin are descendants of the class `Throwable`.
 - Kotlin does not have checked exceptions.
@@ -2038,4 +2049,5 @@
 [Additional Reading](https://kotlinlang.org/docs/reference/exceptions.html)
 
 <br/> 
+
 

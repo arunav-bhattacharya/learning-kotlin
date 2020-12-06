@@ -23,6 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -80,7 +81,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -209,14 +210,7 @@
       <workItem from="1594625604341" duration="606000" />
       <workItem from="1607138147801" duration="1598000" />
       <workItem from="1607152210437" duration="1598000" />
-      <workItem from="1607153821031" duration="8012000" />
-    </task>
-    <task id="LOCAL-00016" summary="Inheritance">
-      <created>1594011247037</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1594011247037</updated>
+      <workItem from="1607153821031" duration="11869000" />
     </task>
     <task id="LOCAL-00017" summary="Nulls">
       <created>1594016380753</created>
@@ -554,7 +548,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607212363450</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Readme">
+      <created>1607212569506</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1607212569506</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,12 +600,12 @@
     <MESSAGE value="Classes" />
     <MESSAGE value="Collections" />
     <MESSAGE value="Inheritance" />
-    <MESSAGE value="Readme" />
     <MESSAGE value="Delegates &amp; Functional" />
     <MESSAGE value="readme" />
     <MESSAGE value="Delegates" />
     <MESSAGE value="Built-in Delegates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Built-in Delegates" />
+    <MESSAGE value="Readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Readme" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
