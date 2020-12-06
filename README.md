@@ -1702,36 +1702,6 @@ signifies only a return from the immediate lambda and not the outer calling func
 
 [Additional Reading](https://kotlinlang.org/docs/reference/inline-functions.html)
 
-### 9.g. Extension Functions
-
-- Extension function allows extending functionality of class without inheriting from it.
-- Scope of exception functions is packages. In order to use outside the package, we need to import the package with the
-  extension function.
-- Member function takes precedence over extension function when both have same names and definition.
-- Extensions are resolved **_statically_**. By defining an extension, we do not insert new members into a class, but
-  merely make new functions callable with the dot-notation on variables of this type.
-
-> Note :
->   - There needs to be a discipline when using extension methods
-
-[Additional Reading](https://kotlinlang.org/docs/reference/extensions.html)
-
-### 9.h. String Extensions
-
-- A bunch of String manipulation functions are available in Kotlin. Check it out here -
-  [Kotlin String Functions](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/)
-
-- Some utility functions to checkout -
-  - `run()`
-  - `with()`
-  - `apply()`
-  - `let()`
-  - `also()`
-  - `takeIf()`
-  - `takeUnless()`
-
-[Additional Reading](https://kotlinlang.org/docs/tutorials/kotlin-for-py/functional-programming.html#nice-utility-functions)
-
 <br/> 
 
 ## 10. Internal Iterator & Sequences
@@ -1762,19 +1732,49 @@ signifies only a return from the immediate lambda and not the outer calling func
 
 ## 11. Fluency in Kotlin
 
-### 11.a. Nested/Local functions
+### 11.a. Extension Functions
+
+- Extension function allows extending functionality of class without inheriting from it.
+- Scope of exception functions is packages. In order to use outside the package, we need to import the package with the
+  extension function.
+- Member function takes precedence over extension function when both have same names and definition.
+- Extensions are resolved **_statically_**. By defining an extension, we do not insert new members into a class, but
+  merely make new functions callable with the dot-notation on variables of this type.
+
+> Note :
+>   - There needs to be a discipline when using extension methods
+
+[Additional Reading](https://kotlinlang.org/docs/reference/extensions.html)
+
+### 11.b. String Extensions
+
+- A bunch of String manipulation functions are available in Kotlin. Check it out here -
+  [Kotlin String Functions](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/)
+
+- Some utility functions to checkout -
+  - `run()`
+  - `with()`
+  - `apply()`
+  - `let()`
+  - `also()`
+  - `takeIf()`
+  - `takeUnless()`
+
+[Additional Reading](https://kotlinlang.org/docs/tutorials/kotlin-for-py/functional-programming.html#nice-utility-functions)
+
+### 11.c. Nested/Local functions
 
 - Nested or local functions are functions defined inside another function. The local functions are not accessible
   outside the enclosing function.
 
-### 11.b. `infix` functions
+### 11.d. `infix` functions
 
 - Functions prefixed with `infix` can be accessed without the dot notation and we can call the functions without
   parentheses `()`
 - This is applicable to member and extension functions only
 - Only one parameter is supported in an infix function
 
-### 11.c. Operator Overloading
+### 11.e. Operator Overloading
 
 - Kotlin allows us to provide implementations for a predefined set of operators on our types.
 - These operators have fixed symbolic representation (like + or *) and fixed precedence
