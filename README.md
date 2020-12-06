@@ -1609,10 +1609,10 @@
 - A lambda is stateless; the output is dependent on the inputs parameters.
 - A lambda expression or anonymous function (as well as a local function and an object expression) can access its
   closure, i.e. the variables declared in the outer scope, also known as **lexical scoping**.
-- Sometimes we want to depend on external state. Such a lambda is called a **closure** — that’s because it closes over the
-  defining scope to bind to the properties and methods that aren’t local.
+- Sometimes we want to depend on external state. Such a lambda is called a **closure** — that’s because it closes over
+  the defining scope to bind to the properties and methods that aren’t local.
 - The variables captured in the closure can be modified in the lambda, but this should be avoided.
-    
+
     ```kotlin
         val factor = 2
         val doubleIt = { e: Int -> e * factor }
@@ -1623,10 +1623,38 @@
 > - In lambdas as well we can use object destructuring.
 > - Keep closure as pure functions to avoid confusion and to minimize errors
 
-### 9.e. Non-local and labeled `return`
+### 9.e. Labeled and Non-local`return`
 
-- When we do a `return` from a lambda function, it returns from the enclosing function inside which it is defined. For
-  example -
+By default, lambdas aren’t allowed to have the `return` keyword, even if they return a value. This is a significant
+difference between lambdas and anonymous functions - the latter is required to have return if returning values and it
+signifies only a return from the immediate lambda and not the outer calling function.
+
+#### Labeled `return`
+
+- In order to return from an enclosing lambda, we can use _labeled_ `return`, i.e., `return@myLabel` where `myLabel` is
+  some label that we can create using syntax `myLabel@`.
+- We can also use implicit label, i.e., name of the function to which the lambda is passed.
+- Prefer explicit labels over implicit as it makes the intention clear and code more readable.
+- In the below example, the label `myLabel` behaves as a `continue` statement as in case of imperative programming.
+
+    ```kotlin
+        fun caller() {
+            (1..5).forEach { i ->
+                invokeWith(i) myLabel@{ 
+                    if (it == 2) {
+                        return@myLabel // Return without a label will not be allowed here
+                    }
+                }
+            }
+        }    
+    ```
+
+#### Non-local `return`
+
+- Non-local `return` is useful to break out of the current function that's being implemented, right from within a
+  lambda.
+- Non-local returns, i.e., `return` from a lambda function is allowed only when the function in which lambda expression
+  is invoked is an `inline` function. In the below example `forEach()` is an `inline` function.
 
     ```kotlin
         fun containingFunction(){
@@ -1637,12 +1665,30 @@
             }
             println("After forEach")
         }
-    ```
+    ``` 
 
-  In this case the `println` statement is not executed because the `return` statement, which is defined inside a lambda
-  function, returns from the `containingFunction()`.
-- Non-local returns, i.e., `return` from a lambda function is allowed only when the function in which lambda expression
-  is invoked is an `inline` function. In our example `forEach()` is an `inline` function.
+> **Recap:**
+> 
+> - `return` is not allowed by default within lambdas.
+> - We may use a labeled return to step out of the encompassing lambda.
+> - Use of non-local `return` to exit from the encompassing function being defined is possible only if the function to which the lambda is passed is defined with `inline`.
+
+### 9.f. Inlining Functions with Lambdas
+
+#### `inline` optimization
+
+#### Selective `noinline`
+
+#### Non-local `return` in inlined lambdas
+
+#### `crossinline` Parameters
+
+- When we do a `return` from a lambda function, it returns from the enclosing function inside which it is defined. For
+  example -
+
+In this case the `println` statement is not executed because the `return` statement, which is defined inside a lambda
+function, returns from the `containingFunction()`.
+
 - In order to make lambda to return to forEach we can use labels. For example in the below case the code will return
   to `forEach` -
 

@@ -23,8 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_P3_9-functional/src/com/arunav/kotlin/functional/_2ReturnFromFunctions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P3_9-functional/src/com/arunav/kotlin/functional/_2ReturnFromFunctions.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +82,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Kotlin" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -94,7 +96,7 @@
       <recent name="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance" />
     </key>
   </component>
-  <component name="RunManager" selected="Application._1FunctionalBasicsKt">
+  <component name="RunManager" selected="Application._2ReturnFromFunctionsKt">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -134,6 +136,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="_2ReturnFromFunctionsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="_P3_9-functional" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.functional._2ReturnFromFunctionsKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="_3BuiltInStdDelegatesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="_P2_8-delegates" />
       <option name="VM_PARAMETERS" />
@@ -142,19 +157,6 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.delegates._3BuiltInStdDelegatesKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="_3GenericsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="_P2_7-inheritance" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.inheritance._3GenericsKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -174,19 +176,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application._3GenericsKt" />
       <item itemvalue="Application._6SealedClassKt" />
       <item itemvalue="Application._3BuiltInStdDelegatesKt" />
       <item itemvalue="Application._1FunctionalKt" />
       <item itemvalue="Application._1FunctionalBasicsKt" />
+      <item itemvalue="Application._2ReturnFromFunctionsKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application._2ReturnFromFunctionsKt" />
         <item itemvalue="Application._1FunctionalBasicsKt" />
         <item itemvalue="Application._1FunctionalKt" />
         <item itemvalue="Application._3BuiltInStdDelegatesKt" />
         <item itemvalue="Application._6SealedClassKt" />
-        <item itemvalue="Application._3GenericsKt" />
       </list>
     </recent_temporary>
   </component>
@@ -209,14 +211,7 @@
       <workItem from="1594625604341" duration="606000" />
       <workItem from="1607138147801" duration="1598000" />
       <workItem from="1607152210437" duration="1598000" />
-      <workItem from="1607153821031" duration="22200000" />
-    </task>
-    <task id="LOCAL-00020" summary="readme">
-      <created>1594017185559</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1594017185559</updated>
+      <workItem from="1607153821031" duration="24631000" />
     </task>
     <task id="LOCAL-00021" summary="readme">
       <created>1594017259639</created>
@@ -554,7 +549,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607287127971</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Functional">
+      <created>1607287280697</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1607287280697</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
