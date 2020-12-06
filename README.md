@@ -1686,17 +1686,17 @@ signifies only a return from the immediate lambda and not the outer calling func
   actual function call is done. This reduces the call stack.
 - Performance can be improved for functions by making it `inline`, if they have another function as a parameter.
 - `inline` functions without function as parameters will not have performance improvement.
-- A particular lambda-function parameter in `inline` function can be made non-inline by prefixing the parameter
-  with `noinline`.
-- We cannot reference the function parameter with another variable inside an inline function. If the function parameter
-  is declared as `noinline` then this is possible.
-- When an exception is thrown from an inline function the stack trace doesn't show the function separately.
-
-#### `inline` optimization
 
 #### Selective `noinline`
 
-#### Non-local `return` in inlined lambdas
+- A particular lambda-function parameter in `inline` function can be made non-inline by prefixing the parameter
+  with `noinline`.
+- We cannot reference the function parameter with another variable inside an `inline` function. If the function parameter
+  is declared as `noinline` then this is possible.
+  
+#### Non-local `return` in `inline` lambdas
+
+- When an exception is thrown from an inline function the stack trace doesn't show the function separately.
 
 #### `crossinline` Parameters
 
