@@ -1585,13 +1585,13 @@
   particular lambda and return it from another function, but provide some parameter on which that lambda will work on.
   Let's look at the following function -
 
-      ```kotlin
-          fun predicateOfLength(length: Int): (String) -> Boolean { 
-            return { input: String -> input.length == length }
-          }
-          println(names.find(predicateOfLength(5)))  
-          println(names.find(predicateOfLength(4)))
-      ```
+    ```kotlin
+        fun predicateOfLength(length: Int): (String) -> Boolean { 
+          return { input: String -> input.length == length }
+        }
+        println(names.find(predicateOfLength(5)))  
+        println(names.find(predicateOfLength(4)))
+    ```
 
 ### 9.c. Lambdas & Anonymous Expressions
 

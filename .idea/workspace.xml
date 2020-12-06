@@ -24,7 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P3_9-functional/src/com/arunav/kotlin/functional/_2InlineFunctions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P3_9-functional/src/com/arunav/kotlin/functional/_2ReturnFromFunctions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,14 +209,7 @@
       <workItem from="1594625604341" duration="606000" />
       <workItem from="1607138147801" duration="1598000" />
       <workItem from="1607152210437" duration="1598000" />
-      <workItem from="1607153821031" duration="22078000" />
-    </task>
-    <task id="LOCAL-00019" summary="Nulls">
-      <created>1594017086321</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1594017086321</updated>
+      <workItem from="1607153821031" duration="22200000" />
     </task>
     <task id="LOCAL-00020" summary="readme">
       <created>1594017185559</created>
@@ -554,7 +547,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607242540243</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Functional">
+      <created>1607287127971</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1607287127971</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
