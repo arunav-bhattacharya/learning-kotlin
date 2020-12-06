@@ -8,13 +8,14 @@
 > - [Idioms](https://kotlinlang.org/docs/reference/idioms.html)
 > - [Coding Conventions](https://kotlinlang.org/docs/reference/coding-conventions.html)
 >
-> This document is split into 6 parts -
-> A. Introduction to Kotlin
-> B. Object Oriented Kotlin
-> C. Functional Kotlin
-> D. DSLs using Kotlin
-> E. Async Programming using Kotlin
-> F. Interoperability & Testing
+> This document is split into 7 parts -
+> 1. Introduction to Kotlin
+> 2. Object Oriented Kotlin
+> 3. Functional Kotlin
+> 4. Fluent, Elegant & Efficient Kotlin
+> 5. Async Programming using Kotlin
+> 6. Interoperability with Java
+> 7. Metaprogramming & some Useful Constructs
 >
 > My takeaways from Kotlin till now when compared to Java -
 >
@@ -26,11 +27,11 @@
 >    5. **Delegation**
 >    6. **Coroutines**
 >
->   Some more useful features:
->    1. Object destructuring
->    2. Using `data` class accompanied by _copy()_ method
->    3. Smart casting
->    4. Using _default & named parameters_ in functions
+>   Some _more useful features_:
+>    1. **Object destructuring** - Con is position based destructuring compared to JS where it is name based.
+>    2. Using **`data` class** accompanied by _copy()_ method
+>    3. **Smart casting**
+>    4. Using **default & named parameters** in functions
 >
 
 <br/> 
@@ -1595,6 +1596,7 @@
 
 ### 9.c. Lambdas & Anonymous Expressions
 
+- We can pass functions with no names as a parameter to higher-order functions. These are called _anonymous functions_.
 - Instead of lambdas we can use anonymous functions. But because of its verbosity it should be avoided in most cases,
   except for some cases which we'll discuss in following sections.
 - The `return` keyword is required for block-body anonymous functions that returns a value.
@@ -1622,6 +1624,8 @@
 >
 > - In lambdas as well we can use object destructuring.
 > - Keep closure as pure functions to avoid confusion and to minimize errors
+
+[Additional Reading](https://kotlinlang.org/docs/reference/lambdas.html)
 
 ### 9.e. Labeled and Non-local`return`
 
@@ -1675,6 +1679,19 @@ signifies only a return from the immediate lambda and not the outer calling func
 
 ### 9.f. Inlining Functions with Lambdas
 
+#### `inline` functions
+
+- Functions prefixed with `inline` are inline functions.
+- When bytecode is generated for `inline` functions, the body of the function is copied to the place from where the
+  actual function call is done. This reduces the call stack.
+- Performance can be improved for functions by making it `inline`, if they have another function as a parameter.
+- `inline` functions without function as parameters will not have performance improvement.
+- A particular lambda-function parameter in `inline` function can be made non-inline by prefixing the parameter
+  with `noinline`.
+- We cannot reference the function parameter with another variable inside an inline function. If the function parameter
+  is declared as `noinline` then this is possible.
+- When an exception is thrown from an inline function the stack trace doesn't show the function separately.
+
 #### `inline` optimization
 
 #### Selective `noinline`
@@ -1683,7 +1700,7 @@ signifies only a return from the immediate lambda and not the outer calling func
 
 #### `crossinline` Parameters
 
-[Additional Reading](https://kotlinlang.org/docs/reference/lambdas.html)
+[Additional Reading](https://kotlinlang.org/docs/reference/inline-functions.html)
 
 ### 9.g. Extension Functions
 
@@ -1691,13 +1708,29 @@ signifies only a return from the immediate lambda and not the outer calling func
 - Scope of exception functions is packages. In order to use outside the package, we need to import the package with the
   extension function.
 - Member function takes precedence over extension function when both have same names and definition.
-- Extensions are resolved **statically**. By defining an extension, we do not insert new members into a class, but
+- Extensions are resolved **_statically_**. By defining an extension, we do not insert new members into a class, but
   merely make new functions callable with the dot-notation on variables of this type.
 
 > Note :
 >   - There needs to be a discipline when using extension methods
 
 [Additional Reading](https://kotlinlang.org/docs/reference/extensions.html)
+
+### 9.h. String Extensions
+
+- A bunch of String manipulation functions are available in Kotlin. Check it out here -
+  [Kotlin String Functions](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/)
+
+- Some utility functions to checkout -
+  - `run()`
+  - `with()`
+  - `apply()`
+  - `let()`
+  - `also()`
+  - `takeIf()`
+  - `takeUnless()`
+
+[Additional Reading](https://kotlinlang.org/docs/tutorials/kotlin-for-py/functional-programming.html#nice-utility-functions)
 
 <br/> 
 
@@ -1722,94 +1755,26 @@ signifies only a return from the immediate lambda and not the outer calling func
 
 [Additional Reading](https://kotlinlang.org/docs/reference/sequences.html)
 
-
 <br/>
-<br/>
-
-### String Extensions
-
-- A bunch of String manipulation functions are available in Kotlin. Check it out here -
-  [Kotlin String Functions](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/)
-
-- Some utility functions to checkout -
-    - `run()`
-    - `with()`
-    - `apply()`
-    - `let()`
-    - `also()`
-    - `takeIf()`
-    - `takeUnless()`
-
-[Additional Reading](https://kotlinlang.org/docs/tutorials/kotlin-for-py/functional-programming.html#nice-utility-functions)
-
-<br/> 
 <br/>
 
 # Part IV - Fluent, Elegant & Efficient Kotlin
 
 ## 11. Fluency in Kotlin
 
-<br/>
-
-## 12. Creating DSLs
-
-<br/>
-
-## 13. Recursion & Memoization
-
-<br/>
-<br/>
-
-## 10. Functions - A Deeper look
-
-> In this section we'll take a deeper look at functions
-
-### 10.a. Nested/Local functions
+### 11.a. Nested/Local functions
 
 - Nested or local functions are functions defined inside another function. The local functions are not accessible
   outside the enclosing function.
 
-### 10.b. `infix` functions
+### 11.b. `infix` functions
 
 - Functions prefixed with `infix` can be accessed without the dot notation and we can call the functions without
   parentheses `()`
 - This is applicable to member and extension functions only
 - Only one parameter is supported in an infix function
 
-### 10.c. Anonymous functions
-
-- We can pass functions with no names as a parameter to higher-order functions. These are called anonymous functions.
-- The difference with a lambda function and **anonymous function** is that in anonymous functions we can have multiple
-  return points, but lambdas have just one.
-
-    ```kotlin
-        operation(7, fun(x): Int {
-            if (x < 0)
-                return 0
-            else
-                return Math.sqrt(x.toDouble()).toInt()
-        })
-    ```
-
-### 10.d. `inline` functions
-
-- Functions prefixed with `inline` are inline functions.
-- When bytecode is generated for `inline` functions, the body of the function is copied to the place from where the
-  actual function call is done. This reduces the call stack.
-- Performance can be improved for functions by making it `inline`, if they have another function as a parameter.
-- `inline` functions without function as parameters will not have performance improvement.
-- A particular lambda-function parameter in `inline` function can be made non-inline by prefixing the parameter
-  with `noinline`.
-- We cannot reference the function parameter with another variable inside an inline function. If the function parameter
-  is declared as `noinline` then this is possible.
-- When an exception is thrown from an inline function the stack trace doesn't show the function separately.
-
-### 10.f. Tail Recursion using `tailrec`
-
-- When a function is tail recursive, Kotlin provides us a way to optimize the execution of it by prefixing the function
-  with `tailrec`. This optimizes the generated bytecode by replacing it with for loops or GOTO calls.
-
-### 10.g. Operator Overloading
+### 11.c. Operator Overloading
 
 - Kotlin allows us to provide implementations for a predefined set of operators on our types.
 - These operators have fixed symbolic representation (like + or *) and fixed precedence
@@ -1818,25 +1783,39 @@ signifies only a return from the immediate lambda and not the outer calling func
 
 ![operator-overloading](./images/operator-overloading.png "operator-overloading")
 
-### 10.h. Lambda Extensions - Creating DSLs
+<br/>
+
+## 12. Creating DSLs
+
+### 12.a. Lambda Extensions - Creating DSLs
 
 - Lambda extensions helps us create Domain Specific Languages (DSLs) like Gradle, SQL Dialects, JSON DSL, etc.
 - Using the `invoke()` function
 
 - Learn more from here -
-    - [Kotlin in Action](https://learning.oreilly.com/library/view/kotlin-in-action/9781617293290/kindle_split_022.html)
-    - [Programming Kotlin by Venkat](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0107.xhtml#chap.dsl)
+  - [Kotlin in Action](https://learning.oreilly.com/library/view/kotlin-in-action/9781617293290/kindle_split_022.html)
+  - [Programming Kotlin by Venkat](https://learning.oreilly.com/library/view/programming-kotlin/9781680507287/f_0107.xhtml#chap.dsl)
 
 [Additional Reading](https://kotlinlang.org/docs/reference/type-safe-builders.html)
 
-### 10.i. Functional Constructs
+### 12.b. Functional Constructs
 
 **Open Source Library** - [funKTionale](https://github.com/MarioAriasC/funKTionale/wiki)
 
 - Supports composition, currying, memoization, etc...
 
+
 <br/>
-<br/>    
+
+## 13. Recursion & Memoization
+
+### 13.a. Tail Recursion using `tailrec`
+
+- When a function is tail recursive, Kotlin provides us a way to optimize the execution of it by prefixing the function
+  with `tailrec`. This optimizes the generated bytecode by replacing it with for loops or GOTO calls.
+  
+<br/>
+<br/>
 
 # Part V - Async Programming in Kotlin Coroutines
 
@@ -2024,7 +2003,7 @@ signifies only a return from the immediate lambda and not the outer calling func
 <br/>
 <br/>
 
-# Part VII - Metaprogramming & Useful Constructs
+# Part VII - Metaprogramming & some Useful Constructs
 
 ## 17. Metaprogramming
 
@@ -2042,18 +2021,14 @@ signifies only a return from the immediate lambda and not the outer calling func
 > - Kotlin can use -
     >
 
-- Java Reflections API
-
+- **Java Reflections API**
 > - Kotlin Reflection API
 > - Reified type parameters
-    >
 
-- Avoid type erasure
+- **Avoid type erasure**
+> - Limitations - applicable to `inline` only, cannot create instances of `T`
 
-> - Limitations - applicable to `inline` only, cannot create instances of T
->
-<br/> 
-<br/> 
+<br/>
 
 ## 18. Some useful language constructs
 
@@ -2109,5 +2084,4 @@ signifies only a return from the immediate lambda and not the outer calling func
 [Additional Reading](https://kotlinlang.org/docs/reference/exceptions.html)
 
 <br/> 
-
 
