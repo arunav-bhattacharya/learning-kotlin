@@ -23,9 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_P3_9-functional/src/com/arunav/kotlin/functional/_2InlineFunctions.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_P3_9-functional/src/com/arunav/kotlin/functional/ExtensionFunctions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P3_9-functional/src/com/arunav/kotlin/functional/_3ExtensionFunctions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_P3_9-functional/src/com/arunav/kotlin/functional/_1Functional.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P3_9-functional/src/com/arunav/kotlin/functional/_1FunctionalBasics.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +97,7 @@
       <recent name="$PROJECT_DIR$/4-inheritance/src/com/arunav/kotlin/inheritance" />
     </key>
   </component>
-  <component name="RunManager" selected="Application._3BuiltInStdDelegatesKt">
+  <component name="RunManager" selected="Application._1FunctionalBasicsKt">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -109,14 +111,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_1InterfacesKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="_P2_7-inheritance" />
+    <configuration name="_1FunctionalBasicsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="_P3_9-functional" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.inheritance._1InterfacesKt" />
+      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.functional._1FunctionalBasicsKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_1FunctionalKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <module name="_P3_9-functional" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.functional._1FunctionalKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,19 +163,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_4InnerClassKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <module name="_P2_7-inheritance" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.arunav.kotlin.inheritance._4InnerClassKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="_6SealedClassKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="_P2_7-inheritance" />
       <option name="VM_PARAMETERS" />
@@ -175,19 +177,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application._1InterfacesKt" />
       <item itemvalue="Application._3GenericsKt" />
-      <item itemvalue="Application._4InnerClassKt" />
       <item itemvalue="Application._6SealedClassKt" />
       <item itemvalue="Application._3BuiltInStdDelegatesKt" />
+      <item itemvalue="Application._1FunctionalKt" />
+      <item itemvalue="Application._1FunctionalBasicsKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application._1FunctionalBasicsKt" />
+        <item itemvalue="Application._1FunctionalKt" />
         <item itemvalue="Application._3BuiltInStdDelegatesKt" />
         <item itemvalue="Application._6SealedClassKt" />
         <item itemvalue="Application._3GenericsKt" />
-        <item itemvalue="Application._4InnerClassKt" />
-        <item itemvalue="Application._1InterfacesKt" />
       </list>
     </recent_temporary>
   </component>
@@ -210,14 +212,7 @@
       <workItem from="1594625604341" duration="606000" />
       <workItem from="1607138147801" duration="1598000" />
       <workItem from="1607152210437" duration="1598000" />
-      <workItem from="1607153821031" duration="11869000" />
-    </task>
-    <task id="LOCAL-00017" summary="Nulls">
-      <created>1594016380753</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1594016380753</updated>
+      <workItem from="1607153821031" duration="21411000" />
     </task>
     <task id="LOCAL-00018" summary="Nulls">
       <created>1594016485266</created>
@@ -555,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607212569506</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Readme">
+      <created>1607216551089</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1607216551089</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

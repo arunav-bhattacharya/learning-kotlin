@@ -1005,12 +1005,15 @@
 
 - `companion` objects are singletons defined within a class — they’re singleton companions of classes.
 - Allows creating equivalent of static members in Java.
-- An `object` inside a class can be prefixed with `companion`. This makes the functions inside the object accessible outside the class by without referencing using the object name.
+- An `object` inside a class can be prefixed with `companion`. This makes the functions inside the object accessible
+  outside the class by without referencing using the object name.
 - Each class can have only one single `companion` object, inside which we can multiple functions.
-- By prefixing the functions inside the object with the annotation `@JvmStatic`, it becomes accessible to Java as static methods accessible by the classname.
+- By prefixing the functions inside the object with the annotation `@JvmStatic`, it becomes accessible to Java as static
+  methods accessible by the classname.
 - They may implement interfaces and may extend from base classes, and thus are useful for code re-usability.
 - The members of the companion object of a class can be accessed using the class name as reference.
-- We can access the companion of a class using `.Companion` on the class. The name `Companion` is used only if the companion object doesn’t have an explicit name.
+- We can access the companion of a class using `.Companion` on the class. The name `Companion` is used only if the
+  companion object doesn’t have an explicit name.
 
     ```kotlin
         companion object {
@@ -1025,7 +1028,9 @@
         val wheels = Car.Wheels
     ```
 
-- We can use companion object as a factory by providing a `private constructor` to the class. We can then provide one or more methods in the companion object that creates the instance and carries out the desired steps on the object before returning to the caller.
+- We can use companion object as a factory by providing a `private constructor` to the class. We can then provide one or
+  more methods in the companion object that creates the instance and carries out the desired steps on the object before
+  returning to the caller.
 
     ```kotlin
         class MachineOperator private constructor(val name: String) {
@@ -1090,11 +1095,11 @@
 >
 > - The main purpose of the `componentN()` methods is for destructuring. Any class, including Java classes, that has `componentN()` methods can participate in destructuring.
 > - To destructure, we have to extract the properties in the same order as they appear in the primary constructor.
->
->    ```kotlin
->       val (id, _, name) = employee
->       println("Employee Id=${id}, Employee Name=${name}")
->    ```
+    >
+    >    ```kotlin
+    > val (id, _, name) = employee
+    > println("Employee Id=${id}, Employee Name=${name}")
+    >    ```
 > - The destructuring of data classes in Kotlin comes with a significant limitation. In JavaScript, object destructuring is based on property names, but, sadly, Kotlin relies on the order of properties passed to the primary constructor. If a developer inserts a new parameter in between current parameters, then the result may be catastrophic.
 
 ### 6.g. `enum` Classes
@@ -1120,7 +1125,8 @@
 
 ### 6.h. Late Initialization using `lateinit`
 
-- Kotlin provides a way to define properties by not initializing them. This can be done by prefixing the property with the keyword `lateinit`.
+- Kotlin provides a way to define properties by not initializing them. This can be done by prefixing the property with
+  the keyword `lateinit`.
 
 <br/> 
 
@@ -1280,9 +1286,8 @@
 
 - Kotlin supports nested class.
 - Nested classes can be accessed outer class by using the OuterClass.InnerClass notation both in Java and Kotlin.
-- Unlike in Java, Kotlin nested classes can’t access
-  the private members of the nesting outer class. But if we mark the nested class with the `inner` keyword, then they
-  turn into inner classes and the restriction goes away.
+- Unlike in Java, Kotlin nested classes can’t access the private members of the nesting outer class. But if we mark the
+  nested class with the `inner` keyword, then they turn into inner classes and the restriction goes away.
 
     ```kotlin
         class _TV {
@@ -1331,13 +1336,16 @@
 
 ### 7.f. `sealed` Class
 
-- `sealed` classes are used for representing restricted class hierarchies, where a value can have one of the types from a limited set, but cannot have any other type.
+- `sealed` classes are used for representing restricted class hierarchies, where a value can have one of the types from
+  a limited set, but cannot have any other type.
 - A class can be made `sealed` by prefixing it with the `sealed` keyword.
 - A `sealed` class is abstract by itself. It cannot be instantiated directly and can have abstract members.
-- We can't instantiate an object of a sealed class, but we can create objects of classes that inherit from `sealed` classes.  
-- `sealed` classes are **open for extension** by other classes defined **in the same file** but closed — that is, `final` or not `open` for any other classes.
+- We can't instantiate an object of a sealed class, but we can create objects of classes that inherit from `sealed`
+  classes.
+- `sealed` classes are **open for extension** by other classes defined **in the same file** but closed — that
+  is, `final` or not `open` for any other classes.
 - The constructors of `sealed` classes aren’t marked `private`, but they’re considered `private`.
-- `sealed` classes are not allowed to have non-private constructors (their constructors are private by default).  
+- `sealed` classes are not allowed to have non-private constructors (their constructors are private by default).
 - We may also derive singleton `objects` from `sealed` classes.
 
     ```kotlin
@@ -1538,46 +1546,84 @@
 
 ### 9.b. Lambda Expressions
 
-- In Kotlin, lambda expressions are expressed with "->", similar to Java.
-- For single parameter in a lambda expression, we don't have to explicitly define the parameter in the lambda
-  expression. Instead we can refer to the parameter as `it` in the body of the expression. Let's see an example -
+- **Passing Lambdas to higher-order functions**: In Kotlin, lambda expressions are expressed with "`->`", similar to
+  Java. In the below example `2 until n` returns an `IntRange` class. The class has a method `none()` that takes
+  a `Predicate` and returns `false` if the `Predicate` is evaluated as `true` and vice-versa.
+
+    ```kotlin
+        fun isPrime(n: Int) = n==1 || (n > 1 && (2 until n).none({ i: Int -> n % i == 0 }))
+    ```
+
+- **Implicit Parameter - `it`**: For single parameter in a lambda expression, we don't have to explicitly define the
+  parameter in the lambda expression and instead, we can refer to the parameter as `it` in the body of the expression.
+  Let's see an example -
 
     ```kotlin
         someFunc(3, {x -> x*x})
         someFunc(3, {it * it})
     ```
 
-- **Dropping the brackets** when calling higher-order function:
-    - When the last or the only parameter of a function is a function, then when calling the higher-order function, the
-      function parameter can be passed outside the parentheses of the function call
+- **Receiving Lambdas**: Let's take a look at a function that takes a lambda as a parameter.
+
+    ```kotlin
+        fun actionFromOneTo(action: (Int) -> Unit, n: Int) = (1..n).forEach {action(it)}
+    ```
+
+- **Lambda as Last Parameter - Dropping the brackets**: When the last or the only parameter of a function is a function,
+  then when calling the higher-order function, the function parameter can be passed outside the parentheses of the
+  function call
 
     ```kotlin
         operation(5) { it * it }
     ```
 
-- In lambdas as well we can use object destructuring
+- **Function References**: In Kotlin, method references are denoted as `::`, similar to Java. We can pass a method
+  reference or a lambda expression to a function that accepts a function as an argument.
 
-### 9.c. Function References
+- **Function returning functions**: A function returning a function is also a higher-order function. This might come in
+  handy when we have multiple lambdas with same functionality but varies on some parameter. We can extract that
+  particular lambda and return it from another function, but provide some parameter on which that lambda will work on.
+  Let's look at the following function -
 
-- In Kotlin, method references are denoted as `::`, similar to Java.
-- We can pass a method reference or a lambda expression to a function that accepts a function as an argument.
+      ```kotlin
+          fun predicateOfLength(length: Int): (String) -> Boolean { 
+            return { input: String -> input.length == length }
+          }
+          println(names.find(predicateOfLength(5)))  
+          println(names.find(predicateOfLength(4)))
+      ```
 
+### 9.c. Lambdas & Anonymous Expressions
 
-### 9.d. Function returning functions
+- Instead of lambdas we can use anonymous functions. But because of its verbosity it should be avoided in most cases,
+  except for some cases which we'll discuss in following sections.
+- The `return` keyword is required for block-body anonymous functions that returns a value.
+- The `return` will always return from the anonymous function and not from the encompassing function.
 
-### 9.e. Lambdas & Anonymous functions
+    ```kotlin
+        val checkLength5 = fun(name: String): Boolean { return name.length == 5 }
+    ```
 
-### 9.f. Closures & Lexical Scoping
+### 9.d. Closures & Lexical Scoping
 
+- A lambda is stateless; the output is dependent on the inputs parameters.
 - A lambda expression or anonymous function (as well as a local function and an object expression) can access its
-  closure, i.e. the variables declared in the outer scope, also known as *lexical scoping*.
-- The variables captured in the closure can be modified in the lambda. Such a lambda is called closure.
+  closure, i.e. the variables declared in the outer scope, also known as **lexical scoping**.
+- Sometimes we want to depend on external state. Such a lambda is called a **closure** — that’s because it closes over the
+  defining scope to bind to the properties and methods that aren’t local.
+- The variables captured in the closure can be modified in the lambda, but this should be avoided.
+    
+    ```kotlin
+        val factor = 2
+        val doubleIt = { e: Int -> e * factor }
+    ```
 
 > **Note**
 >
-> Keep closure as pure functions to avoid confusion and to minimize errors
+> - In lambdas as well we can use object destructuring.
+> - Keep closure as pure functions to avoid confusion and to minimize errors
 
-### 9.g. Non-local and labeled `return`
+### 9.e. Non-local and labeled `return`
 
 - When we do a `return` from a lambda function, it returns from the enclosing function inside which it is defined. For
   example -
@@ -1613,8 +1659,8 @@
 
 - On the other hand, when a local `return` is called from an anonymous function it returns to the enclosing function and
   not to the outer function.
-  
-### 9.h. `inline` optimization
+
+### 9.f. `inline` optimization
 
 - Selective `noinline`
 - Non-local return permitted in inlined lambdas
@@ -1622,7 +1668,7 @@
 
 [Additional Reading](https://kotlinlang.org/docs/reference/lambdas.html)
 
-### 9.i. Extension Functions
+### 9.g. Extension Functions
 
 - Extension function allows extending functionality of class without inheriting from it.
 - Scope of exception functions is packages. In order to use outside the package, we need to import the package with the
@@ -1696,7 +1742,6 @@
 
 <br/>
 <br/>
-
 
 ## 10. Functions - A Deeper look
 
@@ -1775,7 +1820,6 @@
 
 <br/>
 <br/>    
-
 
 # Part V - Async Programming in Kotlin Coroutines
 
@@ -1993,7 +2037,6 @@
 >
 <br/> 
 <br/> 
-
 
 ## 18. Some useful language constructs
 
