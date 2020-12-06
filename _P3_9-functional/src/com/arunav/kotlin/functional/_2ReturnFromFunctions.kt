@@ -1,4 +1,4 @@
 package com.arunav.kotlin.functional
 
-class _2InlineFunctions {
+class _2ReturnFromFunctions {
 }
