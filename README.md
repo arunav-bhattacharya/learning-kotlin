@@ -1660,18 +1660,18 @@ signifies only a return from the immediate lambda and not the outer calling func
         fun containingFunction(){
             val numbers = 1..100
             numbers.forEach{
-                if(it % 5 == 0)
-                    return
+                if(it % 5 == 0) return
             }
             println("After forEach")
         }
     ``` 
 
 > **Recap:**
-> 
-> - `return` is not allowed by default within lambdas.
-> - We may use a labeled return to step out of the encompassing lambda.
-> - Use of non-local `return` to exit from the encompassing function being defined is possible only if the function to which the lambda is passed is defined with `inline`.
+>
+> - `return` is **not allowed by default** within lambdas.
+> - We may use a **labeled return** to step out of the encompassing lambda.
+> - Use of **non-local `return` to exit from the encompassing function** being defined is possible only if the function to which the lambda is passed is defined with **`inline`**.
+> - When a local `return` is called from an **anonymous function** it returns to the enclosing function and not to the outer function.
 
 ### 9.f. Inlining Functions with Lambdas
 
@@ -1682,35 +1682,6 @@ signifies only a return from the immediate lambda and not the outer calling func
 #### Non-local `return` in inlined lambdas
 
 #### `crossinline` Parameters
-
-- When we do a `return` from a lambda function, it returns from the enclosing function inside which it is defined. For
-  example -
-
-In this case the `println` statement is not executed because the `return` statement, which is defined inside a lambda
-function, returns from the `containingFunction()`.
-
-- In order to make lambda to return to forEach we can use labels. For example in the below case the code will return
-  to `forEach` -
-
-    ```kotlin
-        fun containingFunction(){
-            val numbers = 1..100
-            numbers.forEach @myLabel{
-                if(it % 5 == 0)
-                    return@myLabel
-            }
-            println("After forEach")
-        }
-    ```
-
-- On the other hand, when a local `return` is called from an anonymous function it returns to the enclosing function and
-  not to the outer function.
-
-### 9.f. `inline` optimization
-
-- Selective `noinline`
-- Non-local return permitted in inlined lambdas
-- `crossinline` parameters
 
 [Additional Reading](https://kotlinlang.org/docs/reference/lambdas.html)
 
