@@ -1,4 +1,4 @@
-package com.arunav.kotlin.functional
+package com.arunav.kotlin.advanced.functions
 
 fun main() {
     greet.shout()

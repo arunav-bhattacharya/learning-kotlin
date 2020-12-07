@@ -3,6 +3,9 @@ package com.arunav.kotlin.functional
 fun main() {
     caller()
     println("after return from caller")
+
+    localReturnLambda()
+    localReturnAnonymous()
 }
 
 fun caller() {
@@ -23,4 +26,24 @@ fun invokeWith(n: Int, action: (Int) -> Unit) {
     println("enter invokeWith $n")
     action(n)
     println("exit invokeWith $n")
+}
+
+fun localReturnLambda(){
+    val numbers = 1..100
+
+    numbers.forEach forEachBlock@{
+        if(it % 5 == 0)
+            return//@forEachBlock
+    }
+    println("After forEach in lambda")
+}
+
+fun localReturnAnonymous(){
+    val numbers = 1..100
+
+    numbers.forEach(fun(x) {
+        if(x % 5 == 0)
+            return
+    })
+    println("After forEach in anonymous")
 }
