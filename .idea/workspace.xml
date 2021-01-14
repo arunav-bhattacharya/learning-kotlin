@@ -23,41 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64984698-684a-4c6c-8565-5d134c7a2786" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_P4_11-fluency/src/com/arunav/kotlin/advanced/functions/_3ExtensionFunctions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__22_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__23_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime__24_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_P4_13-recursion/_P4_13-recursion.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_P5_14-coroutines/_P5_14-coroutines.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_P7_17-metaprogramming/_P7_17-metaprogramming.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P3_10-sequences/_P3_10-sequences.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_P3_10-iteratorsNsequences/_P3_10-iteratorsNsequences.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P3_10-sequences/src/com.arunav.kotlin.stdlib/Collections.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P3_10-iteratorsNsequences/src/com.arunav.kotlin.stdlib/Collections.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P3_10-sequences/src/com.arunav.kotlin.stdlib/OperationsOnCollections.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P3_10-iteratorsNsequences/src/com.arunav.kotlin.stdlib/OperationsOnCollections.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P3_10-sequences/src/com.arunav.kotlin.stdlib/Sequences.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P3_10-iteratorsNsequences/src/com.arunav.kotlin.stdlib/Sequences.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P3_10-sequences/src/com.arunav.kotlin.stdlib/StringExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P3_10-iteratorsNsequences/src/com.arunav.kotlin.stdlib/StringExtensions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P3_9-functional/src/com/arunav/kotlin/functional/_2ReturnFromFunctions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P3_9-functional/src/com/arunav/kotlin/functional/_2ReturnFromFunctions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P3_9-functional/src/com/arunav/kotlin/functional/_3ExtensionFunctions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P3_9-functional/src/com/arunav/kotlin/functional/_3Inline.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P4_11-adv-functions/_P4_11-adv-functions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_P4_11-fluency/_P4_11-fluency.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P4_11-adv-functions/src/com/arunav/kotlin/advanced/functions/Anonymous.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P4_11-adv-functions/src/com/arunav/kotlin/advanced/functions/DSLs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P4_11-fluency/src/com/arunav/kotlin/advanced/functions/DSLs.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P4_11-adv-functions/src/com/arunav/kotlin/advanced/functions/InfixNotation.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P4_11-fluency/src/com/arunav/kotlin/advanced/functions/InfixNotation.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P4_11-adv-functions/src/com/arunav/kotlin/advanced/functions/Inline.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P4_11-adv-functions/src/com/arunav/kotlin/advanced/functions/LambdaExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P4_11-fluency/src/com/arunav/kotlin/advanced/functions/LambdaExtensions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P4_11-adv-functions/src/com/arunav/kotlin/advanced/functions/LocalFunctions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P4_11-fluency/src/com/arunav/kotlin/advanced/functions/LocalFunctions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P4_11-adv-functions/src/com/arunav/kotlin/advanced/functions/ReturnsNLocalReturns.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P4_12-adv-classes/_P4_12-adv-classes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_P4_12-dsls/_P4_12-dsls.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P4_12-adv-classes/src/com/arunav/kotlin/advanced/classes/CompanionObjects.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P4_12-dsls/src/com/arunav/kotlin/advanced/classes/CompanionObjects.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P4_12-adv-classes/src/com/arunav/kotlin/advanced/classes/LateInit.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P4_12-dsls/src/com/arunav/kotlin/advanced/classes/LateInit.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P4_12-adv-classes/src/com/arunav/kotlin/advanced/classes/NestedClasses.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P4_12-dsls/src/com/arunav/kotlin/advanced/classes/NestedClasses.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P5_13-async-programming/_P5_13-async-programming.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_P5_15-async-programming/_P5_15-async-programming.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P5_13-async-programming/src/com/arunav/kotlin/async/AsyncNAwait.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P5_15-async-programming/src/com/arunav/kotlin/async/AsyncNAwait.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P5_13-async-programming/src/com/arunav/kotlin/async/Coroutines.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P5_15-async-programming/src/com/arunav/kotlin/async/Coroutines.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P5_13-async-programming/src/com/arunav/kotlin/async/CoroutinesContext.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P5_15-async-programming/src/com/arunav/kotlin/async/CoroutinesContext.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P5_13-async-programming/src/com/arunav/kotlin/async/example/Airport.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P5_15-async-programming/src/com/arunav/kotlin/async/example/Airport.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P5_13-async-programming/src/com/arunav/kotlin/async/example/AirportInfo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P5_15-async-programming/src/com/arunav/kotlin/async/example/AirportInfo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P6_14-interoperability/_P6_14-interoperability.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_P6_16-interoperability/_P6_16-interoperability.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P6_14-interoperability/src/com/arunav/java/interop/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/_P6_16-interoperability/src/com/arunav/java/interop/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P6_14-interoperability/src/com/arunav/kotlin/interop/Employee.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P6_16-interoperability/src/com/arunav/kotlin/interop/Employee.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P6_15-useful-constructs/_P6_15-useful-constructs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/_P7_18-useful-constructs/_P7_18-useful-constructs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P6_15-useful-constructs/src/com/arunav/kotlin/constructs/Tuples.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P7_18-useful-constructs/src/com/arunav/kotlin/constructs/Tuples.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_P6_15-useful-constructs/src/com/arunav/kotlin/constructs/TypeCasting.kt" beforeDir="false" afterPath="$PROJECT_DIR$/_P7_18-useful-constructs/src/com/arunav/kotlin/constructs/TypeCasting.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +87,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Kotlin" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -131,19 +104,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application._3InlineKt">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="_1FunctionalBasicsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="_P3_9-functional" />
       <option name="VM_PARAMETERS" />
@@ -210,10 +170,10 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application._3BuiltInStdDelegatesKt" />
-      <item itemvalue="Application._1FunctionalKt" />
       <item itemvalue="Application._1FunctionalBasicsKt" />
+      <item itemvalue="Application._1FunctionalKt" />
       <item itemvalue="Application._2ReturnFromFunctionsKt" />
+      <item itemvalue="Application._3BuiltInStdDelegatesKt" />
       <item itemvalue="Application._3InlineKt" />
     </list>
     <recent_temporary>
@@ -245,14 +205,10 @@
       <workItem from="1594625604341" duration="606000" />
       <workItem from="1607138147801" duration="1598000" />
       <workItem from="1607152210437" duration="1598000" />
-      <workItem from="1607153821031" duration="32901000" />
-    </task>
-    <task id="LOCAL-00026" summary="Getting Functional">
-      <created>1594069257216</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1594069257216</updated>
+      <workItem from="1607153821031" duration="40118000" />
+      <workItem from="1608140136177" duration="1270000" />
+      <workItem from="1608329411806" duration="18000" />
+      <workItem from="1608594871726" duration="555000" />
     </task>
     <task id="LOCAL-00027" summary="Getting Functional">
       <created>1594070165234</created>
@@ -590,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607297277194</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Functional and project structure refactor">
+      <created>1607323088764</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1607323088764</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,7 +578,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="Useful-constructs" />
     <MESSAGE value="Getting Functional" />
     <MESSAGE value="Getting Functional &amp; Readme on Interoperability" />
     <MESSAGE value="Initialized interoperability &amp; standard library modules" />
@@ -640,7 +602,8 @@
     <MESSAGE value="Returning from functions" />
     <MESSAGE value="Readme" />
     <MESSAGE value="inline functions Readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="inline functions Readme" />
+    <MESSAGE value="Functional and project structure refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Functional and project structure refactor" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

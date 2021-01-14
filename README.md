@@ -1693,7 +1693,7 @@ signifies only a return from the immediate lambda and not the outer calling func
 - A particular lambda-function parameter in `inline` function can be made non-inline by prefixing the parameter
   with `noinline`.
 - We can use the `noinline` keyword only on function parameters and the function is itself marked as `inline`.
-- The will be no stack call optimization if the function parameter is marked as `noinline`.  
+- There will be no stack call optimization if the function parameter is marked as `noinline`.  
 - We cannot reference the function parameter with another variable inside an `inline` function. If the function
   parameter is declared as `noinline` then this is possible.
   
@@ -1707,7 +1707,7 @@ signifies only a return from the immediate lambda and not the outer calling func
       - i. Make the particular function that is passed as parameter to the `inline` function as `noinline`.
       - ii. The other option is to make the function parameter `crossinline`. This will make the function to be called as `inline` wherever it will be invoked.
 
-- A non-local `return` is not allowed in a lambda that is passed as a `crossinline` parameter.
+- A non-local `return` is not allowed in a lambda that is passed as a `crossinline` parameter. The reason is that by the time the lambda is executed, it might have exited from the function to which it is passed as a parameter - hence no point trying to return from a function that has already completed.
 
 
 > **Recap:**
