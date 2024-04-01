@@ -784,12 +784,11 @@
   directly by the compiler. The compiler issues a warning on unchecked casts, and at runtime, only the non-generic part
   is checked (equivalent to `foo as List<*>`).
 
-- The type arguments of generic function calls are also only checked at compile time. However, **reified type
-  parameters** of _inline functions_ (functions that are expanded at compile time removing additional function call
-  overhead) are substituted by the actual type arguments in the inlined function body at the call sites and thus can be
+- The type arguments of generic function calls are also only checked at compile time. However, only in the case of _inline functions_, **reified type
+  parameters** are substituted by the actual type arguments in the inlined function body at the call sites, during runtime, and can be
   used for type checks and casts, with the same restrictions for instances of generic types.
 
-- In the below examples, we'll see how reified type parameters will help reduce verbosity and clutter in the code.
+- In the below examples, we'll see how reified type parameters will help reduce verbosity and clutter in the code in an inline function.
 
 - Without reified type parameters
 
@@ -818,6 +817,8 @@
 - Reified type parameters are useful to reduce clutter and also to alleviate potential errors in code. Reified type
   parameters eliminate the need to pass extra class information to functions, help to write code with safe casts, and
   customize the return type of functions with compile-time safety.
+- However the point to note here is this works only in the case of _inline_ function calls. For normal classes or functions,
+  this isn't possible as type arguments are erased during runtime.
 
 <br/>
 <br/>
